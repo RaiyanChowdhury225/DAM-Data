@@ -10,8 +10,16 @@ PDF_DIR.mkdir(exist_ok=True)
 
 METADATA_CSV = DATA_DIR / "report_metadata.csv"
 
+DOWNLOAD_MANIFEST = DATA_DIR / "download_manifest.csv"
+
+TEST_MODE=False
+TEST_LIMIT=20
+MANIFEST_CHECKPOINT = 50
+
 
 TIMEOUT = 30
+MAX_RETRIES = 3
+RETRY_DELAY = 2
 CURRENT_LAYOUT = {
     "serial_index": 0,
     "date_index": 1,
