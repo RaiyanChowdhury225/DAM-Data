@@ -9,7 +9,7 @@ The long-term goal of this project is to create a research-ready historical data
 
 ## Project Goal
 
-DAM publishes daily agricultural market reports as PDF documents. These reports contain structured tabular information about commodities, markets, prices, and locations, but the information is distributed across many PDF files and is not provided as a convenient machine-readable dataset.
+DAM publishes daily agricultural market reports as PDF documents. These reports contain structured tabular information about commodities, prices, and divisions, but the information is distributed across thousands of PDF files and is not provided as a convenient machine-readable dataset.
 
 This project aims to:
 
@@ -23,40 +23,38 @@ This project aims to:
 
 ## Current Pipeline
 
-The project is being developed in multiple phases:
-
 ```text
 DAM Website
     │
     ▼
-Metadata Scraper
+Metadata Scraper              scraper.py        → data/report_metadata.csv
     │
     ▼
-report_metadata.csv
+PDF Downloader                downloader.py     → data/pdfs/ + data/download_manifest.csv
     │
     ▼
-PDF Downloader
+PDF Extraction                extractor.py      → data/extracted/prices_raw.csv
     │
     ▼
-PDF Corpus
+Cleaning & Standardization    clean.py          → data/final/prices.csv
     │
     ▼
-PDF Extraction
-    │
-    ▼
-Cleaning & Standardization
-    │
-    ▼
-Final Research Dataset
+Modelling Table (optional)    add_target.py     → data/final/prices_modeling.csv
+```
+
+All stages can be run in order with a single command:
+
+```bash
+python main.py
 ```
 
 ### Current Status
 
 * [x] Phase 1 — Metadata scraping
 * [x] Phase 2 — PDF downloading
-* [ ] Phase 3 — PDF table extraction
-* [ ] Phase 4 — Data cleaning and normalization
-* [ ] Phase 5 — Final dataset generation and validation
+* [x] Phase 3 — PDF table extraction
+* [x] Phase 4 — Data cleaning and normalization
+* [ ] Phase 5 — Full-corpus run, accuracy validation, Excel-format reports
 
 ---
 
@@ -76,23 +74,17 @@ The scraper currently handles two DAM report page layouts:
 
 ### Current Reports
 
-The current reports page contains:
-
 ```text
 Serial | Date | Dhaka | Chittagong | Khulna | ...
 ```
 
 ### Historical Archive
 
-The archive page has a slightly different structure:
-
 ```text
 (empty) | (empty) | Date | Dhaka | Chittagong | Khulna | ...
 ```
 
-Instead of creating separate parsers, the scraper uses layout configuration to support both structures.
-
-This makes the scraper easier to maintain if DAM changes the table layout.
+Instead of creating separate parsers, the scraper uses layout configuration to support both structures. This makes the scraper easier to maintain if DAM changes the table layout.
 
 ---
 
@@ -100,14 +92,7 @@ This makes the scraper easier to maintain if DAM changes the table layout.
 
 During investigation of the DAM website, it was found that the PDF "Download" buttons are regular HTML `<a>` elements containing the direct PDF URL.
 
-Therefore, browser automation is unnecessary.
-
-The scraper uses:
-
-* `requests`
-* `BeautifulSoup`
-
-This is simpler, faster, and more reproducible than using Selenium.
+Therefore, browser automation is unnecessary. The scraper uses `requests` and `BeautifulSoup`, which is simpler, faster, and more reproducible than using Selenium.
 
 ---
 
@@ -119,53 +104,35 @@ The scraper produces:
 data/report_metadata.csv
 ```
 
-The metadata dataset contains records linking report dates and divisions to their PDF files.
+Duplicate PDF URLs are removed from the **download queue**, but the original metadata is preserved, because duplicate metadata relationships may still be meaningful.
 
-Duplicate PDF URLs are removed from the **download queue**, but the original metadata is preserved.
-
-This distinction is important because duplicate metadata relationships may still be meaningful.
+| Metric | Count |
+|---|---|
+| Metadata records | 7,893 |
+| Archive records | 4,988 |
+| Current records | 2,905 |
+| Unique PDF URLs | 7,705 |
+| Duplicate PDF URLs | 188 |
 
 ---
 
 # Phase 2 — PDF Downloader
 
-The downloader reads:
-
-```text
-data/report_metadata.csv
-```
-
-and downloads the associated PDFs.
-
-Downloaded PDFs are stored locally under:
-
-```text
-data/pdfs/
-```
+The downloader reads `data/report_metadata.csv` and downloads the associated PDFs into `data/pdfs/`.
 
 The PDFs are intentionally **not stored in GitHub** because the corpus contains thousands of files and would make the repository unnecessarily large.
 
----
-
 ## Downloader Features
-
-The downloader currently supports:
 
 ### Deterministic filenames
 
-Each PDF receives a filename based on:
-
-```text
-date + division + URL hash
-```
-
-Example:
+Each PDF receives a filename based on `date + division + URL hash`:
 
 ```text
 2026-08-04_Dhaka_a81f3c92e1ab.pdf
 ```
 
-The URL hash ensures that filenames remain unique and deterministic.
+The URL hash ensures that filenames remain unique and deterministic. Later stages read the date and division back out of the filename.
 
 ### Division normalization
 
@@ -179,52 +146,147 @@ Bangla division names are converted to English:
 বরিশাল      → Barisal
 রংপুর       → Rangpur
 সিলেট       → Sylhet
-ময়মনসিংহ    → Mymensingh
+ময়মনসিংহ    → Mymensingh
 ```
 
-### Duplicate URL removal
+### Other features
 
-The metadata contains duplicate PDF URLs. These are removed before downloading so the same PDF is not requested multiple times.
+* Duplicate URL removal before downloading
+* Existing-file detection (already downloaded PDFs are skipped)
+* Automatic retries with exponential backoff
+* PDF signature validation (`%PDF`), so HTML error pages are not saved as PDFs
+* Download manifest at `data/download_manifest.csv`
+* Checkpointing, logging, and progress tracking
+* `TEST_MODE`, `TEST_LIMIT`, and `DRY_RUN` settings for safe testing
 
-### Existing-file detection
+---
 
-If a PDF already exists locally, the downloader skips it rather than downloading it again.
+# Phase 3 — PDF Extraction
 
-### Retry handling
+```bash
+python extractor.py --build-glyph-map     # run once, before the first extraction
+python extractor.py                       # extract all PDFs in data/pdfs/
+python extractor.py --file <path.pdf>     # extract one PDF and print the rows
+python extractor.py --survey              # list the font combinations used by the corpus
+```
 
-Temporary request failures are retried automatically.
-
-The downloader uses exponential backoff between attempts.
-
-### PDF validation
-
-Downloaded files are checked to ensure their content begins with the PDF file signature:
+Output: `data/extracted/prices_raw.csv` — the raw layer, with Bangla text preserved and no cleaning applied.
 
 ```text
-%PDF
+source_file, source_url, page_number, date_raw, division_raw,
+serial_raw, commodity_type_raw, commodity_name_raw, unit_raw,
+price_raw, min_price_raw, max_price_raw
 ```
 
-This prevents obvious HTML/error responses from being saved as valid PDFs.
+Only the **current** min/max price is extracted. The previous-month, previous-year, and percentage-change columns in the reports are deliberately ignored: they can be recalculated from the dataset's own historical observations if needed.
 
-### Download manifest
+## The Bangla text problem
 
-Download results are recorded in:
+The reports are text-based PDFs, not scans, but the text extracted by standard tools is corrupted:
+
+| Extracted with a standard tool | Actual text |
+|---|---|
+| `র্োংিোরদশ` | `বাংলাদেশ` |
+| `প্রনি কেনি` | `প্রতি কেজি` |
+
+The cause is the PDF's ToUnicode map, written by Excel, which maps several different glyphs to the same character. The information is destroyed at that layer, so no translation dictionary can recover it.
+
+**The solution does not use OCR.** The embedded Nikosh/NikoshBAN font subsets are intact, so the glyph-to-character map is rebuilt from the font itself:
+
+1. The font's own character map gives the plain letters.
+2. Characters dropped by the font subsetter (e.g. hasanta ্, chandrabindu ঁ) are filled in using the fact that Bengali glyphs are stored in Unicode order.
+3. The font's GSUB rules are read backwards to decode conjuncts (ম্ন, ক্ষ), half forms, ra-phala, and reph.
+4. The rebuilt map is given to pdfminer, so table extraction then works normally.
+
+Glyphs are stored in the order they are drawn, so the text is then reordered into logical order: pre-base vowel signs (ি, ে, ৈ) are moved after their consonant cluster, reph (র্) is moved in front of its cluster, ে + cluster + া is combined into ো, Bangla digits are unified with ASCII digits, and the result is NFC-normalized.
+
+### Re-distilled PDFs
+
+A small number of reports have been re-saved through Ghostscript (e.g. "PDF24 Creator"), which strips the font rules but keeps the original glyph IDs. For these, the extractor reuses a glyph map learned from the normal PDFs:
+
+```bash
+python extractor.py --build-glyph-map     # writes data/nikosh_glyph_map.json
+```
+
+Rebuild this file whenever new PDFs are added.
+
+## Table extraction
+
+Column positions differ between divisions — some have a commodity-type column, some have a "fair price" column, some use ditto marks — so columns are located by content rather than by fixed index:
+
+* The **unit column** is the column containing the most unit words (কেজি, লিটার, টি).
+* The **current price column** is the first mostly-numeric column to its right, which skips the fair-price column.
+* The **name** is built from the text cells between the serial number and the unit column.
+
+Source irregularities handled:
+
+| Irregularity | Handling |
+|---|---|
+| Table continues onto the next page, losing a border | A border is added at the edge of the vertical rules |
+| Missing rule between two rows merges their price cells | The price is read from each row's own vertical band |
+| Text overflowing from a neighbouring row (hidden on the page, present in the file) | Overlapping text lines are removed, keeping the line drawn last |
+| Ditto marks (`,,`, `"`) or a blank unit | The unit is carried down from the row above |
+| Merged commodity-type cells | The type is carried down to the rows below |
+| Missing prices written as `*`, `-`, or an empty cell | Stored as null, never as zero |
+
+The serial number is stored as source information only. It repeats and is inconsistent across reports, so it is **not** a primary key.
+
+---
+
+# Phase 4 — Cleaning and Standardization
+
+```bash
+python clean.py
+```
+
+Input: `data/extracted/prices_raw.csv` and `data/commodity_map.csv`
+Output: `data/final/prices.csv`
+
+**One row = one commodity observation for one division on one date.**
 
 ```text
-data/download_manifest.csv
+date, division, commodity_type, commodity_name, unit,
+min_price, max_price, source_file, source_url, page_number
 ```
 
-The manifest records information such as:
+## Commodity mapping
+
+Divisions write the same commodity differently (মসুর ডাল (উন্নত), মসুর (উন্নত), মশুর ডাল সরু (উন্নত)), so a hand-checked crosswalk maps each distinct raw name to one standard commodity:
 
 ```text
-date
-division
-pdf_url
-filename
-status
-downloaded_at
-error
+data/commodity_map.csv
 ```
+
+This file is a research artifact in its own right and is version-controlled. Any raw name missing from it is **reported and skipped, never silently dropped**, so new wordings in older reports are caught.
+
+## Unit standardization
+
+| Raw unit | Standard |
+|---|---|
+| প্রতি কেজি, 1 কেজি, 1.50-2 কেজি, (blank) | `kg` |
+| 1 লিটার, 01লিটার, 1 লিটার (925 গ্রাম) | `litre` |
+| 5 লিটার | `5_litre` |
+| প্রতিটি | `piece` |
+| 4টি, 04 টি | `4_pieces` |
+
+Unit **labels** are standardized, but **prices are never rescaled**. A 5-litre can and a hali of 4 eggs are priced as they are sold, so every value remains traceable to the source report.
+
+## Null handling
+
+The reports write `0.00 - 0.00` when no price was collected. These become null in the clean dataset. Missing prices are never converted to zero.
+
+---
+
+# Phase 5 — Modelling Table (optional)
+
+```bash
+python add_target.py                       # target = next average price
+python add_target.py --target direction    # target = up / down / same
+```
+
+Output: `data/final/prices_modeling.csv`
+
+The published dataset deliberately contains **no target column and no derived variables**. Seasons, price changes, and prediction targets can all be derived from the dataset itself, so storing them would only add assumptions. This script builds such a table separately for modelling work, by shifting each division + commodity series to its next observation and recording the gap in days between reports.
 
 ---
 
@@ -233,24 +295,34 @@ error
 ```text
 DAM-Data/
 │
+├── main.py                 # runs the whole pipeline
 ├── scraper.py
 ├── downloader.py
+├── extractor.py
+├── clean.py
+├── add_target.py
 ├── validate_metadata.py
+├── check_raw.py
 ├── config.py
 ├── logger_config.py
 │
 ├── data/
 │   ├── report_metadata.csv
 │   ├── download_manifest.csv
-│   └── pdfs/
+│   ├── commodity_map.csv
+│   ├── nikosh_glyph_map.json
+│   ├── pdfs/
+│   ├── extracted/
+│   │   └── prices_raw.csv
+│   └── final/
+│       ├── prices.csv
+│       └── prices_modeling.csv
 │
 ├── logs/
-│   └── scraper.log
-│
 └── README.md
 ```
 
-The following are excluded from Git:
+Excluded from Git (see `.gitignore`):
 
 ```text
 data/pdfs/
@@ -258,176 +330,78 @@ data/download_manifest.csv
 logs/
 ```
 
-See `.gitignore`.
-
 ---
 
 # Requirements
 
 Python 3.x
 
-Install the required packages:
-
 ```bash
-pip install requests beautifulsoup4 pandas
+pip install requests beautifulsoup4 pandas pdfplumber fonttools
 ```
 
 ---
 
-# Reproducing the Metadata Scraper
-
-Clone the repository:
+# Running the Pipeline
 
 ```bash
 git clone <REPOSITORY_URL>
 cd DAM-Data
+
+python main.py                          # everything, in order
+python main.py --from extract           # extract, clean, target
+python main.py --only clean             # a single stage
+python main.py --skip scrape download   # everything else
 ```
 
-Run the metadata scraper:
+Each stage is the same script that can be run by hand; `main.py` only decides the order and stops when a stage fails.
 
-```bash
-python scraper.py
-```
-
-The scraper will:
-
-1. Request the configured DAM report pages.
-2. Parse the report tables.
-3. Extract dates, divisions, serial numbers, and PDF URLs.
-4. Combine the results from the supported pages.
-5. Save the metadata to:
-
-```text
-data/report_metadata.csv
-```
-
----
-
-# Reproducing the PDF Downloader
-
-After generating the metadata:
-
-```bash
-python downloader.py
-```
-
-The downloader will:
-
-1. Load `report_metadata.csv`.
-2. Remove duplicate PDF URLs from the download queue.
-3. Generate deterministic filenames.
-4. Check whether each PDF already exists.
-5. Download missing PDFs.
-6. Retry temporary failures.
-7. Validate downloaded files.
-8. Record download results in the manifest.
-
-The downloader supports a test mode so that a small number of PDFs can be tested before running the full download.
-
----
-
-# Configuration
-
-Important settings are stored in:
-
-```text
-config.py
-```
-
-For example:
-
-```python
-TEST_MODE = True
-TEST_LIMIT = 20
-DRY_RUN = True
-```
-
-During development, test mode should be used first.
-
-For a full download, these settings can eventually be changed to:
-
-```python
-TEST_MODE = False
-DRY_RUN = False
-```
-
-Do not enable full downloading until the test run has been verified.
+Use `TEST_MODE` in `config.py` before running a full download.
 
 ---
 
 # Data Quality Checks
 
-The project includes validation scripts to check the metadata before downstream processing.
-
-Example:
-
 ```bash
-python validate_metadata.py
+python validate_metadata.py   # metadata: record counts, missing values, duplicates
+python check_raw.py           # raw layer: name/unit variants, min > max, empty units
 ```
 
-The validation process checks things such as:
-
-* total number of records
-* missing values
-* division distribution
-* duplicate PDF URLs
-* source-page distribution
-
-These checks help ensure that errors in the scraping stage are identified before downloading and PDF extraction.
+`clean.py` additionally reports unmapped commodity names, unknown units, swapped min/max values, rows without a price, and duplicate observations (the same commodity twice on one date, which happens when the mapping merges two varieties).
 
 ---
 
 # Research Reproducibility
 
-A major design goal of this project is reproducibility.
-
-The repository contains the code required to regenerate the metadata and download the PDF corpus rather than storing thousands of PDFs directly in GitHub.
-
-The pipeline is designed so that each stage produces an explicit artifact:
+Each stage produces an explicit artifact that can be validated independently:
 
 ```text
-Scraper
-    ↓
-report_metadata.csv
-
-Downloader
-    ↓
-PDF corpus + download_manifest.csv
-
-Extractor
-    ↓
-raw extracted dataset
-
-Cleaner
-    ↓
-final research dataset
+Scraper    → report_metadata.csv
+Downloader → PDF corpus + download_manifest.csv
+Extractor  → prices_raw.csv          (raw layer, Bangla preserved)
+Cleaner    → prices.csv              (final dataset)
 ```
 
-Each stage can therefore be validated independently.
+The raw layer is kept so that every cleaned value can be traced back to the file, page, and original text it came from. The repository stores the code and the commodity mapping rather than thousands of PDFs, so the corpus can be regenerated from the metadata.
+
+---
+
+# Known Limitations
+
+* Reports published as Excel files (around 2022) are not yet handled; only PDFs are extracted.
+* A small number of names are garbled where two text lines overlap inside a single cell in the source file. These are handled through the commodity mapping.
+* Some Rangpur reports have no unit on their first rows, so the unit defaults to `kg` per the report header.
+* Extraction accuracy has not yet been measured against a manually verified sample.
+* Prices are retail quotes from a small number of named markets per division, not a statistical sample of all markets.
 
 ---
 
 # Future Work
 
-The next major stage is extracting the tables contained inside the Bangla PDF reports.
-
-The extracted data is expected to contain information such as:
-
-```text
-date
-division
-district
-market
-commodity
-category
-unit
-price
-currency
-```
-
-Additional cleaning and standardization will be performed before creating the final research dataset.
-
-The final dataset is expected to contain **80,000+ structured observations**, depending on the number of valid rows extracted from the historical PDF reports.
+* Run the pipeline over the full corpus of ~7,705 reports.
+* Measure extraction accuracy on a stratified manual sample and publish per-field accuracy.
+* Add support for the Excel-format reports, reusing the same cleaned schema.
+* Document coverage gaps by division and date.
 
 ---
 
@@ -435,6 +409,4 @@ The final dataset is expected to contain **80,000+ structured observations**, de
 
 This project is an academic Data Wrangling and research project using publicly available agricultural market reports published by the Bangladesh Department of Agricultural Marketing.
 
-The project does not claim ownership of the original government reports.
-
-The downloaded PDFs are kept locally and are not included in this repository.
+The project does not claim ownership of the original government reports. The downloaded PDFs are kept locally and are not included in this repository.
