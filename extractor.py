@@ -16,7 +16,7 @@ Usage:
   python extractor.py --limit 20
   python extractor.py --survey          # which fonts do the PDFs use?
 """
-import argparse, csv, io, json, re, sys, warnings
+import argparse, csv, io, json, re, sys, unicodedata, warnings
 from collections import Counter
 from pathlib import Path
 
@@ -222,6 +222,9 @@ def fix_bangla(text):
     text = re.sub(rf"([িেৈ])(ঁ?)({C2})", r"\3\1\2", text)
     # the font draws ASCII digits with Bangla shapes, so both appear -> unify
     text = text.translate(BN_DIGITS)
+    # compose ড়/ঢ়/য় written as letter + nukta into single characters, so the
+    # same name always has the same code points
+    text = unicodedata.normalize("NFC", text)
     return re.sub(r"\s+", " ", text).strip()
 
 # =============================================================================
