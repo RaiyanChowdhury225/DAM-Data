@@ -5,7 +5,7 @@ import logging
 from datetime import datetime
 import time
 
-from config import METADATA_CSV,PDF_DIR,TIMEOUT,MAX_RETRIES,RETRY_DELAY,DOWNLOAD_MANIFEST,TEST_LIMIT,TEST_MODE,MANIFEST_CHECKPOINT
+from config import METADATA_CSV,PDF_DIR,TIMEOUT,MAX_RETRIES,RETRY_DELAY,DOWNLOAD_MANIFEST,TEST_LIMIT,TEST_MODE,MANIFEST_CHECKPOINT,CA_BUNDLE
 
 import logger_config
 logger=logging.getLogger(__name__)
@@ -23,12 +23,27 @@ logger=logging.getLogger(__name__)
 
 def save_manifest(records):
     """
-    Save download status records to the manifest CSV.
+    Save download status records, merged with any existing manifest.
+
+    Each run only holds its own records in memory, so the manifest on disk is
+    the accumulated history. Keeping it means an interrupted run resumes with a
+    full picture rather than only what the current process happens to remember.
     """
 
     logger.info("Saving download manifest...")
 
     df = pd.DataFrame(records)
+
+    existing = load_manifest()
+
+    if not existing.empty:
+        df = pd.concat([existing, df], ignore_index=True)
+
+        # one row per URL: the newest attempt wins
+        df = df.drop_duplicates(
+            subset="pdf_url",
+            keep="last"
+        ).reset_index(drop=True)
 
     df.to_csv(
         DOWNLOAD_MANIFEST,
@@ -56,19 +71,34 @@ DIVISION_MAP = {
 }
 
 def normalize_data(bangla_date):
-    #Convert bangla date digits to english
+    # Convert bangla date digits to english
 
-    bangla_to_english=str.maketrans(
-        '০১২৩৪৫৬৭৮৯','0123456789'
+    bangla_to_english = str.maketrans(
+        '০১২৩৪৫৬৭৮৯',
+        '0123456789'
     )
 
-    english_date=str(bangla_date).translate(
+    english_date = str(bangla_date).translate(
         bangla_to_english
     )
+    
+    english_date = english_date.strip()
+    english_date = english_date.replace('*', '')
 
-    day,month,year=english_date.split('-')
+    parts = english_date.split('-')
+
+    # If date does not have exactly 3 parts, skip it
+    if len(parts) != 3:
+        logger.warning(
+            f"Invalid date format, skipping: {bangla_date}"
+        )
+        return None
+
+    day, month, year = parts
 
     return f'{year}-{month}-{day}'
+
+
 
 
 
@@ -95,23 +125,26 @@ def load_metadata():
         raise
 
 
-def generate_filename(date,division,pdf_url):
+def generate_filename(date, division, pdf_url):
 
-    #Stable Filename using hash of the pdf url
+    # Stable Filename using hash of the pdf url
 
-    normalized_date=normalize_data(date)
+    normalized_date = normalize_data(date)
+
+    # Invalid date → skip this PDF
+    if normalized_date is None:
+        return None
 
     english_division = DIVISION_MAP.get(
         division,
         division
     )
 
-
-    url_hash=hashlib.sha256(
+    url_hash = hashlib.sha256(
         pdf_url.encode('utf-8')
     ).hexdigest()[:12]
 
-    filename=(
+    filename = (
         f'{normalized_date}_'
         f'{english_division}_'
         f'{url_hash}.pdf'
@@ -138,7 +171,8 @@ def download_pdf(url, output_path):
 
             response = requests.get(
                 url,
-                timeout=TIMEOUT
+                timeout=TIMEOUT,
+                verify=CA_BUNDLE
             )
 
             response.raise_for_status()
@@ -359,6 +393,9 @@ def main():
             division,
             pdf_url
         )
+        if filename is None: 
+            logger.warning( f"Skipping PDF due to invalid date: {date}" ) 
+            continue
 
         output_path = PDF_DIR / filename
 

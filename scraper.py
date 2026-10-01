@@ -6,6 +6,7 @@ import logger_config
 import pandas as pd
 
 
+
 logger = logging.getLogger(__name__)
 
 
@@ -16,7 +17,8 @@ def fetch_page(url):
     try:
         response = requests.get(
             url,
-            timeout=TIMEOUT
+            timeout=TIMEOUT,
+            verify=CA_BUNDLE
         )
 
         response.raise_for_status()
