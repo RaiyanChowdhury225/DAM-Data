@@ -170,11 +170,55 @@ def parse_reports(table, layout, source_name):
 
 
 
+BANGLA_DIGITS = str.maketrans("০১২৩৪৫৬৭৮৯", "0123456789")
+
+
+def add_date_iso(df):
+    """
+    Add date_iso (YYYY-MM-DD) and date_status (ok / corrected / invalid).
+
+    Dates are read as Bangla dd-mm-yyyy. Malformed ones (typos on the DAM site,
+    e.g. "২৪-০৩-৩০৩২") are taken from data/date_repairs.csv, where each repair
+    was checked against the report's own header; a repair wins even over a
+    date that parses, because some typos are valid dates.
+    """
+    fixes = pd.read_csv(DATE_REPAIRS_CSV, dtype=str, encoding="utf-8-sig")
+    # keyed by URL, not by date text: one page lists "১৩-০৭-২০২৩" twice, once correctly
+    # and once for the 13 August report
+    fixes = dict(zip(zip(fixes["pdf_url"], fixes["raw_date"]), fixes["date_iso"]))
+
+    raw = df["date"].astype(str).str.strip()
+    parsed = pd.to_datetime(
+        raw.str.translate(BANGLA_DIGITS),
+        format="%d-%m-%Y",
+        errors="coerce"
+    ).dt.strftime("%Y-%m-%d")
+    repaired = pd.Series(
+        [fixes.get(k) for k in zip(df["pdf_url"], raw)],
+        index=df.index,
+        dtype="object"
+    )
+
+    df["date_iso"] = repaired.fillna(parsed)
+    df["date_status"] = "ok"
+    df.loc[repaired.notna(), "date_status"] = "corrected"
+    df.loc[df["date_iso"].isna(), "date_status"] = "invalid"
+
+    invalid = df.loc[df["date_status"] == "invalid", ["source_page", "date"]]
+    if len(invalid):
+        logger.warning(
+            f"{len(invalid)} records have a date that is neither valid nor in "
+            f"{DATE_REPAIRS_CSV.name}; they will not be downloaded. "
+            f"Distinct values: {invalid.drop_duplicates().values.tolist()[:20]}"
+        )
+    return df
+
+
 def save_metadata(records):
 
     logger.info("Saving metadata...")
 
-    df = pd.DataFrame(records)
+    df = add_date_iso(pd.DataFrame(records))
 
     df.to_csv(
         METADATA_CSV,
@@ -248,3 +292,4 @@ if __name__ == "__main__":
         logger.exception(
             "Metadata pipeline failed."
         )
+        raise SystemExit(1)       # non-zero exit, so main.py stops here

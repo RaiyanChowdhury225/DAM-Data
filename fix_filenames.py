@@ -7,7 +7,7 @@ typo'd one would otherwise keep that date forever, because the manifest already
 records them as downloaded. The hash is derived from the URL, so it identifies
 each file reliably: we look up the correct name for that hash and rename.
 
-Run AFTER repair_dates.py and after downloader.py uses date_iso.
+Run after scraper.py (which writes date_iso) whenever date_repairs.csv changes.
 
     python fix_filenames.py            # show what would change
     python fix_filenames.py --apply    # do it
@@ -17,17 +17,18 @@ import sys
 import pandas as pd
 
 from config import METADATA_CSV, PDF_DIR, DOWNLOAD_MANIFEST
-from downloader import generate_filename
+from downloader import generate_filename, url_hash
 
 apply = "--apply" in sys.argv
 
-meta = pd.read_csv(METADATA_CSV).drop_duplicates(subset="pdf_url")
+meta = pd.read_csv(METADATA_CSV).drop_duplicates(subset="pdf_url")   # first record wins, as in downloader.py
 meta = meta[meta["date_iso"].fillna("").astype(str).str.strip() != ""]
 
 expected = {}            # url hash -> (correct filename, date_iso, url)
 for _, r in meta.iterrows():
     name = generate_filename(r["date_iso"], r["division"], r["pdf_url"])
-    expected[name[-16:-4]] = (name, r["date_iso"], r["pdf_url"])
+    if name:
+        expected[url_hash(r["pdf_url"])] = (name, r["date_iso"], r["pdf_url"])
 
 renames, orphans, clashes = [], [], []
 for f in sorted(PDF_DIR.glob("*.pdf")):
@@ -53,8 +54,7 @@ if apply:
         man = pd.read_csv(DOWNLOAD_MANIFEST)
         fixed = 0
         for i, row in man.iterrows():
-            key = generate_filename("x", "x", row["pdf_url"])[-16:-4]   # url hash
-            hit = expected.get(key)
+            hit = expected.get(url_hash(row["pdf_url"]))
             if hit and (row["filename"] != hit[0] or row["date"] != hit[1]):
                 man.at[i, "filename"], man.at[i, "date"] = hit[0], hit[1]
                 fixed += 1

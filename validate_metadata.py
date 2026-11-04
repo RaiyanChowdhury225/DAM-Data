@@ -2,7 +2,7 @@ import pandas as pd
 from config import METADATA_CSV
 
 
-df = pd.read_csv('report_metadata')
+df = pd.read_csv(METADATA_CSV)
 
 
 print("Total records:")

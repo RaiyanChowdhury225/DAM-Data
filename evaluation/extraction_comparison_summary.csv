@@ -1,0 +1,17 @@
+measure,value
+rows_total,1868
+rows_with_checked_reference,1517
+distinct_reference_names,230
+extractor_output_equals_reread,1868
+font_map_exact_share,0.2188529993408042
+font_map_mean_cer,0.18875718263454735
+conventional_exact_share,0.021753460777851022
+conventional_mean_cer,0.5537682519221108
+pdfplumber_found_share,0.028345418589321027
+pdfplumber_mean_partial_ratio,64.35972452437917
+pymupdf_found_share,0.02966381015161503
+pymupdf_mean_partial_ratio,65.27538084498845
+tesseract_fast_found_share,0.6262359920896506
+tesseract_fast_mean_partial_ratio,91.35381257606673
+tesseract_best_found_share,0.8226763348714569
+tesseract_best_mean_partial_ratio,96.05749027672518

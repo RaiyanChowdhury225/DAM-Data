@@ -1,0 +1,19 @@
+# Versions used to build the released dataset (Python 3.14).
+# pdfplumber/pdfminer.six/fonttools matter most: extractor.py patches pdfminer internals.
+beautifulsoup4==4.14.3
+certifi==2026.7.22
+fonttools==4.63.0
+matplotlib==3.10.9
+numpy==2.3.5
+pandas==2.3.3
+pdfminer.six==20260107
+pdfplumber==0.11.10
+requests==2.34.2
+scipy==1.17.0
+statsmodels==0.15.0
+hijridate==2.6.0          # rq2 holiday dates
+pytest==9.2.0             # tests/
+
+# Only for evaluation/compare_extraction.py (plus the tesseract binary with Bengali models):
+# pymupdf
+# rapidfuzz

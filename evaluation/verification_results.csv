@@ -1,0 +1,555 @@
+sample_id,row_in_prices_csv,source_file,page,date,year,division,commodity_en,type_bn,name_bn,unit_bn,unit,min_price,max_price,name_ok,unit_ok,min_ok,max_ok,note,row_ok
+1,556,01-02-2026_Mymensingh_21c206953db1.pdf,1,2026-02-01,2026,Mymensingh,Wheat flour (packet),,আটা (প্যাকেট-সাদা),প্রতি কেজি,kg,53.0,55.0,Y,Y,Y,Y,,True
+2,562,01-02-2026_Mymensingh_21c206953db1.pdf,1,2026-02-01,2026,Mymensingh,Khesari dal,,খেসারী ডাল,প্রতি কেজি,kg,95.0,100.0,Y,Y,Y,Y,,True
+3,585,01-02-2026_Mymensingh_21c206953db1.pdf,1,2026-02-01,2026,Mymensingh,Yard-long bean,,বরবটি,প্রতি কেজি,kg,,,Y,Y,Y,Y,,True
+4,590,01-02-2026_Mymensingh_21c206953db1.pdf,1,2026-02-01,2026,Mymensingh,Bitter gourd,,ঊচ্ছে/করল্লা,প্রতি কেজি,kg,100.0,120.0,Y,Y,Y,Y,,True
+5,598,01-02-2026_Mymensingh_21c206953db1.pdf,1,2026-02-01,2026,Mymensingh,Hilsa fish,,ইলিশ মাছ,প্রতি কেজি,kg,1400.0,2400.0,Y,Y,Y,Y,,True
+6,4608,02-07-2026_Chittagong_af97afdcf746.pdf,1,2026-07-02,2026,Chittagong,Lentil (fine),,মসুর ডাল (উন্নত),প্রতি কেজি,kg,162.0,165.0,Y,Y,Y,Y,,True
+7,4617,02-07-2026_Chittagong_af97afdcf746.pdf,1,2026-07-02,2026,Chittagong,Soybean oil (5 litre can),,তেল-সয়াবিন (ক্যান 5লিঃ বিভিন্ন,5 লিটার,5_litre,970.0,985.0,Y,Y,Y,Y,,True
+8,4622,02-07-2026_Chittagong_af97afdcf746.pdf,1,2026-07-02,2026,Chittagong,Garlic (imported),,রসুন (চায়না),প্রতি কেজি,kg,120.0,130.0,Y,Y,Y,Y,,True
+9,4646,02-07-2026_Chittagong_af97afdcf746.pdf,2,2026-07-02,2026,Chittagong,Tilapia fish,,তেলাপিয়া মাছ (চাষের),প্রতি কেজি,kg,190.0,250.0,Y,Y,Y,Y,,True
+10,4655,02-07-2026_Chittagong_af97afdcf746.pdf,2,2026-07-02,2026,Chittagong,Powdered milk (packet),,গুঁড়ো দুধ (পলিপ্যাক),প্রতি কেজি,kg,660.0,930.0,Y,Y,Y,Y,,True
+11,9128,04-05-2026_Barisal_46cbe3bae350.pdf,1,2026-05-04,2026,Barisal,Soybean oil (loose),,তেল-সয়াবিন (খোলা),1 লিটার,litre,189.0,194.0,Y,Y,Y,Y,,True
+12,9136,04-05-2026_Barisal_46cbe3bae350.pdf,1,2026-05-04,2026,Barisal,Garlic (imported),,রসুন (চায়না),প্রতি কেজি,kg,160.0,170.0,Y,Y,Y,Y,,True
+13,9151,04-05-2026_Barisal_46cbe3bae350.pdf,1,2026-05-04,2026,Barisal,Bitter gourd,,ঊচ্ছে/করল্লা,প্রতি কেজি,kg,50.0,80.0,Y,Y,Y,Y,,True
+14,9163,04-05-2026_Barisal_46cbe3bae350.pdf,2,2026-05-04,2026,Barisal,Goat meat,,ছাগলের মাংস,প্রতি কেজি,kg,1100.0,1200.0,Y,Y,Y,Y,,True
+15,9173,04-05-2026_Barisal_46cbe3bae350.pdf,2,2026-05-04,2026,Barisal,Rice (coarse/hybrid),,চাল মোটা (গুটি স্বনা,প্রতি কেজি,kg,50.0,55.0,Y,Y,Y,Y,,True
+16,11681,05-04-2026_Dhaka_7cd474be107d.pdf,1,2026-04-05,2026,Dhaka,Mung dal (coarse),ডাল,মুগ -(মোটা),প্রতি কেজি,kg,100.0,110.0,Y,Y,Y,Y,,True
+17,11695,05-04-2026_Dhaka_7cd474be107d.pdf,1,2026-04-05,2026,Dhaka,Dried chilli (local),মসলা,শুকনা মরিচ (দেশী),প্রতি কেজি,kg,200.0,300.0,Y,Y,Y,Y,,True
+18,11706,05-04-2026_Dhaka_7cd474be107d.pdf,1,2026-04-05,2026,Dhaka,Cucumber,সবজি,শসা,প্রতি কেজি,kg,30.0,60.0,Y,Y,Y,Y,,True
+19,11718,05-04-2026_Dhaka_7cd474be107d.pdf,2,2026-04-05,2026,Dhaka,Powdered milk (packet),দুধ,গুঁড়ো (পলিপ্যাক),প্রতি কেজি,kg,630.0,920.0,Y,Y,Y,Y,,True
+20,11722,05-04-2026_Dhaka_7cd474be107d.pdf,2,2026-04-05,2026,Dhaka,Rice (fine),চাল,জিরাশাইল-শম্পা কাটারি(সরু),প্রতি কেজি,kg,70.0,95.0,Y,Y,Y,Y,,True
+21,14700,06-08-2026_Mymensingh_a9190bfa2aa1.pdf,1,2026-08-06,2026,Mymensingh,Wheat flour (packet),,আটা (প্যাকেট-সাদা),প্রতি কেজি,kg,50.0,55.0,Y,Y,Y,Y,,True
+22,14723,06-08-2026_Mymensingh_a9190bfa2aa1.pdf,1,2026-08-06,2026,Mymensingh,Brinjal,,বেগুন,প্রতি কেজি,kg,100.0,120.0,Y,Y,Y,Y,,True
+23,14741,06-08-2026_Mymensingh_a9190bfa2aa1.pdf,1,2026-08-06,2026,Mymensingh,Katla fish,,কাতল মাছ (চাষের),প্রতি কেজি,kg,280.0,450.0,Y,Y,Y,Y,,True
+24,14747,06-08-2026_Mymensingh_a9190bfa2aa1.pdf,2,2026-08-06,2026,Mymensingh,Chicken (local),,মোরগ-মুরগি (দেশী) জ্যান্ত,প্রতি কেজি,kg,550.0,560.0,Y,Y,Y,Y,,True
+25,14763,06-08-2026_Mymensingh_a9190bfa2aa1.pdf,2,2026-08-06,2026,Mymensingh,Rice (coarse/hybrid),,"বোরো উফশী মোটা (বিআর-14, ব্রি ধান-58 ইত্যাদি)",প্রতি কেজি,kg,,,Y,Y,Y,Y,,True
+26,19944,08-07-2026_Rangpur_5ee182c9be4a.pdf,1,2026-07-08,2026,Rangpur,Onion (local),,পেঁয়াজ (দেশী),প্রতি কেজি,kg,32.0,40.0,Y,Y,Y,Y,,True
+27,19945,08-07-2026_Rangpur_5ee182c9be4a.pdf,1,2026-07-08,2026,Rangpur,Onion (imported),,পেঁয়াজ (আমদানীকৃত),প্রতি কেজি,kg,,,Y,Y,Y,Y,,True
+28,19956,08-07-2026_Rangpur_5ee182c9be4a.pdf,1,2026-07-08,2026,Rangpur,Pointed gourd,,পটল,প্রতি কেজি,kg,35.0,40.0,Y,Y,Y,Y,,True
+29,19960,08-07-2026_Rangpur_5ee182c9be4a.pdf,1,2026-07-08,2026,Rangpur,Hilsa fish,,ইলিশ মাছ,1 কেজি,kg,2150.0,2300.0,Y,Y,Y,Y,,True
+30,19963,08-07-2026_Rangpur_5ee182c9be4a.pdf,1,2026-07-08,2026,Rangpur,Chicken (local),,মোরগ-মুরগি (দেশী) জ্যান্ত,1 কেজি,kg,570.0,580.0,Y,Y,Y,Y,,True
+31,20096,08-09-2026_Chittagong_f98e4d6a8279.pdf,1,2026-09-08,2026,Chittagong,Wheat flour (packet),,আটা (প্যাকেট-সাদা),প্রতি কেজি,kg,58.0,60.0,Y,Y,Y,Y,,True
+32,20110,08-09-2026_Chittagong_f98e4d6a8279.pdf,1,2026-09-08,2026,Chittagong,Onion (local),,পেঁয়াজ দেশী,প্রতি কেজি,kg,40.0,50.0,Y,Y,Y,Y,,True
+33,20117,08-09-2026_Chittagong_f98e4d6a8279.pdf,1,2026-09-08,2026,Chittagong,Brinjal,,বেগুন (বিভিন্ন সাইজ ও জাত),প্রতি কেজি,kg,50.0,80.0,Y,Y,Y,Y,,True
+34,20135,08-09-2026_Chittagong_f98e4d6a8279.pdf,2,2026-09-08,2026,Chittagong,Beef,,মাংস- গরু (হাড়সহ),প্রতি কেজি,kg,800.0,850.0,Y,Y,Y,Y,,True
+35,20137,08-09-2026_Chittagong_f98e4d6a8279.pdf,2,2026-09-08,2026,Chittagong,Chicken (local),,মোরগ-মুরগি (দেশী),প্রতি কেজি,kg,620.0,640.0,Y,Y,Y,Y,,True
+36,29375,12-05-2026_Rangpur_4004a3e8968b.pdf,1,2026-05-12,2026,Rangpur,Rice (coarse/hybrid),,আমন চাল-মোটা (গুটি স্বর্ণা),,kg,47.0,50.0,Y,Y,Y,Y,"source unit cell is a ditto mark with no row above (first table row missing); dataset unit blank, standardised to kg per report header",True
+37,29405,12-05-2026_Rangpur_4004a3e8968b.pdf,1,2026-05-12,2026,Rangpur,Beef,,মাংস- গরু,1 কেজি,kg,740.0,750.0,Y,Y,Y,Y,,True
+38,29406,12-05-2026_Rangpur_4004a3e8968b.pdf,1,2026-05-12,2026,Rangpur,Chicken (local),,মোরগ-মুরগি (দেশী) জ্যান্ত,1 কেজি,kg,630.0,650.0,Y,Y,Y,Y,,True
+39,29412,12-05-2026_Rangpur_4004a3e8968b.pdf,2,2026-05-12,2026,Rangpur,Salt (packet),,লবণ (প্যাকেটজাত)সাধারণ/উন্নত,প্রতি কেজি,kg,28.0,40.0,Y,Y,Y,Y,,True
+40,29413,12-05-2026_Rangpur_4004a3e8968b.pdf,2,2026-05-12,2026,Rangpur,Powdered milk (packet),,গুড়ো দুধ (প্যাকেট),1 কেজি,kg,690.0,930.0,Y,Y,Y,Y,,True
+41,30350,12-08-2026_Sylhet_6973bd340f8b.pdf,1,2026-08-12,2026,Sylhet,Brinjal,সবজি,বেগুন,প্রতি কেজি,kg,60.0,100.0,Y,Y,Y,Y,,True
+42,30359,12-08-2026_Sylhet_6973bd340f8b.pdf,1,2026-08-12,2026,Sylhet,Bitter gourd,সবজি,ঊচ্ছে/করল্লা,প্রতি কেজি,kg,80.0,100.0,Y,Y,Y,Y,,True
+43,30369,12-08-2026_Sylhet_6973bd340f8b.pdf,1,2026-08-12,2026,Sylhet,Katla fish,মাছ,কাতল মাছ (চাষের 1.5-3.5,প্রতি কেজি,kg,350.0,500.0,Y,Y,Y,Y,,True
+44,30373,12-08-2026_Sylhet_6973bd340f8b.pdf,2,2026-08-12,2026,Sylhet,Beef,মাংস,মাংস- গরু,প্রতি কেজি,kg,750.0,760.0,Y,Y,Y,Y,,True
+45,30379,12-08-2026_Sylhet_6973bd340f8b.pdf,2,2026-08-12,2026,Sylhet,"Egg (farm, white/red)",ডিম,ডিমঃ ফার্ম সাদা/লাল,প্রতিটি,piece,12.5,13.0,Y,Y,Y,Y,,True
+46,31485,13-05-2026_Sylhet_752f83ca2f90.pdf,1,2026-05-13,2026,Sylhet,Dried chilli (local),মসলা,শুকনা মরিচ (দেশী),প্রতি কেজি,kg,250.0,380.0,Y,Y,Y,Y,,True
+47,31496,13-05-2026_Sylhet_752f83ca2f90.pdf,1,2026-05-13,2026,Sylhet,Bitter gourd,সবজি,ঊচ্ছে/করল্লা,প্রতি কেজি,kg,60.0,80.0,Y,Y,Y,Y,,True
+48,31507,13-05-2026_Sylhet_752f83ca2f90.pdf,1,2026-05-13,2026,Sylhet,Pangas fish,মাছ,পাংগাস মাছ (চাষের),প্রতি কেজি,kg,160.0,220.0,Y,Y,Y,Y,,True
+49,31516,13-05-2026_Sylhet_752f83ca2f90.pdf,2,2026-05-13,2026,Sylhet,Salt (packet),লবণ,(প্যাকেটজাত-মোটা ও চিকন),প্রতি কেজি,kg,30.0,42.0,Y,Y,Y,Y,type column stored separately (লবণ),True
+50,31521,13-05-2026_Sylhet_752f83ca2f90.pdf,2,2026-05-13,2026,Sylhet,Rice (coarse/hybrid),চাল,গুটি স্বর্ণা(মোটা),প্রতি কেজি,kg,52.0,55.0,Y,Y,Y,Y,,True
+51,33016,14-01-2026_Khulna_ec3a7da79199.pdf,1,2026-01-14,2026,Khulna,Chickpea (chhola),,ছোলা-কলাই,প্রতি কেজি,kg,110.0,110.0,Y,Y,N,Y,PDF 105-110; dataset min=max=110,False
+52,33020,14-01-2026_Khulna_ec3a7da79199.pdf,1,2026-01-14,2026,Khulna,Soybean oil (5 litre can),,তেল-সয়াবিন (ক্যান 5 লিঃবিভিন্ন ব্র্যান্ড),5 লিটার,5_litre,955.0,955.0,Y,Y,N,Y,PDF 945-955; dataset min=max=955,False
+53,33023,14-01-2026_Khulna_ec3a7da79199.pdf,1,2026-01-14,2026,Khulna,Garlic (imported),,রসুন (চায়না),প্রতি কেজি,kg,190.0,190.0,Y,Y,N,Y,PDF 180-190; dataset min=max=190,False
+54,33042,14-01-2026_Khulna_ec3a7da79199.pdf,2,2026-01-14,2026,Khulna,Pangas fish,,পাংগাস মাছ (চাষের),প্রতি কেজি,kg,180.87,180.87,Y,Y,N,N,PDF current 180-220; dataset 180.87 taken from fair-price column,False
+55,33050,14-01-2026_Khulna_ec3a7da79199.pdf,2,2026-01-14,2026,Khulna,Salt (packet),,লবণ (প্যাকেটজাত-মোটা ও চিকন),প্রতি কেজি,kg,,,Y,Y,N,N,PDF 30-40; dataset blank,False
+56,35643,15-02-2026_Rajshahi_87a0e982f9e4.pdf,1,2026-02-15,2026,Rajshahi,Wheat flour (loose),,আটা-(খোলা),প্রতি কেজি,kg,45.0,48.0,Y,Y,Y,Y,,True
+57,35644,15-02-2026_Rajshahi_87a0e982f9e4.pdf,1,2026-02-15,2026,Rajshahi,Lentil (coarse),,মশুর ডাল (মোটা/আমদানীকৃত),প্রতি কেজি,kg,85.0,100.0,Y,Y,Y,Y,,True
+58,35657,15-02-2026_Rajshahi_87a0e982f9e4.pdf,1,2026-02-15,2026,Rajshahi,Green papaya,,কাঁচাপেঁপে,প্রতি কেজি,kg,25.0,30.0,Y,Y,Y,Y,,True
+59,35659,15-02-2026_Rajshahi_87a0e982f9e4.pdf,1,2026-02-15,2026,Rajshahi,Tomato,,টমেটো,প্রতি কেজি,kg,30.0,60.0,Y,Y,Y,Y,,True
+60,35662,15-02-2026_Rajshahi_87a0e982f9e4.pdf,1,2026-02-15,2026,Rajshahi,Katla fish,,কাতল মাছ,প্রতি কেজি,kg,200.0,350.0,Y,Y,Y,Y,,True
+61,37517,15-09-2026_Barisal_3bdfa2ceeaf5.pdf,1,2026-09-15,2026,Barisal,Soybean oil (loose),,তেল-সয়াবিন (খোলা),1 লিটার,litre,186.0,189.0,Y,Y,Y,Y,,True
+62,37536,15-09-2026_Barisal_3bdfa2ceeaf5.pdf,1,2026-09-15,2026,Barisal,Yard-long bean,,বরবটি,প্রতি কেজি,kg,90.0,110.0,Y,Y,Y,Y,,True
+63,37539,15-09-2026_Barisal_3bdfa2ceeaf5.pdf,1,2026-09-15,2026,Barisal,Ash gourd,,চালকুমড়া (জালি),প্রতিটি,piece,30.0,50.0,Y,Y,Y,Y,,True
+64,37541,15-09-2026_Barisal_3bdfa2ceeaf5.pdf,1,2026-09-15,2026,Barisal,Bitter gourd,,ঊচ্ছে/করল্লা,প্রতি কেজি,kg,50.0,80.0,Y,Y,Y,Y,,True
+65,37557,15-09-2026_Barisal_3bdfa2ceeaf5.pdf,2,2026-09-15,2026,Barisal,"Egg (farm, white/red)",,ডিমঃ ফার্ম সাদা/লাল,4টি,4_pieces,46.0,50.0,Y,Y,Y,Y,,True
+66,40970,17-02-2026_Dhaka_1009a4e81bc4.pdf,1,2026-02-17,2026,Dhaka,Soybean oil (loose),তেল,সয়াবিন (খোলা),1 লিটার,litre,178.0,180.0,Y,Y,Y,Y,,True
+67,40971,17-02-2026_Dhaka_1009a4e81bc4.pdf,1,2026-02-17,2026,Dhaka,Palm oil (loose),তেল,পাম (খোলা),1 লিটার,litre,152.0,155.0,Y,Y,Y,Y,,True
+68,40993,17-02-2026_Dhaka_1009a4e81bc4.pdf,2,2026-02-17,2026,Dhaka,Goat meat,মাংস,ছাগল,প্রতি কেজি,kg,1200.0,1300.0,Y,Y,Y,Y,,True
+69,40997,17-02-2026_Dhaka_1009a4e81bc4.pdf,2,2026-02-17,2026,Dhaka,Salt (packet),লবণ,প্যাকেটজাত-মোটা ও চিকন,প্রতি কেজি,kg,25.0,40.0,Y,Y,Y,Y,,True
+70,41002,17-02-2026_Dhaka_1009a4e81bc4.pdf,2,2026-02-17,2026,Dhaka,Rice (fine),চাল,জিরাশাইল-শম্পা কাটারি(সরু),প্রতি কেজি,kg,70.0,95.0,Y,Y,Y,Y,,True
+71,42315,17-08-2026_Khulna_41a6bf33eaad.pdf,1,2026-08-17,2026,Khulna,Lentil (fine),,মসুর ডাল (উন্নত),প্রতি কেজি,kg,155.0,165.0,Y,Y,Y,Y,,True
+72,42324,17-08-2026_Khulna_41a6bf33eaad.pdf,1,2026-08-17,2026,Khulna,Soybean oil (1 litre bottle),,তেল-সয়াবিন (ক্যান 1লিঃ বিভিন্ন ব্র্যান্ড),1 লিটার,litre,205.0,205.0,Y,Y,N,Y,PDF 200-205; dataset min=max=205,False
+73,42348,17-08-2026_Khulna_41a6bf33eaad.pdf,1,2026-08-17,2026,Khulna,Taro stolon,,কচুরলতি,প্রতি কেজি,kg,60.0,70.0,Y,Y,Y,Y,,True
+74,42354,17-08-2026_Khulna_41a6bf33eaad.pdf,2,2026-08-17,2026,Khulna,Beef,,মাংস- গরু,প্রতি কেজি,kg,750.0,770.0,Y,Y,Y,Y,,True
+75,42355,17-08-2026_Khulna_41a6bf33eaad.pdf,2,2026-08-17,2026,Khulna,Goat meat,,খাসির মাংস,প্রতি কেজি,kg,1100.0,1150.0,Y,Y,Y,Y,,True
+76,43321,18-02-2026_Rajshahi_5b8432672f95.pdf,1,2026-02-18,2026,Rajshahi,Wheat flour (packet),,আটা-(প্যাকেট),প্রতি কেজি,kg,55.0,56.0,Y,Y,Y,Y,,True
+77,43322,18-02-2026_Rajshahi_5b8432672f95.pdf,1,2026-02-18,2026,Rajshahi,Wheat flour (loose),,আটা-(খোলা),প্রতি কেজি,kg,40.0,42.0,Y,Y,Y,Y,,True
+78,43324,18-02-2026_Rajshahi_5b8432672f95.pdf,1,2026-02-18,2026,Rajshahi,Lentil (fine),,মশুর ডাল সরু (উন্নত),প্রতি কেজি,kg,140.0,160.0,Y,Y,Y,Y,,True
+79,43326,18-02-2026_Rajshahi_5b8432672f95.pdf,1,2026-02-18,2026,Rajshahi,Mung dal (fine),,মুগ ডাল (সরু),প্রতি কেজি,kg,150.0,160.0,Y,Y,Y,Y,,True
+80,43329,18-02-2026_Rajshahi_5b8432672f95.pdf,1,2026-02-18,2026,Rajshahi,Palm oil (loose),,পাম তেল- (খোলা),1 লিটার,litre,154.0,155.0,Y,Y,Y,Y,,True
+81,49326,20-09-2026_Rajshahi_b2c718446cb2.pdf,1,2026-09-20,2026,Rajshahi,Potato (local red),,আলু-দেশি/স্থানীয় লাল,প্রতি কেজি,kg,35.0,45.0,Y,Y,Y,Y,,True
+82,49330,20-09-2026_Rajshahi_b2c718446cb2.pdf,1,2026-09-20,2026,Rajshahi,Green chilli,,কাঁচামরিচ,প্রতি কেজি,kg,120.0,140.0,Y,Y,Y,Y,,True
+83,49340,20-09-2026_Rajshahi_b2c718446cb2.pdf,1,2026-09-20,2026,Rajshahi,Egg (local hen),,ডিম মুরগি (দেশি),4টি,4_pieces,70.0,75.0,Y,Y,Y,Y,,True
+84,49344,20-09-2026_Rajshahi_b2c718446cb2.pdf,1,2026-09-20,2026,Rajshahi,Powdered milk (packet),,গুড়ো দুধ (পলি প্যাকেট),প্রতি কেজি,kg,700.0,940.0,Y,Y,Y,Y,,True
+85,49347,20-09-2026_Rajshahi_b2c718446cb2.pdf,1,2026-09-20,2026,Rajshahi,Rice (coarse/hybrid),,"চাল মোটা (গুটি স্বর্ণা, লাল স্বর্ণা, হিরা- 2)",প্রতি কেজি,kg,50.0,55.0,Y,Y,Y,Y,unit cell blank in PDF; carried down from row above,True
+86,49456,2015-09-15_Barisal_caf2154fcfa4.pdf,1,2015-09-15,2015,Barisal,Wheat flour (loose),,আটা (খোলা),প্রতি কেজি,kg,45.0,48.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+87,49459,2015-09-15_Barisal_caf2154fcfa4.pdf,1,2015-09-15,2015,Barisal,Mung dal (fine),,মুগ ডাল (সরু- উন্নত),প্রতি কেজি,kg,150.0,165.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+88,49460,2015-09-15_Barisal_caf2154fcfa4.pdf,1,2015-09-15,2015,Barisal,Mung dal (coarse),,মুগ ডাল-(মোটা),প্রতি কেজি,kg,115.0,125.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+89,49494,2015-09-15_Barisal_caf2154fcfa4.pdf,2,2015-09-15,2015,Barisal,Chicken (local),,মোরগ-মুরগি (দেশী) জ্যান্ত,প্রতি কেজি,kg,540.0,570.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+90,49496,2015-09-15_Barisal_caf2154fcfa4.pdf,2,2015-09-15,2015,Barisal,Egg (local hen),,ডিমঃ মুরগি (দেশী),4টি,4_pieces,65.0,70.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+91,49511,2015-09-15_Chittagong_d70f619032c6.pdf,1,2015-09-15,2015,Chittagong,Wheat flour (loose),,আটা (খোলা),প্রতি কেজি,kg,45.0,46.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+92,49526,2015-09-15_Chittagong_d70f619032c6.pdf,1,2015-09-15,2015,Chittagong,Garlic (imported),,রসুন (চায়না),প্রতি কেজি,kg,120.0,130.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+93,49534,2015-09-15_Chittagong_d70f619032c6.pdf,1,2015-09-15,2015,Chittagong,Sponge gourd,,ধুন্দল,প্রতি কেজি,kg,55.0,60.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+94,49538,2015-09-15_Chittagong_d70f619032c6.pdf,1,2015-09-15,2015,Chittagong,Bottle gourd,,লাউ,প্রতিটি,piece,50.0,75.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+95,49556,2015-09-15_Chittagong_d70f619032c6.pdf,2,2015-09-15,2015,Chittagong,"Egg (farm, white/red)",,ডিমঃ ফার্ম সাদা/লাল,প্রতিটি,piece,10.5,11.25,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+96,49568,2015-09-15_Dhaka_c5e87e283fe1.pdf,1,2015-09-15,2015,Dhaka,Wheat flour (packet),,আটা (প্যাকেট-সাদা),প্রতি কেজি,kg,55.0,60.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+97,49574,2015-09-15_Dhaka_c5e87e283fe1.pdf,1,2015-09-15,2015,Dhaka,Khesari dal,,খেসারী ডাল,প্রতি কেজি,kg,100.0,110.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+98,49582,2015-09-15_Dhaka_c5e87e283fe1.pdf,1,2015-09-15,2015,Dhaka,Onion (local),,পেঁয়াজ (দেশী),প্রতি কেজি,kg,65.0,80.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+99,49605,2015-09-15_Dhaka_c5e87e283fe1.pdf,1,2015-09-15,2015,Dhaka,Sponge gourd,,ধুন্দুল,প্রতি কেজি,kg,50.0,70.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+100,49622,2015-09-15_Dhaka_c5e87e283fe1.pdf,2,2015-09-15,2015,Dhaka,Rice (coarse/hybrid),,গুটি স্বর্না,প্রতি কেজি,kg,55.0,60.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+101,49625,2015-09-15_Khulna_8aaa4da98d1a.pdf,1,2015-09-15,2015,Khulna,Wheat flour (loose),,আটা (খোলা),প্রতি কেজি,kg,,,Y,Y,N,N,PDF 45-48; dataset blank; file dated 2015 but report is 2025,False
+102,49630,2015-09-15_Khulna_8aaa4da98d1a.pdf,1,2015-09-15,2015,Khulna,Khesari dal,,খেসারী ডাল,প্রতি কেজি,kg,92.61,92.61,Y,Y,N,N,PDF 100-110; dataset 92.61 from fair-price column; file dated 2015 but report is 2025,False
+103,49632,2015-09-15_Khulna_8aaa4da98d1a.pdf,1,2015-09-15,2015,Khulna,Chickpea (chhola),,ছোলা-কলাই,প্রতি কেজি,kg,98.3,98.3,Y,Y,N,N,PDF 100-105; dataset 98.3 from fair-price column; file dated 2015 but report is 2025,False
+104,49649,2015-09-15_Khulna_8aaa4da98d1a.pdf,1,2015-09-15,2015,Khulna,Bottle gourd,,লাউ,প্রতিটি,piece,39.46,39.46,Y,Y,N,N,PDF 45-55; dataset 39.46 from fair-price column; file dated 2015 but report is 2025,False
+105,49655,2015-09-15_Khulna_8aaa4da98d1a.pdf,1,2015-09-15,2015,Khulna,Ash gourd,,চালকুমড়া (জালি),প্রতিটি,piece,,,Y,Y,N,N,PDF 30-35; dataset blank; file dated 2015 but report is 2025,False
+106,49689,2015-09-15_Mymensingh_c587f4a868be.pdf,1,2015-09-15,2015,Mymensingh,Khesari dal,,খেসারী ডাল,প্রতি কেজি,kg,95.0,100.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+107,49721,2015-09-15_Mymensingh_c587f4a868be.pdf,1,2015-09-15,2015,Mymensingh,Ridge gourd,,ঝিংগা,প্রতি কেজি,kg,60.0,70.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+108,49723,2015-09-15_Mymensingh_c587f4a868be.pdf,1,2015-09-15,2015,Mymensingh,Katla fish,,কাতল মাছ (চাষের),প্রতি কেজি,kg,280.0,450.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+109,49741,2015-09-15_Mymensingh_c587f4a868be.pdf,2,2015-09-15,2015,Mymensingh,Rice (fine),,"চিকন (ব্রি ধান-57, ব্রি ধান-80 ইত্যাদি)",প্রতি কেজি,kg,,,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+110,49747,2015-09-15_Mymensingh_c587f4a868be.pdf,2,2015-09-15,2015,Mymensingh,Rice (fine),,"চিকন (ব্রি ধান-50, ব্রি ধান-63, ব্রি ধান-81 ইত্যাদি)",প্রতি কেজি,kg,72.0,80.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+111,49748,2015-09-15_Rajshahi_f9763c7d473a.pdf,1,2015-09-15,2015,Rajshahi,Wheat flour (packet),,আটা-(প্যাকেট),প্রতি কেজি,kg,55.0,56.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+112,49757,2015-09-15_Rajshahi_f9763c7d473a.pdf,1,2015-09-15,2015,Rajshahi,Soybean oil (5 litre can),,সয়াবিন তেল (ক্যান 5লিঃ),5 লিটার,5_litre,920.0,922.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+113,49761,2015-09-15_Rajshahi_f9763c7d473a.pdf,1,2015-09-15,2015,Rajshahi,Garlic (imported),,রসুন (আমদানীকৃত চায়না),প্রতি কেজি,kg,140.0,160.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+114,49762,2015-09-15_Rajshahi_f9763c7d473a.pdf,1,2015-09-15,2015,Rajshahi,Brinjal,,বেগুন,প্রতি কেজি,kg,60.0,80.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+115,49776,2015-09-15_Rajshahi_f9763c7d473a.pdf,1,2015-09-15,2015,Rajshahi,"Sugar (imported, loose)",,চিনি আমদানীকৃত (খোলা),প্রতি কেজি,kg,105.0,110.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+116,49785,2015-09-15_Rangpur_46ace9cbaeee.pdf,1,2015-09-15,2015,Rangpur,Mung dal (coarse),,মুগ ডাল (মোটা),প্রতি কেজি,kg,140.0,145.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+117,49789,2015-09-15_Rangpur_46ace9cbaeee.pdf,1,2015-09-15,2015,Rangpur,Palm oil (loose),,পাম তেল- (খোলা),1 লিটার (925 গ্রাম),litre,157.0,158.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+118,49795,2015-09-15_Rangpur_46ace9cbaeee.pdf,1,2015-09-15,2015,Rangpur,Garlic (imported),,রসুন (আমদানীকৃত),প্রতি কেজি,kg,180.0,190.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+119,49800,2015-09-15_Rangpur_46ace9cbaeee.pdf,1,2015-09-15,2015,Rangpur,Green papaya,,কাঁচাপেপে,প্রতি কেজি,kg,20.0,25.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+120,49814,2015-09-15_Rangpur_46ace9cbaeee.pdf,2,2015-09-15,2015,Rangpur,"Sugar (imported, loose)",,চিনি (খোলা),প্রতি কেজি,kg,108.0,110.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+121,49822,2015-09-15_Sylhet_1013a0898bd1.pdf,1,2015-09-15,2015,Sylhet,Mung dal (coarse),,মুগ ডাল-(মোটা),প্রতি কেজি,kg,120.0,130.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+122,49835,2015-09-15_Sylhet_1013a0898bd1.pdf,1,2015-09-15,2015,Sylhet,Dried chilli (local),,শুকনা মরিচ (দেশী),প্রতি কেজি,kg,250.0,320.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+123,49842,2015-09-15_Sylhet_1013a0898bd1.pdf,1,2015-09-15,2015,Sylhet,Yard-long bean,,বরবটি,প্রতি কেজি,kg,70.0,90.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+124,49843,2015-09-15_Sylhet_1013a0898bd1.pdf,1,2015-09-15,2015,Sylhet,Okra,,ঢেঁড়স,প্রতি কেজি,kg,50.0,70.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+125,49849,2015-09-15_Sylhet_1013a0898bd1.pdf,1,2015-09-15,2015,Sylhet,Kakrol,,কাকরোল,প্রতি কেজি,kg,60.0,80.0,Y,Y,Y,Y,file dated 2015-09-15 but report header shows 15.09.2025,True
+126,50021,2020-09-08_Rangpur_0a107d4550eb.pdf,1,2020-09-08,2020,Rangpur,Garlic (imported),,রসুন (আমদানীকৃত),প্রতি কেজি,kg,75.0,80.0,Y,Y,Y,Y,file dated 2020-09-08; report header shows 07/09/2020,True
+127,50024,2020-09-08_Rangpur_0a107d4550eb.pdf,1,2020-09-08,2020,Rangpur,Sweet pumpkin,,মিষ্টিকুমড়া,প্রতি কেজি,kg,30.0,35.0,Y,Y,Y,Y,file dated 2020-09-08; report header shows 07/09/2020,True
+128,50025,2020-09-08_Rangpur_0a107d4550eb.pdf,1,2020-09-08,2020,Rangpur,Pointed gourd,,পটল,প্রতি কেজি,kg,50.0,60.0,Y,Y,Y,Y,file dated 2020-09-08; report header shows 07/09/2020,True
+129,50026,2020-09-08_Rangpur_0a107d4550eb.pdf,1,2020-09-08,2020,Rangpur,Rui fish,,রুই মাছ,প্রতি কেজি,kg,220.0,300.0,Y,Y,Y,Y,file dated 2020-09-08; report header shows 07/09/2020,True
+130,50032,2020-09-08_Rangpur_0a107d4550eb.pdf,1,2020-09-08,2020,Rangpur,"Sugar (imported, loose)",,চিনি (খোলা),প্রতি কেজি,kg,58.0,60.0,Y,Y,Y,Y,file dated 2020-09-08; report header shows 07/09/2020,True
+131,50123,2020-09-17_Khulna_172e9d8acd95.pdf,1,2020-09-17,2020,Khulna,Chickpea (chhola),,ছোলা কলাই,প্রতি কেজি,kg,70.0,75.0,Y,Y,Y,Y,file dated 2020-09-17; report header shows 16/09/2020,True
+132,50128,2020-09-17_Khulna_172e9d8acd95.pdf,1,2020-09-17,2020,Khulna,Green papaya,,কাঁচাপেপে,প্রতি কেজি,kg,30.0,35.0,Y,Y,Y,Y,file dated 2020-09-17; report header shows 16/09/2020,True
+133,50130,2020-09-17_Khulna_172e9d8acd95.pdf,1,2020-09-17,2020,Khulna,Pointed gourd,,পটল,প্রতি কেজি,kg,40.0,50.0,Y,Y,Y,Y,file dated 2020-09-17; report header shows 16/09/2020,True
+134,50131,2020-09-17_Khulna_172e9d8acd95.pdf,1,2020-09-17,2020,Khulna,Rui fish,,রুই মাছ,প্রতি কেজি,kg,220.0,300.0,Y,Y,Y,Y,file dated 2020-09-17; report header shows 16/09/2020,True
+135,50132,2020-09-17_Khulna_172e9d8acd95.pdf,1,2020-09-17,2020,Khulna,Katla fish,,কাতল মাছ,প্রতি কেজি,kg,220.0,300.0,Y,Y,Y,Y,file dated 2020-09-17; report header shows 16/09/2020,True
+136,50140,2020-09-20_Dhaka_47ec6202267a.pdf,1,2020-09-20,2020,Dhaka,Garlic (local),,রসুন (দেশী),প্রতি কেজি,kg,100.0,110.0,Y,Y,Y,Y,,True
+137,50143,2020-09-20_Dhaka_47ec6202267a.pdf,1,2020-09-20,2020,Dhaka,Green papaya,,কাঁচাপেপে,প্রতি কেজি,kg,25.0,30.0,Y,Y,Y,Y,,True
+138,50145,2020-09-20_Dhaka_47ec6202267a.pdf,1,2020-09-20,2020,Dhaka,Pointed gourd,,পটল,প্রতি কেজি,kg,45.0,50.0,Y,Y,Y,Y,,True
+139,50147,2020-09-20_Dhaka_47ec6202267a.pdf,1,2020-09-20,2020,Dhaka,Katla fish,,কাতল মাছ,প্রতি কেজি,kg,220.0,300.0,Y,Y,Y,Y,,True
+140,50150,2020-09-20_Dhaka_47ec6202267a.pdf,1,2020-09-20,2020,Dhaka,Beef,,মাংস- গরু,প্রতি কেজি,kg,580.0,600.0,Y,Y,Y,Y,,True
+141,50353,2021-02-04_Sylhet_d2877c02e257.pdf,1,2021-02-04,2021,Sylhet,Garlic (local),,রসুন (দেশী),5 লিটার,5_litre,90.0,100.0,Y,N,Y,Y,PDF unit per kg (row 13 states প্রতি কেজি then ditto); dataset 5 litre carried from row 12,False
+142,50355,2021-02-04_Sylhet_d2877c02e257.pdf,1,2021-02-04,2021,Sylhet,Ginger (imported),,আদা (আমদানীকৃত),5 লিটার,5_litre,60.0,150.0,Y,N,Y,Y,PDF unit per kg (row 13 states প্রতি কেজি then ditto); dataset 5 litre carried from row 12,False
+143,50362,2021-02-04_Sylhet_d2877c02e257.pdf,1,2021-02-04,2021,Sylhet,Katla fish,,কাতল মাছ,5 লিটার,5_litre,180.0,260.0,Y,N,Y,Y,PDF unit per kg (row 13 states প্রতি কেজি then ditto); dataset 5 litre carried from row 12,False
+144,50363,2021-02-04_Sylhet_d2877c02e257.pdf,1,2021-02-04,2021,Sylhet,Hilsa fish,,ইলিশ মাছ,5 লিটার,5_litre,500.0,1000.0,Y,N,Y,Y,PDF unit per kg (row 13 states প্রতি কেজি then ditto); dataset 5 litre carried from row 12,False
+145,50364,2021-02-04_Sylhet_d2877c02e257.pdf,1,2021-02-04,2021,Sylhet,Pangas fish,,পাংগাস মাছ,5 লিটার,5_litre,120.0,140.0,Y,N,Y,Y,PDF unit per kg (row 13 states প্রতি কেজি then ditto); dataset 5 litre carried from row 12,False
+146,51078,2023-08-02_Barisal_5b45e4ac1a4d.pdf,1,2023-08-02,2023,Barisal,Soybean oil (loose),,সয়াবিন তেল-(খোলা),1 কেজি,kg,178.0,180.0,Y,Y,Y,Y,,True
+147,51085,2023-08-02_Barisal_5b45e4ac1a4d.pdf,1,2023-08-02,2023,Barisal,Green papaya,,কাঁচাপেপে,প্রতি কেজি,kg,30.0,35.0,Y,Y,Y,Y,,True
+148,51086,2023-08-02_Barisal_5b45e4ac1a4d.pdf,1,2023-08-02,2023,Barisal,Sweet pumpkin,,মিষ্টিকুমড়া,প্রতি কেজি,kg,25.0,30.0,Y,Y,Y,Y,,True
+149,51093,2023-08-02_Barisal_5b45e4ac1a4d.pdf,1,2023-08-02,2023,Barisal,Chicken (local),,মোরগ-মুরগি (দেশী),প্রতি কেজি,kg,450.0,500.0,Y,Y,Y,Y,,True
+150,51095,2023-08-02_Barisal_5b45e4ac1a4d.pdf,1,2023-08-02,2023,Barisal,"Egg (farm, white/red)",,",, ফার্ম",4টি,4_pieces,46.0,48.0,Y,Y,Y,Y,"name is literally ',, ফার্ম' in the PDF (ditto for egg)",True
+151,51505,2023-08-09_Chittagong_51e4ab2267a5.pdf,1,2023-08-09,2023,Chittagong,Chickpea (chhola),,ছোলা,প্রতি কেজি,kg,78.0,80.0,Y,Y,Y,Y,,True
+152,51509,2023-08-09_Chittagong_51e4ab2267a5.pdf,1,2023-08-09,2023,Chittagong,Onion (imported),,পিঁয়াজ (আমদানীকৃত),প্রতি কেজি,kg,46.0,48.0,Y,Y,Y,Y,,True
+153,51512,2023-08-09_Chittagong_51e4ab2267a5.pdf,1,2023-08-09,2023,Chittagong,Ginger (imported),,আদা (আমদানীকৃত),প্রতি কেজি,kg,150.0,180.0,Y,Y,Y,Y,,True
+154,51514,2023-08-09_Chittagong_51e4ab2267a5.pdf,1,2023-08-09,2023,Chittagong,Green papaya,,কাঁচাপেপে,প্রতি কেজি,kg,35.0,40.0,Y,Y,Y,Y,,True
+155,51524,2023-08-09_Chittagong_51e4ab2267a5.pdf,1,2023-08-09,2023,Chittagong,Powdered milk (packet),,গুড়ো দুধ (প্যাকেট),প্রতি কেজি,kg,780.0,790.0,Y,Y,Y,Y,,True
+156,52750,2023-08-27_Dhaka_dcac25cd1be0.pdf,3,2023-08-27,2023,Dhaka,Snake gourd,,চিচিংগা,5 লিটার,5_litre,30.0,60.0,Y,N,Y,Y,PDF unit per kg (row 32 states প্রতি কেজি then ditto); dataset 5 litre carried from row 14,False
+157,52751,2023-08-27_Dhaka_dcac25cd1be0.pdf,3,2023-08-27,2023,Dhaka,Katla fish,,কাতল মাছ,5 লিটার,5_litre,350.0,450.0,Y,N,Y,Y,PDF unit per kg (row 32 states প্রতি কেজি then ditto); dataset 5 litre carried from row 14,False
+158,52752,2023-08-27_Dhaka_dcac25cd1be0.pdf,3,2023-08-27,2023,Dhaka,Hilsa fish,,ইলিশ মাছ,5 লিটার,5_litre,500.0,1500.0,Y,N,Y,Y,PDF unit per kg (row 32 states প্রতি কেজি then ditto); dataset 5 litre carried from row 14,False
+159,52753,2023-08-27_Dhaka_dcac25cd1be0.pdf,3,2023-08-27,2023,Dhaka,Pangas fish,,পাংগাস মাছ,5 লিটার,5_litre,180.0,230.0,Y,N,Y,Y,PDF unit per kg (row 32 states প্রতি কেজি then ditto); dataset 5 litre carried from row 14,False
+160,54509,2023-09-14_Rangpur_c0190dbca1fa.pdf,1,2023-09-14,2023,Rangpur,Soybean oil (loose),,সয়াবিন তেল-(খোলা),1 লিটার (925 গ্রাম),litre,158.0,160.0,Y,Y,Y,Y,,True
+161,54515,2023-09-14_Rangpur_c0190dbca1fa.pdf,1,2023-09-14,2023,Rangpur,Garlic (imported),,রসুন (আমদানীকৃত),প্রতি কেজি,kg,230.0,240.0,Y,Y,Y,Y,,True
+162,54517,2023-09-14_Rangpur_c0190dbca1fa.pdf,1,2023-09-14,2023,Rangpur,Green papaya,,কাঁচাপেপে,প্রতি কেজি,kg,25.0,30.0,Y,Y,Y,Y,,True
+163,54521,2023-09-14_Rangpur_c0190dbca1fa.pdf,1,2023-09-14,2023,Rangpur,Rui fish,,রুই মাছ,প্রতি কেজি,kg,330.0,350.0,Y,Y,Y,Y,,True
+164,54527,2023-09-14_Rangpur_c0190dbca1fa.pdf,1,2023-09-14,2023,Rangpur,Chicken (broiler),,মুরগী (ব্রয়লার) জ্যান্ত,প্রতি কেজি,kg,180.0,185.0,Y,Y,Y,Y,,True
+165,54618,2023-09-18_Rajshahi_403cb29e913a.pdf,1,2023-09-18,2023,Rajshahi,Chickpea (chhola),,ছোলা কলাই,প্রতি কেজি,kg,80.0,85.0,Y,Y,Y,Y,,True
+166,54625,2023-09-18_Rajshahi_403cb29e913a.pdf,1,2023-09-18,2023,Rajshahi,Garlic (imported),,রসুন (আমদানীকৃত),প্রতি কেজি,kg,200.0,240.0,Y,Y,Y,Y,,True
+167,54628,2023-09-18_Rajshahi_403cb29e913a.pdf,1,2023-09-18,2023,Rajshahi,Green papaya,,কাঁচাপেপে,প্রতি কেজি,kg,25.0,30.0,Y,Y,Y,Y,,True
+168,54633,2023-09-18_Rajshahi_403cb29e913a.pdf,1,2023-09-18,2023,Rajshahi,Katla fish,,কাতল মাছ,প্রতি কেজি,kg,200.0,280.0,Y,Y,Y,Y,,True
+169,54641,2023-09-18_Rajshahi_403cb29e913a.pdf,1,2023-09-18,2023,Rajshahi,Powdered milk (packet),,গুড়ো দুধ (প্যাকেট),প্রতি কেজি,kg,800.0,900.0,Y,Y,Y,Y,,True
+170,54898,2023-09-20_Mymensingh_ce0282b332fb.pdf,1,2023-09-20,2023,Mymensingh,Soybean oil (loose),,সয়াবিন তেল-(খোলা),1 লিটার,litre,150.0,151.0,Y,Y,Y,Y,,True
+171,54910,2023-09-20_Mymensingh_ce0282b332fb.pdf,1,2023-09-20,2023,Mymensingh,Rui fish,,রুই মাছ,প্রতি কেজি,kg,280.0,450.0,Y,Y,Y,Y,,True
+172,54913,2023-09-20_Mymensingh_ce0282b332fb.pdf,1,2023-09-20,2023,Mymensingh,Pangas fish,,পাংগাস মাছ,প্রতি কেজি,kg,160.0,180.0,Y,Y,Y,Y,,True
+173,54917,2023-09-20_Mymensingh_ce0282b332fb.pdf,1,2023-09-20,2023,Mymensingh,Egg (sonali),,ডিমঃমুরগি(কক/সোঃ দেশী,4টি,4_pieces,65.0,70.0,Y,Y,Y,Y,,True
+174,54918,2023-09-20_Mymensingh_ce0282b332fb.pdf,1,2023-09-20,2023,Mymensingh,"Egg (farm, white/red)",,",, ফার্ম",4টি,4_pieces,48.0,50.0,Y,Y,Y,Y,"name is literally "",, ফার্ম"" in the PDF",True
+175,56472,2023-10-09_Khulna_70ba69011f85.pdf,1,2023-10-09,2023,Khulna,Soybean oil (5 litre can),,সয়াবিন তেল (ক্যান 5লিঃ),5 লিটার,5_litre,800.0,820.0,Y,Y,Y,Y,,True
+176,56475,2023-10-09_Khulna_70ba69011f85.pdf,1,2023-10-09,2023,Khulna,Green papaya,,কাঁচাপেপে,প্রতি কেজি,kg,30.0,35.0,Y,Y,Y,Y,,True
+177,56479,2023-10-09_Khulna_70ba69011f85.pdf,1,2023-10-09,2023,Khulna,Hilsa fish,,ইলিশ মাছ,প্রতি কেজি,kg,800.0,1200.0,Y,Y,Y,Y,,True
+178,56481,2023-10-09_Khulna_70ba69011f85.pdf,1,2023-10-09,2023,Khulna,Chicken (broiler),,মুরগী (ব্রয়লার) জ্যান্ত,প্রতি কেজি,kg,165.0,170.0,Y,Y,Y,Y,,True
+179,56482,2023-10-09_Khulna_70ba69011f85.pdf,1,2023-10-09,2023,Khulna,"Egg (farm, white/red)",,",, ফার্ম",প্রতি কেজি,kg,46.0,48.0,Y,N,Y,Y,PDF unit 4টি (egg row above states 4টি; this row is a ditto); dataset kg because the row above was skipped,False
+180,58336,2024-07-01_Mymensingh_818e880cd641.pdf,1,2024-07-01,2024,Mymensingh,Wheat flour (packet),,আটা-(প্যাকেট),প্রতি কেজি,kg,52.0,55.0,Y,Y,Y,Y,,True
+181,58337,2024-07-01_Mymensingh_818e880cd641.pdf,1,2024-07-01,2024,Mymensingh,Wheat flour (loose),,আটা-(খোলা),প্রতি কেজি,kg,40.0,42.0,Y,Y,Y,Y,,True
+182,58346,2024-07-01_Mymensingh_818e880cd641.pdf,1,2024-07-01,2024,Mymensingh,Sweet pumpkin,,মিষ্টিকুমড়া,প্রতি কেজি,kg,25.0,30.0,Y,Y,Y,Y,,True
+183,58348,2024-07-01_Mymensingh_818e880cd641.pdf,1,2024-07-01,2024,Mymensingh,Green chilli,,কাঁচামরিচ,প্রতি কেজি,kg,200.0,220.0,Y,Y,Y,Y,,True
+184,58355,2024-07-01_Mymensingh_818e880cd641.pdf,1,2024-07-01,2024,Mymensingh,Chicken (broiler),,মুরগী (ব্রয়লার) জ্যান্ত,প্রতি কেজি,kg,165.0,170.0,Y,Y,Y,Y,,True
+185,58572,2024-07-03_Dhaka_7eb7b4b9767c.pdf,1,2024-07-03,2024,Dhaka,Garlic (imported),,রসুন (চায়না),প্রতি কেজি,kg,180.0,220.0,Y,Y,Y,Y,,True
+186,58584,2024-07-03_Dhaka_7eb7b4b9767c.pdf,1,2024-07-03,2024,Dhaka,Taro (mukhi),,মুখীকচু,প্রতি কেজি,kg,80.0,100.0,Y,Y,Y,Y,,True
+187,58590,2024-07-03_Dhaka_7eb7b4b9767c.pdf,1,2024-07-03,2024,Dhaka,Sponge gourd,,ধুন্দল,প্রতি কেজি,kg,40.0,60.0,Y,Y,Y,Y,,True
+188,58607,2024-07-03_Dhaka_7eb7b4b9767c.pdf,2,2024-07-03,2024,Dhaka,Banana (sagar),,কলা (সাগর),4টি,4_pieces,25.0,40.0,Y,Y,Y,Y,,True
+189,58611,2024-07-03_Dhaka_7eb7b4b9767c.pdf,2,2024-07-03,2024,Dhaka,Rice (medium),,"মাঝারি (ব্রি ধান- 28, ব্রি ধান-29)",প্রতি কেজি,kg,54.0,58.0,Y,Y,Y,Y,,True
+190,62030,2024-08-19_Rajshahi_bcc4812592ac.pdf,1,2024-08-19,2024,Rajshahi,Soybean oil (loose),,সয়াবিন তেল-(খোলা),1 লিটার,litre,148.0,150.0,Y,Y,Y,Y,,True
+191,62036,2024-08-19_Rajshahi_bcc4812592ac.pdf,1,2024-08-19,2024,Rajshahi,Ginger (imported),,আদা (আমদানীকৃত),প্রতি কেজি,kg,220.0,260.0,Y,Y,Y,Y,,True
+192,62046,2024-08-19_Rajshahi_bcc4812592ac.pdf,1,2024-08-19,2024,Rajshahi,Beef,,মাংস- গরু,প্রতি কেজি,kg,740.0,750.0,Y,Y,Y,Y,,True
+193,62047,2024-08-19_Rajshahi_bcc4812592ac.pdf,1,2024-08-19,2024,Rajshahi,Chicken (local),,মোরগ-মুরগী (দেশী) জ্যান্ত,প্রতি কেজি,kg,460.0,470.0,Y,Y,Y,Y,,True
+194,62048,2024-08-19_Rajshahi_bcc4812592ac.pdf,1,2024-08-19,2024,Rajshahi,Chicken (broiler),,মুরগী (ব্রয়লার) জ্যান্ত,প্রতি কেজি,kg,160.0,170.0,Y,Y,Y,Y,,True
+195,62141,2024-08-20_Mymensingh_022a71e2427c.pdf,1,2024-08-20,2024,Mymensingh,Garlic (imported),,রসুন (আমদানীকৃত),প্রতি কেজি,kg,185.0,190.0,Y,Y,Y,Y,,True
+196,62148,2024-08-20_Mymensingh_022a71e2427c.pdf,1,2024-08-20,2024,Mymensingh,Katla fish,,কাতল মাছ,প্রতি কেজি,kg,280.0,450.0,Y,Y,Y,Y,,True
+197,62149,2024-08-20_Mymensingh_022a71e2427c.pdf,1,2024-08-20,2024,Mymensingh,Hilsa fish,,ইলিশ মাছ,প্রতি কেজি,kg,1200.0,1500.0,Y,Y,Y,Y,,True
+198,62152,2024-08-20_Mymensingh_022a71e2427c.pdf,1,2024-08-20,2024,Mymensingh,Chicken (local),,মোরগ-মুরগি (দেশী) জ্যান্ত,প্রতি কেজি,kg,450.0,470.0,Y,Y,Y,Y,,True
+199,62153,2024-08-20_Mymensingh_022a71e2427c.pdf,1,2024-08-20,2024,Mymensingh,Chicken (broiler),,মুরগী (ব্রয়লার) জ্যান্ত,প্রতি কেজি,kg,165.0,170.0,Y,Y,Y,Y,,True
+200,62328,2024-08-21_Khulna_631de7f16087.pdf,1,2024-08-21,2024,Khulna,Wheat flour (packet),,আটা-(প্যাকেট),প্রতি কেজি,kg,50.0,52.0,Y,Y,Y,Y,,True
+201,62329,2024-08-21_Khulna_631de7f16087.pdf,1,2024-08-21,2024,Khulna,Wheat flour (loose),,আটা-(খোলা),প্রতি কেজি,kg,40.0,42.0,Y,Y,Y,Y,,True
+202,62334,2024-08-21_Khulna_631de7f16087.pdf,1,2024-08-21,2024,Khulna,Brinjal,,বেগুন,প্রতি কেজি,kg,90.0,110.0,Y,Y,Y,Y,,True
+203,62339,2024-08-21_Khulna_631de7f16087.pdf,1,2024-08-21,2024,Khulna,Hilsa fish,,ইলিশ মাছ,প্রতি কেজি,kg,900.0,1300.0,Y,Y,Y,Y,,True
+204,62342,2024-08-21_Khulna_631de7f16087.pdf,1,2024-08-21,2024,Khulna,"Egg (farm, white/red)",,",, ফার্ম",প্রতি কেজি,kg,42.0,50.0,Y,N,Y,Y,PDF unit 4টি (egg row above states 4টি; this row is a ditto); dataset kg because the row above was skipped,False
+205,65105,2024-09-05_Khulna_615777fe4d40.pdf,1,2024-09-05,2024,Khulna,Wheat flour (packet),,আটা-(প্যাকেট),প্রতি কেজি,kg,50.0,52.0,Y,Y,Y,Y,,True
+206,65108,2024-09-05_Khulna_615777fe4d40.pdf,1,2024-09-05,2024,Khulna,Soybean oil (loose),,সয়াবিন তেল-(খোলা),1 লিটার,litre,158.0,160.0,Y,Y,Y,Y,,True
+207,65110,2024-09-05_Khulna_615777fe4d40.pdf,1,2024-09-05,2024,Khulna,Potato (Holland/red),,আলু-হল্যান্ড,প্রতি কেজি,kg,58.0,60.0,Y,Y,Y,Y,,True
+208,65111,2024-09-05_Khulna_615777fe4d40.pdf,1,2024-09-05,2024,Khulna,Brinjal,,বেগুন,প্রতি কেজি,kg,60.0,80.0,Y,Y,Y,Y,,True
+209,65120,2024-09-05_Khulna_615777fe4d40.pdf,1,2024-09-05,2024,Khulna,Salt (packet),,লবণ (প্যাকেটজাত),প্রতি কেজি,kg,38.0,44.0,Y,Y,Y,Y,,True
+210,66214,2024-09-11_Barisal_1133a2285bca.pdf,1,2024-09-11,2024,Barisal,Mash kalai,,মাশ কলাই,প্রতি কেজি,kg,115.0,120.0,Y,Y,Y,Y,,True
+211,66227,2024-09-11_Barisal_1133a2285bca.pdf,1,2024-09-11,2024,Barisal,Dried chilli (local),,শুকনা মরিচ (দেশী),প্রতি কেজি,kg,280.0,350.0,Y,Y,Y,Y,,True
+212,66228,2024-09-11_Barisal_1133a2285bca.pdf,1,2024-09-11,2024,Barisal,Green chilli,,কাঁচা মরিচ,প্রতি কেজি,kg,130.0,140.0,Y,Y,Y,Y,,True
+213,66230,2024-09-11_Barisal_1133a2285bca.pdf,1,2024-09-11,2024,Barisal,Green papaya,,কাঁচা পেঁপে,প্রতি কেজি,kg,25.0,30.0,Y,Y,Y,Y,,True
+214,66267,2024-09-11_Barisal_1133a2285bca.pdf,2,2024-09-11,2024,Barisal,Rice (coarse/hybrid),,"বোরো হাইব্রিড SL4H, হিরা-2",প্রতি কেজি,kg,27.0,28.0,Y,Y,Y,Y,PDF glyph is Bangla digit four (looks like 8); dataset SL4H matches the text; commercial variety is SL8H,True
+215,68086,2024-09-22_Rajshahi_fbe6571b55af.pdf,1,2024-09-22,2024,Rajshahi,Wheat flour (loose),,আটা-(খোলা),প্রতি কেজি,kg,40.0,45.0,Y,Y,Y,Y,,True
+216,68087,2024-09-22_Rajshahi_fbe6571b55af.pdf,1,2024-09-22,2024,Rajshahi,Chickpea (chhola),,ছোলা কলাই,প্রতি কেজি,kg,120.0,125.0,Y,Y,Y,Y,,True
+217,68102,2024-09-22_Rajshahi_fbe6571b55af.pdf,1,2024-09-22,2024,Rajshahi,Hilsa fish,,ইলিশ মাছ (500-1000 গ্রাম),প্রতি কেজি,kg,1200.0,1800.0,Y,Y,Y,Y,,True
+218,68104,2024-09-22_Rajshahi_fbe6571b55af.pdf,1,2024-09-22,2024,Rajshahi,Beef,,মাংস- গরু,প্রতি কেজি,kg,700.0,740.0,Y,Y,Y,Y,,True
+219,68110,2024-09-22_Rajshahi_fbe6571b55af.pdf,1,2024-09-22,2024,Rajshahi,Powdered milk (packet),,গুড়ো দুধ (প্যাকেট),প্রতি কেজি,kg,780.0,880.0,Y,Y,Y,Y,,True
+220,68878,2024-09-25_Sylhet_2d65478fbb98.pdf,1,2024-09-25,2024,Sylhet,Chickpea (chhola),,ছোলা কলাই,প্রতি কেজি,kg,115.0,120.0,Y,Y,Y,Y,,True
+221,68891,2024-09-25_Sylhet_2d65478fbb98.pdf,1,2024-09-25,2024,Sylhet,Green papaya,,কাঁচাপেঁপে,প্রতি কেজি,kg,25.0,30.0,Y,Y,Y,Y,,True
+222,68905,2024-09-25_Sylhet_2d65478fbb98.pdf,1,2024-09-25,2024,Sylhet,Ridge gourd,,ঝিংগা,প্রতি কেজি,kg,50.0,60.0,Y,Y,Y,Y,,True
+223,68914,2024-09-25_Sylhet_2d65478fbb98.pdf,2,2024-09-25,2024,Sylhet,Chicken (cock/sonali),,মোরগ-মুরগি (কক/সোনালী) জ্যান্ত,প্রতি কেজি,kg,262.0,262.0,Y,Y,N,N,PDF 290-300; dataset 262 from fair-price column,False
+224,68920,2024-09-25_Sylhet_2d65478fbb98.pdf,2,2024-09-25,2024,Sylhet,Banana (sagar),,কলা (সাগর),4টি,4_pieces,29.78,29.78,Y,Y,N,N,PDF 25-40; dataset 29.78 from fair-price column,False
+225,70634,2024-10-06_Rangpur_85ce7c8c70e1.pdf,1,2024-10-06,2024,Rangpur,Chickpea (chhola),,ছোলা কলাই,প্রতি কেজি,kg,110.0,115.0,Y,Y,Y,Y,,True
+226,70639,2024-10-06_Rangpur_85ce7c8c70e1.pdf,1,2024-10-06,2024,Rangpur,Garlic (local),,রসুন (দেশী) ছোট,প্রতি কেজি,kg,150.0,160.0,Y,Y,Y,Y,,True
+227,70640,2024-10-06_Rangpur_85ce7c8c70e1.pdf,1,2024-10-06,2024,Rangpur,Garlic (imported),,রসুন (আমদানীকৃত),প্রতি কেজি,kg,210.0,220.0,Y,Y,Y,Y,,True
+228,70648,2024-10-06_Rangpur_85ce7c8c70e1.pdf,1,2024-10-06,2024,Rangpur,Katla fish,,কাতল মাছ,প্রতি কেজি,kg,290.0,310.0,Y,Y,Y,Y,,True
+229,70649,2024-10-06_Rangpur_85ce7c8c70e1.pdf,1,2024-10-06,2024,Rangpur,Egg (sonali),,ডিমঃমুরগি(কক/সোঃ দেশী,4টি,4_pieces,60.0,65.0,Y,Y,Y,Y,,True
+230,73580,2024-10-29_Chittagong_2076b648d6a8.pdf,1,2024-10-29,2024,Chittagong,Soybean oil (5 litre can),,সয়াবিন তেল (ক্যান 5লিঃ),5 লিটার,5_litre,805.0,810.0,Y,Y,Y,Y,,True
+231,73586,2024-10-29_Chittagong_2076b648d6a8.pdf,1,2024-10-29,2024,Chittagong,Brinjal,,বেগুন,প্রতি কেজি,kg,90.0,120.0,Y,Y,Y,Y,,True
+232,73593,2024-10-29_Chittagong_2076b648d6a8.pdf,1,2024-10-29,2024,Chittagong,Chicken (local),,মোরগ-মুরগি (দেশী) জ্যান্ত,প্রতি কেজি,kg,550.0,580.0,Y,Y,Y,Y,,True
+233,73595,2024-10-29_Chittagong_2076b648d6a8.pdf,1,2024-10-29,2024,Chittagong,"Sugar (imported, loose)",,চিনি (খোলা),প্রতি কেজি,kg,128.0,135.0,Y,Y,Y,Y,,True
+234,73597,2024-10-29_Chittagong_2076b648d6a8.pdf,1,2024-10-29,2024,Chittagong,Powdered milk (packet),,গুড়ো দুধ (প্যাকেট),প্রতি কেজি,kg,770.0,820.0,Y,Y,Y,Y,,True
+235,73793,2024-10-30_Barisal_b6d358a449fb.pdf,1,2024-10-30,2024,Barisal,Onion (local),,পেঁয়াজ (দেশী),প্রতি কেজি,kg,115.0,120.0,Y,Y,Y,Y,,True
+236,73794,2024-10-30_Barisal_b6d358a449fb.pdf,1,2024-10-30,2024,Barisal,Onion (imported),,পেঁয়াজ (আমদানীকৃত),প্রতি কেজি,kg,100.0,110.0,Y,Y,Y,Y,,True
+237,73823,2024-10-30_Barisal_b6d358a449fb.pdf,2,2024-10-30,2024,Barisal,Chicken (cock/sonali),,মোরগ-মুরগি (কক/সোনালী) জ্যান্ত,প্রতি কেজি,kg,290.0,300.0,Y,Y,Y,Y,,True
+238,73827,2024-10-30_Barisal_b6d358a449fb.pdf,2,2024-10-30,2024,Barisal,Salt (packet),,লবণ (প্যাকেটজাত-মোটা ও চিকন),প্রতি কেজি,kg,38.0,40.0,Y,Y,Y,Y,,True
+239,73837,2024-10-30_Barisal_b6d358a449fb.pdf,2,2024-10-30,2024,Barisal,Rice (coarse/hybrid),,"বোরো হাইব্রিড SL4H, হিরা-2",প্রতি কেজি,kg,27.0,28.0,Y,Y,Y,Y,PDF glyph is Bangla digit four (looks like 8); dataset SL4H matches the text,True
+240,75061,2024-11-06_Rajshahi_5b784d8c16fa.pdf,1,2024-11-06,2024,Rajshahi,Chickpea (chhola),,ছোলা কলাই,প্রতি কেজি,kg,125.0,130.0,Y,Y,Y,Y,,True
+241,75073,2024-11-06_Rajshahi_5b784d8c16fa.pdf,1,2024-11-06,2024,Rajshahi,Green chilli,,কাঁচামরিচ,প্রতি কেজি,kg,100.0,120.0,Y,Y,Y,Y,,True
+242,75076,2024-11-06_Rajshahi_5b784d8c16fa.pdf,1,2024-11-06,2024,Rajshahi,Hilsa fish,,ইলিশ মাছ (500-1000 গ্রাম),প্রতি কেজি,kg,1200.0,1800.0,Y,Y,Y,Y,,True
+243,75081,2024-11-06_Rajshahi_5b784d8c16fa.pdf,1,2024-11-06,2024,Rajshahi,"Egg (farm, white/red)",,",, ফার্ম",4টি,4_pieces,46.0,50.0,Y,Y,Y,Y,egg row; unit 4টি carried from egg row above,True
+244,75082,2024-11-06_Rajshahi_5b784d8c16fa.pdf,1,2024-11-06,2024,Rajshahi,"Sugar (imported, loose)",,চিনি (খোলা),প্রতি কেজি,kg,130.0,140.0,Y,Y,Y,Y,,True
+245,77644,2024-11-20_Barisal_e0f396c47b01.pdf,1,2024-11-20,2024,Barisal,Mustard oil (loose),,সরিষার তেল (খোলা),1 লিটার,litre,230.0,240.0,Y,Y,Y,Y,,True
+246,77648,2024-11-20_Barisal_e0f396c47b01.pdf,1,2024-11-20,2024,Barisal,Garlic (local),,রসুন (দেশী),প্রতি কেজি,kg,220.0,225.0,Y,Y,Y,Y,,True
+247,77652,2024-11-20_Barisal_e0f396c47b01.pdf,1,2024-11-20,2024,Barisal,Green papaya,,কাঁচা পেঁপে,প্রতি কেজি,kg,35.0,40.0,Y,Y,Y,Y,,True
+248,77669,2024-11-20_Barisal_e0f396c47b01.pdf,2,2024-11-20,2024,Barisal,Pangas fish,,পাংগাস মাছ (চাষের),প্রতি কেজি,kg,170.0,200.0,Y,Y,Y,Y,,True
+249,77672,2024-11-20_Barisal_e0f396c47b01.pdf,2,2024-11-20,2024,Barisal,Goat meat,,ছাগলের মাংস,প্রতি কেজি,kg,1000.0,1050.0,Y,Y,Y,Y,,True
+250,77767,2024-11-20_Mymensingh_f0d28805a2a4.pdf,1,2024-11-20,2024,Mymensingh,Wheat flour (packet),,আটা (প্যাকেট-সাদা),প্রতি কেজি,kg,44.0,46.0,Y,Y,Y,Y,,True
+251,77796,2024-11-20_Mymensingh_f0d28805a2a4.pdf,1,2024-11-20,2024,Mymensingh,Bottle gourd,,লাউ,প্রতিটি,piece,45.0,50.0,Y,Y,Y,Y,,True
+252,77801,2024-11-20_Mymensingh_f0d28805a2a4.pdf,2,2024-11-20,2024,Mymensingh,Okra,,ঢেঁড়স,প্রতি কেজি,kg,50.0,55.0,Y,Y,Y,Y,,True
+253,77810,2024-11-20_Mymensingh_f0d28805a2a4.pdf,2,2024-11-20,2024,Mymensingh,Beef,,মাংস- গরু,প্রতি কেজি,kg,700.0,750.0,Y,Y,Y,Y,,True
+254,77829,2024-11-20_Mymensingh_f0d28805a2a4.pdf,2,2024-11-20,2024,Mymensingh,Rice (medium),,"মাঝারি (ব্রি ধান- 28, ব্রি ধান-29)",প্রতি কেজি,kg,40.0,41.0,Y,Y,Y,Y,,True
+255,80212,2024-12-02_Sylhet_fd9c0b4a2a79.pdf,1,2024-12-02,2024,Sylhet,Wheat flour (packet),,আটা (প্যাকেট-সাদা),প্রতি কেজি,kg,50.0,60.0,Y,Y,Y,Y,,True
+256,80227,2024-12-02_Sylhet_fd9c0b4a2a79.pdf,1,2024-12-02,2024,Sylhet,Garlic (local),,রসুন (দেশী),প্রতি কেজি,kg,220.0,240.0,Y,Y,Y,Y,,True
+257,80241,2024-12-02_Sylhet_fd9c0b4a2a79.pdf,1,2024-12-02,2024,Sylhet,Cucumber,,শসা ( হাইব্রিড),প্রতি কেজি,kg,40.0,50.0,Y,Y,Y,Y,,True
+258,80245,2024-12-02_Sylhet_fd9c0b4a2a79.pdf,1,2024-12-02,2024,Sylhet,Rui fish,,রুই মাছ (চাষের),প্রতি কেজি,kg,320.0,320.0,Y,Y,N,Y,PDF 250-320; dataset min=max=320,False
+259,80253,2024-12-02_Sylhet_fd9c0b4a2a79.pdf,2,2024-12-02,2024,Sylhet,Chicken (cock/sonali),,মোরগ-মুরগি (কক/সোনালী) জ্যান্ত,প্রতি কেজি,kg,262.0,262.0,Y,Y,N,N,PDF 310-320; dataset 262 from fair-price column,False
+260,81215,2024-12-08_Chittagong_0991a4b93d8d.pdf,1,2024-12-08,2024,Chittagong,Palm oil (loose),,পাম তেল- (খোলা),1 লিটার,litre,163.0,165.0,Y,Y,Y,Y,,True
+261,81216,2024-12-08_Chittagong_0991a4b93d8d.pdf,1,2024-12-08,2024,Chittagong,Soybean oil (5 litre can),,সয়াবিন তেল (ক্যান 5লিঃ),5 লিটার,5_litre,805.0,810.0,Y,Y,Y,Y,,True
+262,81224,2024-12-08_Chittagong_0991a4b93d8d.pdf,1,2024-12-08,2024,Chittagong,Pointed gourd,,পটল,প্রতি কেজি,kg,60.0,70.0,Y,Y,Y,Y,,True
+263,81226,2024-12-08_Chittagong_0991a4b93d8d.pdf,1,2024-12-08,2024,Chittagong,Hilsa fish,,ইলিশ মাছ (ছোট),প্রতি কেজি,kg,500.0,750.0,Y,Y,Y,Y,,True
+264,81232,2024-12-08_Chittagong_0991a4b93d8d.pdf,1,2024-12-08,2024,Chittagong,Powdered milk (packet),,গুড়ো দুধ (প্যাকেট),প্রতি কেজি,kg,770.0,850.0,Y,Y,Y,Y,,True
+265,81858,2024-12-10_Khulna_33232ee5dff1.pdf,1,2024-12-10,2024,Khulna,Chickpea (chhola),,ছোলা কলাই,প্রতি কেজি,kg,130.0,135.0,Y,Y,Y,Y,,True
+266,81859,2024-12-10_Khulna_33232ee5dff1.pdf,1,2024-12-10,2024,Khulna,Soybean oil (loose),,সয়াবিন তেল-(খোলা),1 লিটার,litre,174.0,176.0,Y,Y,Y,Y,,True
+267,81861,2024-12-10_Khulna_33232ee5dff1.pdf,1,2024-12-10,2024,Khulna,Potato (Holland/red),,আলু-হল্যান্ড,প্রতি কেজি,kg,78.0,80.0,Y,Y,Y,Y,,True
+268,81868,2024-12-10_Khulna_33232ee5dff1.pdf,1,2024-12-10,2024,Khulna,Beef,,মাংস- গরু,প্রতি কেজি,kg,650.0,680.0,Y,Y,Y,Y,,True
+269,81871,2024-12-10_Khulna_33232ee5dff1.pdf,1,2024-12-10,2024,Khulna,Powdered milk (packet),,গুড়ো দুধ (প্যাকেট),প্রতি কেজি,kg,800.0,850.0,Y,Y,Y,Y,,True
+270,84455,2024-12-26_Dhaka_405719beb73f.pdf,1,2024-12-26,2024,Dhaka,Mung dal (fine),,মুগ ডাল (সরু- উন্নত),প্রতি কেজি,kg,160.0,170.0,Y,Y,Y,Y,,True
+271,84472,2024-12-26_Dhaka_405719beb73f.pdf,1,2024-12-26,2024,Dhaka,Brinjal,,বেগুন,প্রতি কেজি,kg,30.0,60.0,Y,Y,Y,Y,,True
+272,84480,2024-12-26_Dhaka_405719beb73f.pdf,1,2024-12-26,2024,Dhaka,Bitter gourd,,ঊচ্ছে/করল্লা,প্রতি কেজি,kg,50.0,100.0,Y,Y,Y,Y,,True
+273,84500,2024-12-26_Dhaka_405719beb73f.pdf,2,2024-12-26,2024,Dhaka,Rice (coarse/hybrid),,আমন উফশী মোটা (বিআর-11),প্রতি কেজি,kg,47.06,47.06,Y,Y,N,N,PDF 52-58; dataset 47.06 from fair-price column,False
+274,84505,2024-12-26_Dhaka_405719beb73f.pdf,2,2024-12-26,2024,Dhaka,Rice (coarse/hybrid),,"বোরো হাইব্রিড SL4H, হিরা-2",প্রতি কেজি,kg,45.94,45.94,Y,Y,N,N,PDF 52-55; dataset 45.94 from fair-price column; SL4H matches the text (Bangla digit four),False
+275,85376,2024-12-31_Rangpur_a6265f877d78.pdf,1,2024-12-31,2024,Rangpur,Wheat flour (loose),,আটা-(খোলা),প্রতি কেজি,kg,40.0,42.0,Y,Y,Y,Y,,True
+276,85380,2024-12-31_Rangpur_a6265f877d78.pdf,1,2024-12-31,2024,Rangpur,Soybean oil (5 litre can),,সয়াবিন তেল (ক্যান 5লিঃ),5 লিটার,5_litre,850.0,860.0,Y,Y,Y,Y,,True
+277,85381,2024-12-31_Rangpur_a6265f877d78.pdf,1,2024-12-31,2024,Rangpur,Onion (local),,পেঁয়াজ (দেশী),প্রতি কেজি,kg,50.0,55.0,Y,Y,Y,Y,,True
+278,85384,2024-12-31_Rangpur_a6265f877d78.pdf,1,2024-12-31,2024,Rangpur,Garlic (imported),,রসুন (আমদানীকৃত),প্রতি কেজি,kg,200.0,220.0,Y,Y,Y,Y,,True
+279,85387,2024-12-31_Rangpur_a6265f877d78.pdf,1,2024-12-31,2024,Rangpur,Green papaya,,কাঁচাপেপে,প্রতি কেজি,kg,30.0,35.0,Y,Y,Y,Y,,True
+280,87698,2025-01-12_Rangpur_64dddf28e967.pdf,1,2025-01-12,2025,Rangpur,Onion (imported),,পেঁয়াজ (আমদানীকৃত),প্রতি কেজি,kg,50.0,55.0,Y,Y,Y,Y,,True
+281,87700,2025-01-12_Rangpur_64dddf28e967.pdf,1,2025-01-12,2025,Rangpur,Garlic (imported),,রসুন (আমদানীকৃত),প্রতি কেজি,kg,200.0,220.0,Y,Y,Y,Y,,True
+282,87701,2025-01-12_Rangpur_64dddf28e967.pdf,1,2025-01-12,2025,Rangpur,Potato (Holland/red),,আলু হল্যান্ড (লাল ),প্রতি কেজি,kg,30.0,35.0,Y,Y,Y,Y,,True
+283,87702,2025-01-12_Rangpur_64dddf28e967.pdf,1,2025-01-12,2025,Rangpur,Brinjal,,বেগুন সাধারণ/উন্নত,প্রতি কেজি,kg,15.0,40.0,Y,Y,Y,Y,,True
+284,87711,2025-01-12_Rangpur_64dddf28e967.pdf,1,2025-01-12,2025,Rangpur,"Sugar (imported, loose)",,চিনি (খোলা),প্রতি কেজি,kg,125.0,127.0,Y,Y,Y,Y,,True
+285,87974,2025-01-13_Rajshahi_6b0a528e382b.pdf,1,2025-01-13,2025,Rajshahi,Wheat flour (packet),,আটা-(প্যাকেট),প্রতি কেজি,kg,50.0,55.0,Y,Y,Y,Y,,True
+286,87988,2025-01-13_Rajshahi_6b0a528e382b.pdf,1,2025-01-13,2025,Rajshahi,Rui fish,,রুই মাছ,প্রতি কেজি,kg,250.0,340.0,Y,Y,Y,Y,,True
+287,87994,2025-01-13_Rajshahi_6b0a528e382b.pdf,1,2025-01-13,2025,Rajshahi,Chicken (broiler),,মুরগী (ব্রয়লার) জ্যান্ত,প্রতি কেজি,kg,185.0,190.0,Y,Y,Y,Y,,True
+288,87998,2025-01-13_Rajshahi_6b0a528e382b.pdf,1,2025-01-13,2025,Rajshahi,Salt (packet),,লবণ (প্যাকেটজাত),প্রতি কেজি,kg,38.0,40.0,Y,Y,Y,Y,,True
+289,87999,2025-01-13_Rajshahi_6b0a528e382b.pdf,1,2025-01-13,2025,Rajshahi,Powdered milk (packet),,গুড়ো দুধ (প্যাকেট),প্রতি কেজি,kg,780.0,880.0,Y,Y,Y,Y,,True
+290,90971,2025-02-02_Barisal_1d05fae959b4.pdf,1,2025-02-02,2025,Barisal,Mung dal (fine),,মুগ ডাল (সরু- উন্নত),প্রতি কেজি,kg,160.0,165.0,Y,Y,Y,Y,,True
+291,90972,2025-02-02_Barisal_1d05fae959b4.pdf,1,2025-02-02,2025,Barisal,Mung dal (coarse),,মুগ ডাল-(মোটা),প্রতি কেজি,kg,145.0,150.0,Y,Y,Y,Y,,True
+292,90981,2025-02-02_Barisal_1d05fae959b4.pdf,1,2025-02-02,2025,Barisal,"Sugar (imported, loose)",,চিনি-আমদানীকৃত (সাদা-খোলা),প্রতি কেজি,kg,120.0,122.0,Y,Y,Y,Y,,True
+293,90992,2025-02-02_Barisal_1d05fae959b4.pdf,1,2025-02-02,2025,Barisal,Taro stolon,,কচুরলতি,প্রতি কেজি,kg,60.0,70.0,Y,Y,Y,Y,,True
+294,91006,2025-02-02_Barisal_1d05fae959b4.pdf,2,2025-02-02,2025,Barisal,Chicken (local),,মোরগ-মুরগি (দেশী) জ্যান্ত,প্রতি কেজি,kg,480.0,520.0,Y,Y,Y,Y,,True
+295,91504,2025-02-04_Barisal_89d6246527e7.pdf,1,2025-02-04,2025,Barisal,Wheat flour (loose),,আটা (খোলা),প্রতি কেজি,kg,40.0,42.0,Y,Y,Y,Y,,True
+296,91530,2025-02-04_Barisal_89d6246527e7.pdf,1,2025-02-04,2025,Barisal,Bottle gourd,,লাউ,প্রতিটি,piece,30.0,40.0,Y,Y,Y,Y,,True
+297,91541,2025-02-04_Barisal_89d6246527e7.pdf,2,2025-02-04,2025,Barisal,Goat meat,,ছাগলের মাংস,প্রতি কেজি,kg,1000.0,1050.0,Y,Y,Y,Y,,True
+298,91544,2025-02-04_Barisal_89d6246527e7.pdf,2,2025-02-04,2025,Barisal,Chicken (broiler),,মোরগ-মুরগি (ব্রয়লার) জ্যান্ত,প্রতি কেজি,kg,185.0,190.0,Y,Y,Y,Y,,True
+299,91559,2025-02-04_Barisal_89d6246527e7.pdf,2,2025-02-04,2025,Barisal,Rice (medium),,"মাঝারি (ব্রি ধান- 28, ব্রি ধান-29)",প্রতি কেজি,kg,,,Y,Y,Y,Y,,True
+300,94058,2025-02-16_Khulna_11c89fb6aafd.pdf,1,2025-02-16,2025,Khulna,Soybean oil (loose),,সয়াবিন তেল-(খোলা),1 লিটার,litre,178.0,180.0,Y,Y,Y,Y,,True
+301,94064,2025-02-16_Khulna_11c89fb6aafd.pdf,1,2025-02-16,2025,Khulna,Rui fish,,রুই মাছ,প্রতি কেজি,kg,260.0,350.0,Y,Y,Y,Y,,True
+302,94066,2025-02-16_Khulna_11c89fb6aafd.pdf,1,2025-02-16,2025,Khulna,Beef,,মাংস- গরু,প্রতি কেজি,kg,740.0,750.0,Y,Y,Y,Y,,True
+303,94067,2025-02-16_Khulna_11c89fb6aafd.pdf,1,2025-02-16,2025,Khulna,"Egg (farm, white/red)",,",, ফার্ম",প্রতি কেজি,kg,38.0,44.0,Y,N,Y,Y,PDF unit 4টি (egg row above states 4টি; this row is a ditto); dataset kg because the row above was skipped,False
+304,94069,2025-02-16_Khulna_11c89fb6aafd.pdf,1,2025-02-16,2025,Khulna,Powdered milk (packet),,গুড়ো দুধ (প্যাকেট),প্রতি কেজি,kg,800.0,850.0,Y,Y,Y,Y,,True
+305,95587,2025-02-24_Rajshahi_fc440d548148.pdf,1,2025-02-24,2025,Rajshahi,Soybean oil (loose),,সয়াবিন তেল-(খোলা),1 লিটার,litre,178.0,180.0,Y,Y,Y,Y,,True
+306,95602,2025-02-24_Rajshahi_fc440d548148.pdf,1,2025-02-24,2025,Rajshahi,Pangas fish,,পাংগাস মাছ,প্রতি কেজি,kg,170.0,200.0,Y,Y,Y,Y,,True
+307,95604,2025-02-24_Rajshahi_fc440d548148.pdf,1,2025-02-24,2025,Rajshahi,Chicken (local),,মোরগ-মুরগী (দেশী) জ্যান্ত,প্রতি কেজি,kg,520.0,530.0,Y,Y,Y,Y,,True
+308,95607,2025-02-24_Rajshahi_fc440d548148.pdf,1,2025-02-24,2025,Rajshahi,"Egg (farm, white/red)",,",, ফার্ম",4টি,4_pieces,38.0,42.0,Y,Y,Y,Y,egg row; unit from ditto chain,True
+309,95608,2025-02-24_Rajshahi_fc440d548148.pdf,1,2025-02-24,2025,Rajshahi,"Sugar (imported, loose)",,চিনি (খোলা),প্রতি কেজি,kg,120.0,135.0,Y,Y,Y,Y,,True
+310,95945,2025-03-02_Sylhet_1ef9110f1d2a.pdf,1,2025-03-02,2025,Sylhet,Chickpea (chhola),,ছোলা কলাই,প্রতি কেজি,kg,100.0,120.0,Y,Y,Y,Y,,True
+311,95946,2025-03-02_Sylhet_1ef9110f1d2a.pdf,1,2025-03-02,2025,Sylhet,Soybean oil (loose),,তেল-সয়াবিন (খোলা),1 লিটার,litre,180.0,185.0,Y,Y,Y,Y,,True
+312,95947,2025-03-02_Sylhet_1ef9110f1d2a.pdf,1,2025-03-02,2025,Sylhet,Palm oil (loose),,তেল-পাম (খোলা),1 লিটার,litre,160.0,180.0,Y,Y,Y,Y,,True
+313,95950,2025-03-02_Sylhet_1ef9110f1d2a.pdf,1,2025-03-02,2025,Sylhet,Onion (local),,পেঁয়াজ (দেশী),প্রতি কেজি,kg,40.0,50.0,Y,Y,Y,Y,,True
+314,95960,2025-03-02_Sylhet_1ef9110f1d2a.pdf,1,2025-03-02,2025,Sylhet,Radish,,মুলা,প্রতি কেজি,kg,15.0,20.0,Y,Y,Y,Y,,True
+315,97836,2025-03-11_Dhaka_b401db129101.pdf,1,2025-03-11,2025,Dhaka,Soybean oil (5 litre can),,তেল-সয়াবিন (ক্যান 5লিঃ বিভিন্ন,5 লিটার,5_litre,,,Y,Y,N,N,PDF 850-852; dataset blank (fair-price column read; it shows '-'),False
+316,97847,2025-03-11_Dhaka_b401db129101.pdf,1,2025-03-11,2025,Dhaka,Snake gourd,,চিচিংগা,প্রতি কেজি,kg,,,Y,Y,N,N,PDF 35-70; dataset blank (fair-price column read),False
+317,97863,2025-03-11_Dhaka_b401db129101.pdf,2,2025-03-11,2025,Dhaka,Chicken (local),,মোরগ-মুরগি (দেশী) জ্যান্ত,প্রতি কেজি,kg,,,Y,Y,N,N,PDF 600-650; dataset blank (fair-price column read),False
+318,97873,2025-03-11_Dhaka_b401db129101.pdf,2,2025-03-11,2025,Dhaka,Rice (fine),,"আমন স্থানীয় Non Aromatic (বিরোই, পাজাম, বালাম ইত্যাদি)",প্রতি কেজি,kg,68.81,68.81,Y,Y,N,N,PDF 60-85; dataset 68.81 from fair-price column,False
+319,97875,2025-03-11_Dhaka_b401db129101.pdf,2,2025-03-11,2025,Dhaka,Rice (fine),,"চিকন (ব্রি ধান-50, ব্রি ধান-63, ব্রি ধান-81 ইত্যাদি)",প্রতি কেজি,kg,63.97,63.97,Y,Y,N,N,PDF shows no current price ('-'); dataset 63.97 from fair-price column,False
+320,98053,2025-03-13_Khulna_615002538c3f.pdf,1,2025-03-13,2025,Khulna,Green papaya,,কাঁচাপেপে,প্রতি কেজি,kg,35.0,40.0,Y,Y,Y,Y,,True
+321,98054,2025-03-13_Khulna_615002538c3f.pdf,1,2025-03-13,2025,Khulna,Sweet pumpkin,,মিষ্টিকুমড়া,প্রতি কেজি,kg,28.0,30.0,Y,Y,Y,Y,,True
+322,98057,2025-03-13_Khulna_615002538c3f.pdf,1,2025-03-13,2025,Khulna,Hilsa fish,,ইলিশ মাছ,প্রতি কেজি,kg,900.0,1400.0,Y,Y,Y,Y,,True
+323,98058,2025-03-13_Khulna_615002538c3f.pdf,1,2025-03-13,2025,Khulna,Beef,,মাংস- গরু,প্রতি কেজি,kg,700.0,750.0,Y,Y,Y,Y,,True
+324,98060,2025-03-13_Khulna_615002538c3f.pdf,1,2025-03-13,2025,Khulna,Salt (packet),,লবণ (প্যাকেটজাত),প্রতি কেজি,kg,30.0,40.0,Y,Y,Y,Y,,True
+325,99304,2025-03-24_Barisal_3801c4b02073.pdf,1,2025-03-24,2025,Barisal,Mung dal (fine),,মুগ ডাল (সরু- উন্নত),প্রতি কেজি,kg,160.0,165.0,Y,Y,Y,Y,,True
+326,99305,2025-03-24_Barisal_3801c4b02073.pdf,1,2025-03-24,2025,Barisal,Mung dal (coarse),,মুগ ডাল-(মোটা),প্রতি কেজি,kg,145.0,150.0,Y,Y,Y,Y,,True
+327,99330,2025-03-24_Barisal_3801c4b02073.pdf,1,2025-03-24,2025,Barisal,Pointed gourd,,পটল,প্রতি কেজি,kg,50.0,60.0,Y,Y,Y,Y,,True
+328,99335,2025-03-24_Barisal_3801c4b02073.pdf,2,2025-03-24,2025,Barisal,Tilapia fish,,তেলাপিয়া মাছ (চাষের),প্রতি কেজি,kg,170.0,200.0,Y,Y,Y,Y,,True
+329,99355,2025-03-24_Barisal_3801c4b02073.pdf,2,2025-03-24,2025,Barisal,Rice (medium),,"মাঝারি (ব্রি ধান- 28, ব্রি ধান-29)",প্রতি কেজি,kg,,,Y,Y,Y,Y,,True
+330,104760,2025-05-06_Rangpur_c5993b2856ad.pdf,1,2025-05-06,2025,Rangpur,Soybean oil (5 litre can),,সয়াবিন তেল (ক্যান 5লিঃ),5 লিটার,5_litre,910.0,920.0,Y,Y,Y,Y,,True
+331,104761,2025-05-06_Rangpur_c5993b2856ad.pdf,1,2025-05-06,2025,Rangpur,Onion (local),,পেঁয়াজ (দেশী),প্রতি কেজি,kg,55.0,60.0,Y,Y,Y,Y,,True
+332,104766,2025-05-06_Rangpur_c5993b2856ad.pdf,1,2025-05-06,2025,Rangpur,Potato (Holland/red),,আলু হল্যান্ড (লাল ),প্রতি কেজি,kg,13.0,15.0,Y,Y,Y,Y,,True
+333,104772,2025-05-06_Rangpur_c5993b2856ad.pdf,1,2025-05-06,2025,Rangpur,Rui fish,,রুই মাছ,প্রতি কেজি,kg,330.0,360.0,Y,Y,Y,Y,,True
+334,104773,2025-05-06_Rangpur_c5993b2856ad.pdf,1,2025-05-06,2025,Rangpur,Katla fish,,কাতল মাছ,প্রতি কেজি,kg,310.0,330.0,Y,Y,Y,Y,,True
+335,106819,2025-05-17_Sylhet_64896ca3d5c6.pdf,1,2025-05-17,2025,Sylhet,Soybean oil (loose),,তেল-সয়াবিন (খোলা),1 লিটার,litre,180.0,185.0,Y,Y,Y,Y,,True
+336,106842,2025-05-17_Sylhet_64896ca3d5c6.pdf,1,2025-05-17,2025,Sylhet,Kakrol,,কাকরোল,প্রতি কেজি,kg,60.0,70.0,Y,Y,Y,Y,,True
+337,106848,2025-05-17_Sylhet_64896ca3d5c6.pdf,2,2025-05-17,2025,Sylhet,Tilapia fish,,তেলাপিয়া মাছ (চাষের),প্রতি কেজি,kg,,,Y,Y,N,N,PDF 150-180; dataset blank (fair-price column read on page 2),False
+338,106849,2025-05-17_Sylhet_64896ca3d5c6.pdf,2,2025-05-17,2025,Sylhet,Beef,,মাংস- গরু,প্রতি কেজি,kg,668.62,668.62,Y,Y,N,N,PDF 750-760; dataset 668.62 from fair-price column,False
+339,106858,2025-05-17_Sylhet_64896ca3d5c6.pdf,2,2025-05-17,2025,Sylhet,Rice (coarse/hybrid),,"আমন হাইব্রিড ধানিগোল্ড, হিরা",প্রতি কেজি,kg,45.97,45.97,Y,Y,N,N,PDF 45-50; dataset 45.97 from fair-price column,False
+340,107330,2025-05-19_Mymensingh_0f71b7ebcf77.pdf,1,2025-05-19,2025,Mymensingh,Soybean oil (5 litre can),,তেল-সয়াবিন (ক্যান 5লিঃ বিভিন্ন ব্র্যান্ড),5 লিটার,5_litre,850.0,852.0,Y,Y,Y,Y,,True
+341,107339,2025-05-19_Mymensingh_0f71b7ebcf77.pdf,1,2025-05-19,2025,Mymensingh,Green chilli,,কাঁচা মরিচ,প্রতি কেজি,kg,40.0,50.0,Y,Y,Y,Y,,True
+342,107357,2025-05-19_Mymensingh_0f71b7ebcf77.pdf,2,2025-05-19,2025,Mymensingh,Katla fish,,কাতল মাছ (চাষের),প্রতি কেজি,kg,300.0,450.0,Y,Y,Y,Y,,True
+343,107362,2025-05-19_Mymensingh_0f71b7ebcf77.pdf,2,2025-05-19,2025,Mymensingh,Goat meat,,ছাগলের মাংস,প্রতি কেজি,kg,1050.0,1200.0,Y,Y,Y,Y,,True
+344,107377,2025-05-19_Mymensingh_0f71b7ebcf77.pdf,2,2025-05-19,2025,Mymensingh,Rice (coarse/hybrid),,"বোরো উফশী মোটা (বিআর-14, ব্রি ধান-58 ইত্যাদি)",প্রতি কেজি,kg,22.5,23.5,Y,Y,Y,Y,,True
+345,111653,2025-06-17_Chittagong_fa20cc080d0e.pdf,1,2025-06-17,2025,Chittagong,Wheat flour (loose),,আটা-(খোলা),প্রতি কেজি,kg,38.0,40.0,Y,Y,Y,Y,,True
+346,111656,2025-06-17_Chittagong_fa20cc080d0e.pdf,1,2025-06-17,2025,Chittagong,Palm oil (loose),,পাম তেল- (খোলা),1 লিটার,litre,150.0,155.0,Y,Y,Y,Y,,True
+347,111666,2025-06-17_Chittagong_fa20cc080d0e.pdf,1,2025-06-17,2025,Chittagong,Green chilli,,কাঁচামরিচ,প্রতি কেজি,kg,70.0,80.0,Y,Y,Y,Y,,True
+348,111668,2025-06-17_Chittagong_fa20cc080d0e.pdf,1,2025-06-17,2025,Chittagong,Pangas fish,,পাংগাস মাছ,প্রতি কেজি,kg,160.0,260.0,Y,Y,Y,Y,,True
+349,111670,2025-06-17_Chittagong_fa20cc080d0e.pdf,1,2025-06-17,2025,Chittagong,"Egg (farm, white/red)",,",, ফার্ম",4টি,4_pieces,40.0,42.0,Y,Y,Y,Y,egg row; unit from ditto chain,True
+350,113654,2025-06-24_Mymensingh_e4488bdb51f0.pdf,1,2025-06-24,2025,Mymensingh,Onion (imported),,পেঁয়াজ (আমদানীকৃত),প্রতি কেজি,kg,,,Y,Y,Y,Y,,True
+351,113660,2025-06-24_Mymensingh_e4488bdb51f0.pdf,1,2025-06-24,2025,Mymensingh,Brinjal,,বেগুন,প্রতি কেজি,kg,60.0,80.0,Y,Y,Y,Y,,True
+352,113671,2025-06-24_Mymensingh_e4488bdb51f0.pdf,2,2025-06-24,2025,Mymensingh,Pointed gourd,,পটল,প্রতি কেজি,kg,30.0,40.0,Y,Y,Y,Y,,True
+353,113675,2025-06-24_Mymensingh_e4488bdb51f0.pdf,2,2025-06-24,2025,Mymensingh,Ridge gourd,,ঝিংগা,প্রতি কেজি,kg,40.0,50.0,Y,Y,Y,Y,,True
+354,113685,2025-06-24_Mymensingh_e4488bdb51f0.pdf,2,2025-06-24,2025,Mymensingh,Chicken (broiler),,মোরগ-মুরগি (ব্রয়লার) জ্যান্ত,প্রতি কেজি,kg,140.0,150.0,Y,Y,Y,Y,,True
+355,115542,2025-07-01_Rajshahi_93f8845f5da9.pdf,1,2025-07-01,2025,Rajshahi,Wheat flour (loose),,আটা-(খোলা),প্রতি কেজি,kg,42.0,45.0,Y,Y,Y,Y,,True
+356,115544,2025-07-01_Rajshahi_93f8845f5da9.pdf,1,2025-07-01,2025,Rajshahi,Soybean oil (loose),,সয়াবিন তেল-(খোলা),1 লিটার,litre,164.0,166.0,Y,Y,Y,Y,,True
+357,115547,2025-07-01_Rajshahi_93f8845f5da9.pdf,1,2025-07-01,2025,Rajshahi,Soybean oil (5 litre can),,সয়াবিন তেল (ক্যান 5লিঃ),5 লিটার,5_litre,920.0,922.0,Y,Y,Y,Y,,True
+358,115553,2025-07-01_Rajshahi_93f8845f5da9.pdf,1,2025-07-01,2025,Rajshahi,Brinjal,,বেগুন,প্রতি কেজি,kg,40.0,60.0,Y,Y,Y,Y,,True
+359,115554,2025-07-01_Rajshahi_93f8845f5da9.pdf,1,2025-07-01,2025,Rajshahi,Green papaya,,কাঁচাপেঁপে,প্রতি কেজি,kg,30.0,40.0,Y,Y,Y,Y,,True
+360,115675,2025-07-02_Chittagong_6c5feaea33d4.pdf,1,2025-07-02,2025,Chittagong,Green chilli,,কাঁচা মরিচ,প্রতি কেজি,kg,50.0,60.0,Y,Y,Y,Y,,True
+361,115678,2025-07-02_Chittagong_6c5feaea33d4.pdf,1,2025-07-02,2025,Chittagong,Sweet pumpkin,,মিষ্টি কুমড়া,প্রতি কেজি,kg,25.0,30.0,Y,Y,Y,Y,,True
+362,115685,2025-07-02_Chittagong_6c5feaea33d4.pdf,1,2025-07-02,2025,Chittagong,Ridge gourd,,ঝিংগা,প্রতি কেজি,kg,60.0,70.0,Y,Y,Y,Y,,True
+363,115706,2025-07-02_Chittagong_6c5feaea33d4.pdf,2,2025-07-02,2025,Chittagong,Powdered milk (packet),,গুঁড়ো দুধ (পলিপ্যাক),প্রতি কেজি,kg,630.0,900.0,Y,Y,Y,Y,,True
+364,115707,2025-07-02_Chittagong_6c5feaea33d4.pdf,2,2025-07-02,2025,Chittagong,Apple,,আপেল,প্রতি কেজি,kg,230.0,320.0,Y,Y,Y,Y,,True
+365,116197,2025-07-03_Khulna_9c3a854cf0c2.pdf,1,2025-07-03,2025,Khulna,Pointed gourd,,পটল,প্রতি কেজি,kg,25.0,30.0,Y,Y,Y,Y,,True
+366,116198,2025-07-03_Khulna_9c3a854cf0c2.pdf,1,2025-07-03,2025,Khulna,Okra,,ঢেঁড়স,প্রতি কেজি,kg,70.0,80.0,Y,Y,Y,Y,,True
+367,116219,2025-07-03_Khulna_9c3a854cf0c2.pdf,2,2025-07-03,2025,Khulna,Salt (packet),,লবণ (প্যাকেটজাত-মোটা ও চিকন),প্রতি কেজি,kg,,,Y,Y,N,N,PDF 30-40; dataset blank (fair-price column read on page 2),False
+368,116225,2025-07-03_Khulna_9c3a854cf0c2.pdf,2,2025-07-03,2025,Khulna,Rice (coarse/hybrid),,চাল আমন উফশী মোটা (বিআর11),প্রতি কেজি,kg,47.06,47.06,Y,Y,N,N,PDF 54-56; dataset 47.06 from fair-price column,False
+369,116228,2025-07-03_Khulna_9c3a854cf0c2.pdf,2,2025-07-03,2025,Khulna,Rice (fine),,জিরাশাইল,প্রতি কেজি,kg,,,Y,Y,N,N,PDF 74-78; dataset blank (fair-price column shows 0.00),False
+370,116460,2025-07-07_Chittagong_e4e11f64ba90.pdf,1,2025-07-07,2025,Chittagong,Lentil (fine),,মসুর ডাল (উন্নত),প্রতি কেজি,kg,130.0,135.0,Y,Y,Y,Y,,True
+371,116467,2025-07-07_Chittagong_e4e11f64ba90.pdf,1,2025-07-07,2025,Chittagong,Palm oil (loose),,তেল-পাম (খোলা),1 লিটার,litre,150.0,155.0,Y,Y,Y,Y,,True
+372,116475,2025-07-07_Chittagong_e4e11f64ba90.pdf,1,2025-07-07,2025,Chittagong,Dried chilli (local),,শুকনা মরিচ (দেশী),প্রতি কেজি,kg,250.0,300.0,Y,Y,Y,Y,,True
+373,116484,2025-07-07_Chittagong_e4e11f64ba90.pdf,1,2025-07-07,2025,Chittagong,Ash gourd,,চালকুমড়া,প্রতিটি,piece,35.0,45.0,Y,Y,Y,Y,,True
+374,116488,2025-07-07_Chittagong_e4e11f64ba90.pdf,1,2025-07-07,2025,Chittagong,Bitter gourd,,ঊচ্ছে/করল্লা,প্রতি কেজি,kg,60.0,70.0,Y,Y,Y,Y,,True
+375,117492,2025-07-09_Sylhet_a117d1f5befa.pdf,1,2025-07-09,2025,Sylhet,Lentil (coarse),,মসুর ডাল (মোটা),প্রতি কেজি,kg,105.0,110.0,Y,Y,Y,Y,,True
+376,117504,2025-07-09_Sylhet_a117d1f5befa.pdf,1,2025-07-09,2025,Sylhet,Garlic (imported),,রসুন (চায়না),প্রতি কেজি,kg,150.0,170.0,Y,Y,Y,Y,,True
+377,117507,2025-07-09_Sylhet_a117d1f5befa.pdf,1,2025-07-09,2025,Sylhet,Green chilli,,কাঁচা মরিচ,প্রতি কেজি,kg,180.0,220.0,Y,Y,Y,Y,,True
+378,117527,2025-07-09_Sylhet_a117d1f5befa.pdf,2,2025-07-09,2025,Sylhet,Beef,,মাংস- গরু,প্রতি কেজি,kg,668.62,668.62,Y,Y,N,N,PDF 750-760; dataset 668.62 from fair-price column (page 2),False
+379,117530,2025-07-09_Sylhet_a117d1f5befa.pdf,2,2025-07-09,2025,Sylhet,Chicken (cock/sonali),,মোরগ-মুরগি (কক/সোনালী) জ্যান্ত,প্রতি কেজি,kg,269.64,269.64,Y,Y,N,N,PDF 280-300; dataset 269.64 from fair-price column (page 2),False
+380,120154,2025-07-21_Rajshahi_2dc5e1fbb502.pdf,1,2025-07-21,2025,Rajshahi,Chickpea (chhola),,ছোলা কলাই,প্রতি কেজি,kg,100.0,110.0,Y,Y,Y,Y,,True
+381,120166,2025-07-21_Rajshahi_2dc5e1fbb502.pdf,1,2025-07-21,2025,Rajshahi,Okra,,ঢেঁড়স,প্রতি কেজি,kg,30.0,40.0,Y,Y,Y,Y,,True
+382,120169,2025-07-21_Rajshahi_2dc5e1fbb502.pdf,1,2025-07-21,2025,Rajshahi,Katla fish,,কাতল মাছ,প্রতি কেজি,kg,170.0,320.0,Y,Y,Y,Y,,True
+383,120171,2025-07-21_Rajshahi_2dc5e1fbb502.pdf,1,2025-07-21,2025,Rajshahi,Pangas fish,,পাংগাস মাছ,প্রতি কেজি,kg,170.0,200.0,Y,Y,Y,Y,,True
+384,120177,2025-07-21_Rajshahi_2dc5e1fbb502.pdf,1,2025-07-21,2025,Rajshahi,"Sugar (imported, loose)",,চিনি আমদানীকৃত (খোলা),প্রতি কেজি,kg,110.0,115.0,Y,Y,Y,Y,,True
+385,122181,2025-07-29_Barisal_8bd11aa4015d.pdf,1,2025-07-29,2025,Barisal,Soybean oil (loose),,তেল-সয়াবিন (খোলা),1 লিটার,litre,161.0,162.0,Y,Y,Y,Y,,True
+386,122182,2025-07-29_Barisal_8bd11aa4015d.pdf,1,2025-07-29,2025,Barisal,Palm oil (loose),,তেল-পাম (খোলা),1 লিটার,litre,150.0,152.0,Y,Y,Y,Y,,True
+387,122190,2025-07-29_Barisal_8bd11aa4015d.pdf,1,2025-07-29,2025,Barisal,Green papaya,,কাঁচা পেঁপে,প্রতি কেজি,kg,25.0,40.0,Y,Y,Y,Y,,True
+388,122198,2025-07-29_Barisal_8bd11aa4015d.pdf,1,2025-07-29,2025,Barisal,Cucumber,,শসা ( হাইব্রিড),প্রতি কেজি,kg,50.0,60.0,Y,Y,Y,Y,,True
+389,122208,2025-07-29_Barisal_8bd11aa4015d.pdf,2,2025-07-29,2025,Barisal,Beef,,মাংস- গরু,প্রতি কেজি,kg,750.0,760.0,Y,Y,Y,Y,,True
+390,124133,2025-08-06_Chittagong_56b58d545e52.pdf,1,2025-08-06,2025,Chittagong,Garlic (imported),,রসুন (চায়না),প্রতি কেজি,kg,130.0,140.0,Y,Y,Y,Y,,True
+391,124146,2025-08-06_Chittagong_56b58d545e52.pdf,1,2025-08-06,2025,Chittagong,Ridge gourd,,ঝিংগা,প্রতি কেজি,kg,60.0,70.0,Y,Y,Y,Y,,True
+392,124151,2025-08-06_Chittagong_56b58d545e52.pdf,1,2025-08-06,2025,Chittagong,Pointed gourd,,পটল,প্রতি কেজি,kg,55.0,60.0,Y,Y,Y,Y,,True
+393,124169,2025-08-06_Chittagong_56b58d545e52.pdf,2,2025-08-06,2025,Chittagong,Rice (coarse/hybrid),,আমন উফশী মোটা (বিআর-11),প্রতি কেজি,kg,,,Y,Y,Y,Y,,True
+394,124172,2025-08-06_Chittagong_56b58d545e52.pdf,2,2025-08-06,2025,Chittagong,Rice (fine),,সবারুল া(মজি ইরতাশ্যাািইদল)),প্রতি কেজি,kg,70.0,85.0,N,Y,Y,Y,PDF name সরু (জিরাশাইল); dataset name garbled (overlapping hidden text); unit carried from row above,False
+395,125121,2025-08-10_Rangpur_d153224ef40e.pdf,1,2025-08-10,2025,Rangpur,Chickpea (chhola),,ছোলা কলাই,প্রতি কেজি,kg,100.0,105.0,Y,Y,Y,Y,,True
+396,125128,2025-08-10_Rangpur_d153224ef40e.pdf,1,2025-08-10,2025,Rangpur,Garlic (local),,রসুন দেশী,প্রতি কেজি,kg,100.0,120.0,Y,Y,Y,Y,,True
+397,125133,2025-08-10_Rangpur_d153224ef40e.pdf,1,2025-08-10,2025,Rangpur,Brinjal,,বেগুন সাধারণ/উন্নত,প্রতি কেজি,kg,35.0,50.0,Y,Y,Y,Y,,True
+398,125134,2025-08-10_Rangpur_d153224ef40e.pdf,1,2025-08-10,2025,Rangpur,Green papaya,,কাঁচাপেপে,প্রতি কেজি,kg,25.0,30.0,Y,Y,Y,Y,,True
+399,125136,2025-08-10_Rangpur_d153224ef40e.pdf,1,2025-08-10,2025,Rangpur,Pointed gourd,,পটল,প্রতি কেজি,kg,30.0,35.0,Y,Y,Y,Y,,True
+400,125889,2025-08-12_Rajshahi_637122a6cbfd.pdf,1,2025-08-12,2025,Rajshahi,Soybean oil (5 litre can),,সয়াবিন তেল (ক্যান 5লিঃ),5 লিটার,5_litre,920.0,922.0,Y,Y,Y,Y,,True
+401,125891,2025-08-12_Rajshahi_637122a6cbfd.pdf,1,2025-08-12,2025,Rajshahi,Onion (imported),,পিঁয়াজ (আমদানীকৃত),প্রতি কেজি,kg,,,Y,Y,Y,Y,,True
+402,125904,2025-08-12_Rajshahi_637122a6cbfd.pdf,1,2025-08-12,2025,Rajshahi,Goat meat,,ছাগলের মাংস,প্রতি কেজি,kg,1100.0,1150.0,Y,Y,Y,Y,,True
+403,125908,2025-08-12_Rajshahi_637122a6cbfd.pdf,1,2025-08-12,2025,Rajshahi,"Sugar (imported, loose)",,চিনি আমদানীকৃত (খোলা),প্রতি কেজি,kg,105.0,110.0,Y,Y,Y,Y,,True
+404,125909,2025-08-12_Rajshahi_637122a6cbfd.pdf,1,2025-08-12,2025,Rajshahi,Salt (packet),,লবণ (প্যাকেটজাত),প্রতি কেজি,kg,38.0,40.0,Y,Y,Y,Y,,True
+405,128995,2025-08-25_Sylhet_696472ac5897.pdf,1,2025-08-25,2025,Sylhet,Khesari dal,,খেসারী ডাল,প্রতি কেজি,kg,100.0,120.0,Y,Y,Y,Y,,True
+406,128997,2025-08-25_Sylhet_696472ac5897.pdf,1,2025-08-25,2025,Sylhet,Chickpea (chhola),,ছোলা,প্রতি কেজি,kg,100.0,110.0,Y,Y,Y,Y,,True
+407,129000,2025-08-25_Sylhet_696472ac5897.pdf,1,2025-08-25,2025,Sylhet,Onion (local),,পেঁয়াজ (দেশী),প্রতি কেজি,kg,70.0,75.0,Y,Y,Y,Y,,True
+408,129003,2025-08-25_Sylhet_696472ac5897.pdf,1,2025-08-25,2025,Sylhet,Garlic (imported),,রসুন (চায়না),প্রতি কেজি,kg,120.0,150.0,Y,Y,Y,Y,,True
+409,129030,2025-08-25_Sylhet_696472ac5897.pdf,2,2025-08-25,2025,Sylhet,Chicken (broiler),,মোরগ-মুরগি (ব্রয়লার) জ্যান্ত,প্রতি কেজি,kg,179.79,179.79,Y,Y,N,N,PDF 160-170; dataset 179.79 from fair-price column (page 2),False
+410,129699,2025-08-27_Rangpur_cc59e3de132e.pdf,1,2025-08-27,2025,Rangpur,Wheat flour (packet),,আটা-(প্যাকেট),প্রতি কেজি,kg,48.0,50.0,Y,Y,Y,Y,,True
+411,129706,2025-08-27_Rangpur_cc59e3de132e.pdf,1,2025-08-27,2025,Rangpur,Onion (imported),,পেঁয়াজ (আমদানীকৃত),প্রতি কেজি,kg,65.0,66.0,Y,Y,Y,Y,,True
+412,129707,2025-08-27_Rangpur_cc59e3de132e.pdf,1,2025-08-27,2025,Rangpur,Garlic (local),,রসুন (দেশী) ছোট,প্রতি কেজি,kg,100.0,110.0,Y,Y,Y,Y,,True
+413,129711,2025-08-27_Rangpur_cc59e3de132e.pdf,1,2025-08-27,2025,Rangpur,Ginger (imported),,আদা (আমদানীকৃত),প্রতি কেজি,kg,160.0,170.0,Y,Y,Y,Y,,True
+414,129722,2025-08-27_Rangpur_cc59e3de132e.pdf,1,2025-08-27,2025,Rangpur,Beef,,মাংস- গরু,1 কেজি,kg,700.0,720.0,Y,Y,Y,Y,"unit ditto of row 30 ""1 কেজি"" (both standardise to kg)",True
+415,135251,2025-09-18_Dhaka_ea68f7e2b996.pdf,1,2025-09-18,2025,Dhaka,Onion (imported),,পেঁয়াজ (আমদানীকৃত),প্রতি কেজি,kg,,,Y,Y,Y,Y,,True
+416,135268,2025-09-18_Dhaka_ea68f7e2b996.pdf,1,2025-09-18,2025,Dhaka,Taro stolon,,কচুরলতি,প্রতি কেজি,kg,50.0,80.0,Y,Y,Y,Y,,True
+417,135275,2025-09-18_Dhaka_ea68f7e2b996.pdf,2,2025-09-18,2025,Dhaka,Beef,,মাংস- গরু,প্রতি কেজি,kg,700.0,750.0,Y,Y,Y,Y,,True
+418,135281,2025-09-18_Dhaka_ea68f7e2b996.pdf,2,2025-09-18,2025,Dhaka,"Egg (farm, white/red)",,ডিমঃ ফার্ম সাদা/লাল,প্রতিটি,piece,10.83,11.67,Y,Y,Y,Y,,True
+419,135283,2025-09-18_Dhaka_ea68f7e2b996.pdf,2,2025-09-18,2025,Dhaka,Powdered milk (packet),,গুঁড়ো দুধ (পলিপ্যাক),প্রতি কেজি,kg,650.0,920.0,Y,Y,Y,Y,,True
+420,136319,2025-09-23_Barisal_7700826f5460.pdf,1,2025-09-23,2025,Barisal,Palm oil (loose),,তেল-পাম (খোলা),1 লিটার,litre,153.0,157.0,Y,Y,Y,Y,,True
+421,136325,2025-09-23_Barisal_7700826f5460.pdf,1,2025-09-23,2025,Barisal,Ginger (imported),,আদা ( আমদানীকৃত),প্রতি কেজি,kg,140.0,180.0,Y,Y,Y,Y,,True
+422,136340,2025-09-23_Barisal_7700826f5460.pdf,1,2025-09-23,2025,Barisal,Pointed gourd,,পটল,প্রতি কেজি,kg,55.0,70.0,Y,Y,Y,Y,,True
+423,136346,2025-09-23_Barisal_7700826f5460.pdf,2,2025-09-23,2025,Barisal,Beef,,মাংস- গরু,প্রতি কেজি,kg,750.0,760.0,Y,Y,Y,Y,,True
+424,136352,2025-09-23_Barisal_7700826f5460.pdf,2,2025-09-23,2025,Barisal,Salt (packet),,লবণ (প্যাকেটজাত-মোটা ও চিকন),প্রতি কেজি,kg,28.0,40.0,Y,Y,Y,Y,,True
+425,136670,2025-09-23_Sylhet_9c6a95c959ed.pdf,1,2025-09-23,2025,Sylhet,Wheat flour (packet),,আটা (প্যাকেট-সাদা),প্রতি কেজি,kg,55.0,65.0,Y,Y,Y,Y,,True
+426,136674,2025-09-23_Sylhet_9c6a95c959ed.pdf,1,2025-09-23,2025,Sylhet,Mung dal (fine),,মুগ ডাল (সরু- উন্নত),প্রতি কেজি,kg,150.0,170.0,Y,Y,Y,Y,,True
+427,136682,2025-09-23_Sylhet_9c6a95c959ed.pdf,1,2025-09-23,2025,Sylhet,Soybean oil (5 litre can),,তেল-সয়াবিন (ক্যান 5লিঃ বিভিন্ন,5 লিটার,5_litre,900.0,920.0,Y,Y,Y,Y,,True
+428,136683,2025-09-23_Sylhet_9c6a95c959ed.pdf,1,2025-09-23,2025,Sylhet,Mustard oil (loose),,সরিষার তেল (খোলা),1 লিটার,litre,200.0,230.0,Y,Y,Y,Y,,True
+429,136715,2025-09-23_Sylhet_9c6a95c959ed.pdf,2,2025-09-23,2025,Sylhet,Chicken (broiler),,মোরগ-মুরগি (ব্রয়লার) জ্যান্ত,প্রতি কেজি,kg,179.79,179.79,Y,Y,N,N,PDF 160-170; dataset 179.79 from fair-price column (page 2),False
+430,144056,2025-10-22_Dhaka_1be50abcc57b.pdf,1,2025-10-22,2025,Dhaka,Brinjal,,বেগুন,প্রতি কেজি,kg,60.0,120.0,Y,Y,Y,Y,,True
+431,144058,2025-10-22_Dhaka_1be50abcc57b.pdf,1,2025-10-22,2025,Dhaka,Sweet pumpkin,,মিষ্টি কুমড়া,প্রতি কেজি,kg,40.0,50.0,Y,Y,Y,Y,,True
+432,144068,2025-10-22_Dhaka_1be50abcc57b.pdf,1,2025-10-22,2025,Dhaka,Ash gourd,,চালকুমড়া (জালি),প্রতিটি,piece,40.0,60.0,Y,Y,Y,Y,,True
+433,144077,2025-10-22_Dhaka_1be50abcc57b.pdf,2,2025-10-22,2025,Dhaka,Chicken (local),,মোরগ-মুরগি (দেশী) জ্যান্ত,প্রতি কেজি,kg,550.0,580.0,Y,Y,Y,Y,,True
+434,144081,2025-10-22_Dhaka_1be50abcc57b.pdf,2,2025-10-22,2025,Dhaka,"Egg (farm, white/red)",,ডিমঃ ফার্ম সাদা/লাল,প্রতিটি,piece,10.83,11.67,Y,Y,Y,Y,,True
+435,145256,2025-10-27_Dhaka_05e56e5bf85d.pdf,1,2025-10-27,2025,Dhaka,Mash kalai,,মাশ কলাই,প্রতি কেজি,kg,170.0,180.0,Y,Y,Y,Y,,True
+436,145276,2025-10-27_Dhaka_05e56e5bf85d.pdf,1,2025-10-27,2025,Dhaka,Bottle gourd,,লাউ,প্রতিটি,piece,30.0,70.0,Y,Y,Y,Y,,True
+437,145278,2025-10-27_Dhaka_05e56e5bf85d.pdf,1,2025-10-27,2025,Dhaka,Okra,,ঢেঁড়স,প্রতি কেজি,kg,50.0,70.0,Y,Y,Y,Y,,True
+438,145281,2025-10-27_Dhaka_05e56e5bf85d.pdf,1,2025-10-27,2025,Dhaka,Taro stolon,,কচুরলতি,প্রতি কেজি,kg,50.0,80.0,Y,Y,Y,Y,,True
+439,145293,2025-10-27_Dhaka_05e56e5bf85d.pdf,2,2025-10-27,2025,Dhaka,"Egg (farm, white/red)",,ডিমঃ ফার্ম সাদা/লাল,প্রতিটি,piece,10.83,11.67,Y,Y,Y,Y,,True
+440,146133,2025-10-29_Khulna_01963be844ee.pdf,1,2025-10-29,2025,Khulna,Lentil (coarse),,মসুর ডাল (মোটা),প্রতি কেজি,kg,105.5,105.5,Y,Y,N,N,PDF 105-110; dataset 105.5 from fair-price column,False
+441,146137,2025-10-29_Khulna_01963be844ee.pdf,1,2025-10-29,2025,Khulna,Mash kalai,,মাশ কলাই,প্রতি কেজি,kg,,,Y,Y,Y,Y,PDF 0.00-0.00 (no price); dataset blank - correct,True
+442,146143,2025-10-29_Khulna_01963be844ee.pdf,1,2025-10-29,2025,Khulna,Mustard oil (loose),,সরিষার তেল (খোলা),1 লিটার,litre,,,Y,Y,N,N,PDF 200-220; dataset blank (fair-price column shows '-'),False
+443,146144,2025-10-29_Khulna_01963be844ee.pdf,1,2025-10-29,2025,Khulna,Onion (local),,পেঁয়াজ (দেশী),প্রতি কেজি,kg,55.6,55.6,Y,Y,N,N,PDF 70-75; dataset 55.6 from fair-price column,False
+444,146155,2025-10-29_Khulna_01963be844ee.pdf,1,2025-10-29,2025,Khulna,Pointed gourd,,পটল,প্রতি কেজি,kg,,,Y,Y,N,N,PDF 50-60; dataset blank (fair-price column shows '-'),False
+445,146291,2025-10-29_Rangpur_ca0460bfd2af.pdf,1,2025-10-29,2025,Rangpur,Mung dal (coarse),,মুগ ডাল (মোটা),প্রতি কেজি,kg,140.0,150.0,Y,Y,Y,Y,,True
+446,146305,2025-10-29_Rangpur_ca0460bfd2af.pdf,1,2025-10-29,2025,Rangpur,Brinjal,,বেগুন সাধারণ/উন্নত,প্রতি কেজি,kg,40.0,65.0,Y,Y,Y,Y,,True
+447,146315,2025-10-29_Rangpur_ca0460bfd2af.pdf,1,2025-10-29,2025,Rangpur,Chicken (local),,মোরগ-মুরগি (দেশী) জ্যান্ত,1 কেজি,kg,480.0,490.0,Y,Y,Y,Y,,True
+448,146316,2025-10-29_Rangpur_ca0460bfd2af.pdf,1,2025-10-29,2025,Rangpur,Chicken (cock/sonali),,মোরগ-মুরগি(কক/র্সোনালী)জ্যান্ত,1 কেজি,kg,270.0,280.0,Y,Y,Y,Y,,True
+449,146318,2025-10-29_Rangpur_ca0460bfd2af.pdf,2,2025-10-29,2025,Rangpur,Egg (sonali),,ডিমঃমুরগি(কক/সোঃ দেশী,4টি,4_pieces,55.0,60.0,Y,Y,Y,Y,,True
+450,147380,2025-11-03_Mymensingh_a252ee48de83.pdf,1,2025-11-03,2025,Mymensingh,Mung dal (coarse),,মুগ ডাল-(মোটা),প্রতি কেজি,kg,130.0,140.0,Y,Y,Y,Y,,True
+451,147382,2025-11-03_Mymensingh_a252ee48de83.pdf,1,2025-11-03,2025,Mymensingh,Mash kalai,,মাশ কলাই,প্রতি কেজি,kg,160.0,170.0,Y,Y,Y,Y,,True
+452,147406,2025-11-03_Mymensingh_a252ee48de83.pdf,1,2025-11-03,2025,Mymensingh,Cucumber,,শসা ( হাইব্রিড),প্রতি কেজি,kg,30.0,40.0,Y,Y,Y,Y,,True
+453,147419,2025-11-03_Mymensingh_a252ee48de83.pdf,2,2025-11-03,2025,Mymensingh,Goat meat,,ছাগলের মাংস,প্রতি কেজি,kg,1050.0,1150.0,Y,Y,Y,Y,,True
+454,147422,2025-11-03_Mymensingh_a252ee48de83.pdf,2,2025-11-03,2025,Mymensingh,Chicken (broiler),,মোরগ-মুরগি (ব্রয়লার) জ্যান্ত,প্রতি কেজি,kg,155.0,160.0,Y,Y,Y,Y,,True
+455,148443,2025-11-06_Chittagong_bbfdc7b955a1.pdf,1,2025-11-06,2025,Chittagong,Wheat flour (loose),,আটা (খোলা),প্রতি কেজি,kg,45.0,46.0,Y,Y,Y,Y,,True
+456,148459,2025-11-06_Chittagong_bbfdc7b955a1.pdf,1,2025-11-06,2025,Chittagong,Ginger (imported),,আদা (আমদানীকৃত),প্রতি কেজি,kg,150.0,160.0,Y,Y,Y,Y,,True
+457,148461,2025-11-06_Chittagong_bbfdc7b955a1.pdf,1,2025-11-06,2025,Chittagong,Green chilli,,কাঁচা মরিচ,প্রতি কেজি,kg,80.0,90.0,Y,Y,Y,Y,,True
+458,148480,2025-11-06_Chittagong_bbfdc7b955a1.pdf,2,2025-11-06,2025,Chittagong,Pangas fish,,পাংগাস মাছ (চাষের),প্রতি কেজি,kg,160.0,180.0,Y,Y,Y,Y,,True
+459,148485,2025-11-06_Chittagong_bbfdc7b955a1.pdf,2,2025-11-06,2025,Chittagong,Chicken (cock/sonali),,মোরগ-মুরগি (সোনালী/কক),প্রতি কেজি,kg,300.0,320.0,Y,Y,Y,Y,,True
+460,151079,2025-11-17_Mymensingh_d7f8a001a6d9.pdf,1,2025-11-17,2025,Mymensingh,Mung dal (coarse),,মুগ ডাল-(মোটা),প্রতি কেজি,kg,130.0,140.0,Y,Y,Y,Y,,True
+461,151082,2025-11-17_Mymensingh_d7f8a001a6d9.pdf,1,2025-11-17,2025,Mymensingh,Chickpea (chhola),,ছোলা,প্রতি কেজি,kg,100.0,105.0,Y,Y,Y,Y,,True
+462,151102,2025-11-17_Mymensingh_d7f8a001a6d9.pdf,1,2025-11-17,2025,Mymensingh,Taro (mukhi),,মুখীকচু,প্রতি কেজি,kg,40.0,50.0,Y,Y,Y,Y,,True
+463,151108,2025-11-17_Mymensingh_d7f8a001a6d9.pdf,1,2025-11-17,2025,Mymensingh,Okra,,ঢেঁড়স,প্রতি কেজি,kg,70.0,80.0,Y,Y,Y,Y,,True
+464,151132,2025-11-17_Mymensingh_d7f8a001a6d9.pdf,2,2025-11-17,2025,Mymensingh,Rice (aromatic),,সুগন্ধী (*ব্রি ধান- 34 ইত্যাদি),প্রতি কেজি,kg,100.0,130.0,Y,Y,Y,Y,,True
+465,154946,2025-12-01_Dhaka_c63488659c38.pdf,1,2025-12-01,2025,Dhaka,Wheat flour (packet),,আটা (প্যাকেট-সাদা),প্রতি কেজি,kg,55.0,65.0,Y,Y,Y,Y,,True
+466,154953,2025-12-01_Dhaka_c63488659c38.pdf,1,2025-12-01,2025,Dhaka,Mash kalai,,মাশ কলাই,প্রতি কেজি,kg,170.0,180.0,Y,Y,Y,Y,,True
+467,154964,2025-12-01_Dhaka_c63488659c38.pdf,1,2025-12-01,2025,Dhaka,Ginger (imported),,আদা (আমদানীকৃত),প্রতি কেজি,kg,130.0,200.0,Y,Y,Y,Y,,True
+468,154975,2025-12-01_Dhaka_c63488659c38.pdf,1,2025-12-01,2025,Dhaka,Okra,,ঢেঁড়স,প্রতি কেজি,kg,70.0,80.0,Y,Y,Y,Y,,True
+469,154991,2025-12-01_Dhaka_c63488659c38.pdf,2,2025-12-01,2025,Dhaka,Salt (packet),,লবণ (প্যাকেটজাত-মোটা ও চিকন),প্রতি কেজি,kg,25.0,40.0,Y,Y,Y,Y,,True
+470,156240,2025-12-04_Mymensingh_8e72e0189c7b.pdf,1,2025-12-04,2025,Mymensingh,Onion (local),,পেঁয়াজ (দেশী),প্রতি কেজি,kg,105.0,125.0,Y,Y,Y,Y,,True
+471,156256,2025-12-04_Mymensingh_8e72e0189c7b.pdf,1,2025-12-04,2025,Mymensingh,Ash gourd,,চাল কুমড়া (জালি),প্রতিটি,piece,,,Y,Y,Y,Y,,True
+472,156257,2025-12-04_Mymensingh_8e72e0189c7b.pdf,1,2025-12-04,2025,Mymensingh,Cucumber,,শসা ( হাইব্রিড),প্রতি কেজি,kg,40.0,50.0,Y,Y,Y,Y,,True
+473,156263,2025-12-04_Mymensingh_8e72e0189c7b.pdf,1,2025-12-04,2025,Mymensingh,Ridge gourd,,ঝিংগা,প্রতি কেজি,kg,50.0,60.0,Y,Y,Y,Y,,True
+474,156273,2025-12-04_Mymensingh_8e72e0189c7b.pdf,2,2025-12-04,2025,Mymensingh,Chicken (broiler),,মোরগ-মুরগি (ব্রয়লার) জ্যান্ত,প্রতি কেজি,kg,150.0,155.0,Y,Y,Y,Y,,True
+475,165133,2026-08-03_Khulna_8718e1d39e30.pdf,1,2026-08-03,2026,Khulna,Dried chilli (local),,শুকনা মরিচ (দেশী),প্রতি কেজি,kg,420.0,420.0,Y,Y,N,Y,PDF 380-420; dataset min=max=420,False
+476,165141,2026-08-03_Khulna_8718e1d39e30.pdf,1,2026-08-03,2026,Khulna,Pointed gourd,,পটল,প্রতি কেজি,kg,70.0,70.0,Y,Y,N,Y,PDF 65-70; dataset min=max=70,False
+477,165142,2026-08-03_Khulna_8718e1d39e30.pdf,1,2026-08-03,2026,Khulna,Bottle gourd,,লাউ,প্রতিটি,piece,65.0,70.0,Y,Y,Y,Y,,True
+478,165147,2026-08-03_Khulna_8718e1d39e30.pdf,1,2026-08-03,2026,Khulna,Sponge gourd,,ধুন্দুল,প্রতি কেজি,kg,55.0,60.0,Y,Y,Y,Y,,True
+479,165159,2026-08-03_Khulna_8718e1d39e30.pdf,2,2026-08-03,2026,Khulna,Chicken (broiler),,মোরগ-মুরগি (ব্রয়লার),প্রতি কেজি,kg,180.0,185.0,Y,Y,Y,Y,,True
+480,165972,2026-09-27_Dhaka_51d2a626e5ba.pdf,2,2026-09-27,2026,Dhaka,Chickpea (chhola),ডাল,বুট,প্রতি কেজি,kg,110.0,120.0,Y,Y,Y,Y,,True
+481,166001,2026-09-27_Dhaka_51d2a626e5ba.pdf,2,2026-09-27,2026,Dhaka,Bitter gourd,সবজি,উচ্ছে/করল্লা,প্রতি কেজি,kg,60.0,100.0,Y,Y,Y,Y,,True
+482,166017,2026-09-27_Dhaka_51d2a626e5ba.pdf,3,2026-09-27,2026,Dhaka,Salt (packet),লবণ,প্যাকেটজাত-মোটা ও চিকন,প্রতি কেজি,kg,25.0,40.0,Y,Y,Y,Y,name cell holds only the variety; type লবণ is in the type column,True
+483,166018,2026-09-27_Dhaka_51d2a626e5ba.pdf,3,2026-09-27,2026,Dhaka,Apple,ফল,আপেল,প্রতি কেজি,kg,300.0,420.0,Y,Y,Y,Y,,True
+484,166020,2026-09-27_Dhaka_51d2a626e5ba.pdf,3,2026-09-27,2026,Dhaka,Banana (sagar),ফল,কলা (সাগর),4টি,4_pieces,30.0,50.0,Y,Y,Y,Y,,True
+485,166759,205-08-14_Khulna_9434f6d1ac96.pdf,1,2025-08-14,2025,Khulna,Soybean oil (5 litre can),,তেল-সয়াবিন (ক্যান 5 লিঃবিভিন্ন ব্র্যান্ড),5 লিটার,5_litre,,,Y,Y,N,N,PDF 900-920; dataset blank (fair-price column read),False
+486,166765,205-08-14_Khulna_9434f6d1ac96.pdf,1,2025-08-14,2025,Khulna,Green chilli,,কাঁচা মরিচ,প্রতি কেজি,kg,60.2,60.2,Y,Y,N,N,PDF 200-240; dataset 60.2 from fair-price column,False
+487,166767,205-08-14_Khulna_9434f6d1ac96.pdf,1,2025-08-14,2025,Khulna,Green papaya,,কাঁচা পেঁপে,প্রতি কেজি,kg,23.11,23.11,Y,Y,N,N,PDF 35-40; dataset 23.11 from fair-price column,False
+488,166768,205-08-14_Khulna_9434f6d1ac96.pdf,1,2025-08-14,2025,Khulna,Sweet pumpkin,,মিষ্টি কুমড়া,প্রতি কেজি,kg,32.28,32.28,Y,Y,N,N,PDF 40-50; dataset 32.28 from fair-price column,False
+489,166776,205-08-14_Khulna_9434f6d1ac96.pdf,1,2025-08-14,2025,Khulna,Bitter gourd,,ঊচ্ছে/করল্লা,প্রতি কেজি,kg,,,Y,Y,N,N,PDF 100-120; dataset blank (fair-price column read),False
+490,170224,22-04-2026_Dhaka_f06b2ba0b227.pdf,1,2026-04-22,2026,Dhaka,Lentil (coarse),ডাল,মসুর (মোটা),প্রতি কেজি,kg,90.0,95.0,Y,Y,Y,Y,,True
+491,170228,22-04-2026_Dhaka_f06b2ba0b227.pdf,1,2026-04-22,2026,Dhaka,Mash kalai,ডাল,মাশ কলাই,প্রতি কেজি,kg,170.0,180.0,Y,Y,Y,Y,,True
+492,170238,22-04-2026_Dhaka_f06b2ba0b227.pdf,1,2026-04-22,2026,Dhaka,Garlic (imported),মসলা,রসুন (চায়না),প্রতি কেজি,kg,160.0,170.0,Y,Y,Y,Y,,True
+493,170243,22-04-2026_Dhaka_f06b2ba0b227.pdf,1,2026-04-22,2026,Dhaka,Brinjal,সবজি,বেগুন,প্রতি কেজি,kg,50.0,100.0,Y,Y,Y,Y,,True
+494,170249,22-04-2026_Dhaka_f06b2ba0b227.pdf,1,2026-04-22,2026,Dhaka,Pointed gourd,সবজি,পটল,প্রতি কেজি,kg,60.0,80.0,Y,Y,Y,Y,,True
+495,172565,23-05-2026_Barisal_c0726aaf579b.pdf,1,2026-05-23,2026,Barisal,Wheat flour (loose),,আটা (খোলা),প্রতি কেজি,kg,42.0,46.0,Y,Y,Y,Y,,True
+496,172572,23-05-2026_Barisal_c0726aaf579b.pdf,1,2026-05-23,2026,Barisal,Chickpea (chhola),,ছোলা,প্রতি কেজি,kg,80.0,90.0,Y,Y,Y,Y,,True
+497,172580,23-05-2026_Barisal_c0726aaf579b.pdf,1,2026-05-23,2026,Barisal,Garlic (local),,রসুন (দেশী),প্রতি কেজি,kg,80.0,110.0,Y,Y,Y,Y,,True
+498,172597,23-05-2026_Barisal_c0726aaf579b.pdf,1,2026-05-23,2026,Barisal,Ridge gourd,,ঝিংগা,প্রতি কেজি,kg,55.0,65.0,Y,Y,Y,Y,,True
+499,172619,23-05-2026_Barisal_c0726aaf579b.pdf,2,2026-05-23,2026,Barisal,Rice (medium),,"চাল- মাঝারি (পাজাম, ব্রি ধান-28",প্রতি কেজি,kg,55.0,60.0,Y,Y,Y,Y,,True
+500,175293,24-03-2026_Mymensingh_d706cbd15c39.pdf,1,2026-03-24,2026,Mymensingh,Chickpea (chhola),,ছোলা,প্রতি কেজি,kg,80.0,85.0,Y,Y,Y,Y,,True
+501,175301,24-03-2026_Mymensingh_d706cbd15c39.pdf,1,2026-03-24,2026,Mymensingh,Onion (imported),,পেঁয়াজ (আমদানীকৃত),প্রতি কেজি,kg,,,Y,Y,Y,Y,,True
+502,175326,24-03-2026_Mymensingh_d706cbd15c39.pdf,1,2026-03-24,2026,Mymensingh,Katla fish,,কাতল মাছ (চাষের),প্রতি কেজি,kg,280.0,450.0,Y,Y,Y,Y,,True
+503,175338,24-03-2026_Mymensingh_d706cbd15c39.pdf,2,2026-03-24,2026,Mymensingh,Powdered milk (packet),,গুঁড়ো দুধ (পলিপ্যাক),প্রতি কেজি,kg,700.0,920.0,Y,Y,Y,Y,,True
+504,175341,24-03-2026_Mymensingh_d706cbd15c39.pdf,2,2026-03-24,2026,Mymensingh,Rice (coarse/hybrid),,"আমন হাইব্রিড ধানিগোল্ড, হিরা",প্রতি কেজি,kg,,,Y,Y,Y,Y,,True
+505,176327,24-06-2026_Sylhet_05845005ba0a.pdf,1,2026-06-24,2026,Sylhet,Green papaya,সবজি,কাঁচাপেঁপে,প্রতি কেজি,kg,30.0,50.0,Y,Y,Y,Y,,True
+506,176341,24-06-2026_Sylhet_05845005ba0a.pdf,1,2026-06-24,2026,Sylhet,Ridge gourd,সবজি,ঝিংগা,প্রতি কেজি,kg,40.0,60.0,Y,Y,Y,Y,,True
+507,176344,24-06-2026_Sylhet_05845005ba0a.pdf,1,2026-06-24,2026,Sylhet,Rui fish,মাছ,রুই মাছ (চাষের 1-1.5 কেজি),প্রতি কেজি,kg,280.0,420.0,Y,Y,Y,Y,,True
+508,176351,24-06-2026_Sylhet_05845005ba0a.pdf,2,2026-06-24,2026,Sylhet,Chicken (local),মোরগ-মুরগি,মোরগ-মুরগি (দেশী) জ্যান্ত,প্রতি কেজি,kg,650.0,720.0,Y,Y,Y,Y,,True
+509,176353,24-06-2026_Sylhet_05845005ba0a.pdf,2,2026-06-24,2026,Sylhet,Chicken (broiler),মোরগ-মুরগি,মোরগ-মুরগি (ব্রয়লার) জ্যান্ত,প্রতি কেজি,kg,155.0,165.0,Y,Y,Y,Y,,True
+510,176436,24-08-2026_Chittagong_0d1648f84bab.pdf,1,2026-08-24,2026,Chittagong,Soybean oil (loose),,তেল-সয়াবিন (খোলা),1 লিটার,litre,187.0,189.0,Y,Y,Y,Y,,True
+511,176452,24-08-2026_Chittagong_0d1648f84bab.pdf,1,2026-08-24,2026,Chittagong,Taro stolon,,কচুরলতি,প্রতি কেজি,kg,55.0,60.0,Y,Y,Y,Y,,True
+512,176455,24-08-2026_Chittagong_0d1648f84bab.pdf,1,2026-08-24,2026,Chittagong,Bottle gourd,,লাউ,প্রতিটি,piece,55.0,60.0,Y,Y,Y,Y,,True
+513,176456,24-08-2026_Chittagong_0d1648f84bab.pdf,1,2026-08-24,2026,Chittagong,Tomato,,টমেটো,প্রতি কেজি,kg,100.0,110.0,Y,Y,Y,Y,,True
+514,176480,24-08-2026_Chittagong_0d1648f84bab.pdf,2,2026-08-24,2026,Chittagong,Rice (coarse/hybrid),,গুটি স্বর্ণা,প্রতি কেজি,kg,46.0,48.0,Y,Y,Y,Y,,True
+515,176619,24-08-2026_Mymensingh_5be2ad02879c.pdf,1,2026-08-24,2026,Mymensingh,Palm oil (loose),,তেল-পাম (খোলা),1 লিটার,litre,167.0,169.0,Y,Y,Y,Y,,True
+516,176632,24-08-2026_Mymensingh_5be2ad02879c.pdf,1,2026-08-24,2026,Mymensingh,Brinjal,,বেগুন,প্রতি কেজি,kg,60.0,80.0,Y,Y,Y,Y,,True
+517,176643,24-08-2026_Mymensingh_5be2ad02879c.pdf,1,2026-08-24,2026,Mymensingh,Bitter gourd,,ঊচ্ছে/করল্লা,প্রতি কেজি,kg,50.0,60.0,Y,Y,Y,Y,,True
+518,176668,24-08-2026_Mymensingh_5be2ad02879c.pdf,2,2026-08-24,2026,Mymensingh,Rice (aromatic),,সুগন্ধী (*ব্রি ধান- 34 ইত্যাদি),প্রতি কেজি,kg,120.0,210.0,Y,Y,Y,Y,,True
+519,176672,24-08-2026_Mymensingh_5be2ad02879c.pdf,2,2026-08-24,2026,Mymensingh,Rice (medium),,"মাঝারি (ব্রি ধান- 28, ব্রি ধান-29)",প্রতি কেজি,kg,52.0,60.0,Y,Y,Y,Y,,True
+520,177607,25-02-2026_Barisal_c0217b75c293.pdf,1,2026-02-25,2026,Barisal,Lentil (coarse),,মসুর ডাল (মোটা),প্রতি কেজি,kg,90.0,95.0,Y,Y,Y,Y,,True
+521,177608,25-02-2026_Barisal_c0217b75c293.pdf,1,2026-02-25,2026,Barisal,Mung dal (fine),,মুগ ডাল (সরু- উন্নত),প্রতি কেজি,kg,150.0,160.0,Y,Y,Y,Y,,True
+522,177618,25-02-2026_Barisal_c0217b75c293.pdf,1,2026-02-25,2026,Barisal,"Sugar (imported, loose)",,চিনি-আমদানীকৃত (সাদা-খোলা),প্রতি কেজি,kg,100.0,105.0,Y,Y,Y,Y,,True
+523,177630,25-02-2026_Barisal_c0217b75c293.pdf,1,2026-02-25,2026,Barisal,Taro stolon,,কচুরলতি,প্রতি কেজি,kg,70.0,80.0,Y,Y,Y,Y,,True
+524,177643,25-02-2026_Barisal_c0217b75c293.pdf,2,2026-02-25,2026,Barisal,Beef,,মাংস- গরু,প্রতি কেজি,kg,750.0,770.0,Y,Y,Y,Y,,True
+525,178480,25-06-2026_Chittagong_912c499658ed.pdf,1,2026-06-25,2026,Chittagong,Lentil (coarse),,মসুর ডাল (আমদানী),প্রতি কেজি,kg,88.0,165.0,Y,Y,Y,Y,,True
+526,178483,25-06-2026_Chittagong_912c499658ed.pdf,1,2026-06-25,2026,Chittagong,Khesari dal,,খেসারী ডাল,প্রতি কেজি,kg,65.0,70.0,Y,Y,Y,Y,,True
+527,178486,25-06-2026_Chittagong_912c499658ed.pdf,1,2026-06-25,2026,Chittagong,Palm oil (loose),,তেল-পাম (খোলা),1 লিটার,litre,164.0,165.0,Y,Y,Y,Y,,True
+528,178525,25-06-2026_Chittagong_912c499658ed.pdf,2,2026-06-25,2026,Chittagong,Salt (packet),,লবণ (প্যাকেটজাত-মোটা ও চিকন),প্রতি কেজি,kg,22.0,42.0,Y,Y,Y,Y,,True
+529,178529,25-06-2026_Chittagong_912c499658ed.pdf,2,2026-06-25,2026,Chittagong,Rice (coarse/hybrid),,"আমন হাইব্রিড ধানিগোল্ড, হিরা",প্রতি কেজি,kg,,,Y,Y,Y,Y,,True
+530,178732,25-06-2026_Rajshahi_70ea60ef36ea.pdf,1,2026-06-25,2026,Rajshahi,Chickpea (chhola),,ছোলা কলাই,প্রতি কেজি,kg,80.0,85.0,Y,Y,Y,Y,,True
+531,178740,25-06-2026_Rajshahi_70ea60ef36ea.pdf,1,2026-06-25,2026,Rajshahi,Garlic (imported),,রসুন (আমদানীকৃত চায়না),প্রতি কেজি,kg,120.0,140.0,Y,Y,Y,Y,,True
+532,178741,25-06-2026_Rajshahi_70ea60ef36ea.pdf,1,2026-06-25,2026,Rajshahi,Ginger (imported),,আদা (আমদানীকৃত),প্রতি কেজি,kg,140.0,160.0,Y,Y,Y,Y,,True
+533,178742,25-06-2026_Rajshahi_70ea60ef36ea.pdf,1,2026-06-25,2026,Rajshahi,Potato (Holland/red),,আলু হল্যান্ড/কাডির্নাল (লাল),প্রতি কেজি,kg,20.0,25.0,Y,Y,Y,Y,,True
+534,178752,25-06-2026_Rajshahi_70ea60ef36ea.pdf,1,2026-06-25,2026,Rajshahi,Beef,,মাংস- গরু,প্রতি কেজি,kg,750.0,780.0,Y,Y,Y,Y,,True
+535,179222,25-08-2026_Rangpur_58fb02b19997.pdf,1,2026-08-25,2026,Rangpur,Rice (coarse/hybrid),,বোরো চাল-(মোটা)হিরা,,kg,45.0,48.0,Y,Y,Y,Y,Rangpur unit blank in dataset: first row has no unit so ditto has no source; standardised to kg per report header (known limitation),True
+536,179226,25-08-2026_Rangpur_58fb02b19997.pdf,1,2026-08-25,2026,Rangpur,Wheat flour (loose),,আটা-(খোলা),,kg,43.0,45.0,Y,Y,Y,Y,Rangpur unit blank in dataset: first row has no unit so ditto has no source; standardised to kg per report header (known limitation),True
+537,179233,25-08-2026_Rangpur_58fb02b19997.pdf,1,2026-08-25,2026,Rangpur,Palm oil (loose),,পাম তেল- (খোলা),1 লিটার (925 গ্রাম),litre,170.0,171.0,Y,Y,Y,Y,,True
+538,179239,25-08-2026_Rangpur_58fb02b19997.pdf,1,2026-08-25,2026,Rangpur,Garlic (local),,রসুন দেশী,প্রতি কেজি,kg,90.0,110.0,Y,Y,Y,Y,,True
+539,179249,25-08-2026_Rangpur_58fb02b19997.pdf,1,2026-08-25,2026,Rangpur,Green chilli,,কাঁচামরিচ,প্রতি কেজি,kg,100.0,120.0,Y,Y,Y,Y,,True
+540,186235,29-03-2026_Khulna_5fd57203536b.pdf,1,2026-03-29,2026,Khulna,Soybean oil (1 litre bottle),,তেল-সয়াবিন (ক্যান 1লিঃ বিভিন্ন ব্র্যান্ড),1 লিটার,litre,196.0,196.0,Y,Y,N,Y,PDF 195-196; dataset min=max=196,False
+541,186254,29-03-2026_Khulna_5fd57203536b.pdf,1,2026-03-29,2026,Khulna,Carrot,,গাজর (দেশী),প্রতি কেজি,kg,45.0,50.0,Y,Y,Y,Y,,True
+542,186255,29-03-2026_Khulna_5fd57203536b.pdf,1,2026-03-29,2026,Khulna,Cauliflower,,ফুলকপি,প্রতি কেজি,kg,,,Y,Y,Y,Y,,True
+543,186269,29-03-2026_Khulna_5fd57203536b.pdf,2,2026-03-29,2026,Khulna,"Egg (farm, white/red)",,ডিমঃ ফার্ম সাদা/লাল,প্রতিটি,piece,8.5,10.0,Y,Y,Y,Y,,True
+544,186282,29-03-2026_Khulna_5fd57203536b.pdf,2,2026-03-29,2026,Khulna,Rice (medium),,চাল বোরো উফশী মাঝারি (ব্রি ধান 28 ব্রি ধান29),প্রতি কেজি,kg,56.0,58.0,Y,Y,Y,Y,,True
+545,189832,30-08-2026_Rangpur_131f7fdf11f4.pdf,1,2026-08-30,2026,Rangpur,Mung dal (coarse),,মুগ ডাল (মোটা),,kg,135.0,145.0,Y,Y,Y,Y,Rangpur unit blank in dataset: first row has no unit so ditto has no source; standardised to kg per report header (known limitation),True
+546,189835,30-08-2026_Rangpur_131f7fdf11f4.pdf,1,2026-08-30,2026,Rangpur,Soybean oil (loose),,সয়াবিন তেল-(খোলা),1 লিটার (925 গ্রাম),litre,190.0,192.0,Y,Y,Y,Y,,True
+547,189839,30-08-2026_Rangpur_131f7fdf11f4.pdf,1,2026-08-30,2026,Rangpur,Onion (local),,পেঁয়াজ (দেশী),প্রতি কেজি,kg,42.0,45.0,Y,Y,Y,Y,,True
+548,189844,30-08-2026_Rangpur_131f7fdf11f4.pdf,1,2026-08-30,2026,Rangpur,Ginger (local),,আদা দেশী,প্রতি কেজি,kg,180.0,200.0,Y,Y,Y,Y,,True
+549,189858,30-08-2026_Rangpur_131f7fdf11f4.pdf,1,2026-08-30,2026,Rangpur,Chicken (local),,মোরগ-মুরগি (দেশী) জ্যান্ত,1 কেজি,kg,530.0,540.0,Y,Y,Y,Y,,True
+550,189873,30-08-2026_Sylhet_0c6bd337725a.pdf,1,2026-08-30,2026,Sylhet,Mash kalai,ডাল,মাশ কলাই,প্রতি কেজি,kg,170.0,180.0,Y,Y,Y,Y,,True
+551,189887,30-08-2026_Sylhet_0c6bd337725a.pdf,1,2026-08-30,2026,Sylhet,Green chilli,মসলা,কাঁচা মরিচ,প্রতি কেজি,kg,80.0,150.0,Y,Y,Y,Y,,True
+552,189889,30-08-2026_Sylhet_0c6bd337725a.pdf,1,2026-08-30,2026,Sylhet,Brinjal,সবজি,বেগুন,প্রতি কেজি,kg,60.0,80.0,Y,Y,Y,Y,,True
+553,189903,30-08-2026_Sylhet_0c6bd337725a.pdf,1,2026-08-30,2026,Sylhet,Ash gourd,সবজি,চালকুমড়া,প্রতিটি,piece,50.0,70.0,Y,Y,Y,Y,,True
+554,189917,30-08-2026_Sylhet_0c6bd337725a.pdf,2,2026-08-30,2026,Sylhet,Egg (sonali),ডিম,ডিমঃ মুরগি (সোনালী),প্রতিটি,piece,,,Y,Y,Y,Y,,True

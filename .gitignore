@@ -26,3 +26,17 @@ venv/
 # OS-generated files
 .DS_Store
 Thumbs.db
+
+# --- derived outputs (rebuild with: python main.py --from features) ---
+data/final/prices_features.csv
+data/final/analysis/
+data/extracted/distinct_names.csv
+data/eval/
+# local backups of the v1 extraction
+*_v1.csv
+
+# verification material too large or private for the repo (attach to a release instead)
+evaluation/private/
+
+# test / tooling caches
+.pytest_cache/

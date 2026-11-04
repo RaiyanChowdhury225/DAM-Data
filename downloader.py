@@ -70,40 +70,6 @@ DIVISION_MAP = {
     "ময়মনসিংহ": "Mymensingh"
 }
 
-def normalize_data(bangla_date):
-    # Convert bangla date digits to english
-
-    bangla_to_english = str.maketrans(
-        '০১২৩৪৫৬৭৮৯',
-        '0123456789'
-    )
-
-    english_date = str(bangla_date).translate(
-        bangla_to_english
-    )
-    
-    english_date = english_date.strip()
-    english_date = english_date.replace('*', '')
-
-    parts = english_date.split('-')
-
-    # If date does not have exactly 3 parts, skip it
-    if len(parts) != 3:
-        logger.warning(
-            f"Invalid date format, skipping: {bangla_date}"
-        )
-        return None
-
-    day, month, year = parts
-
-    return f'{year}-{month}-{day}'
-
-
-
-
-
-
-
 def load_metadata():
     #Load Report metadata CSV
 
@@ -125,32 +91,20 @@ def load_metadata():
         raise
 
 
-def generate_filename(date, division, pdf_url):
+def url_hash(pdf_url):
+    """First 12 hex digits of the URL's SHA-256: the stable part of every PDF filename."""
+    return hashlib.sha256(pdf_url.encode("utf-8")).hexdigest()[:12]
 
-    # Stable Filename using hash of the pdf url
 
-    normalized_date = normalize_data(date)
-
-    # Invalid date → skip this PDF
-    if normalized_date is None:
+def generate_filename(date_iso, division, pdf_url):
+    """YYYY-MM-DD_Division_hash.pdf, or None when the date is not a valid ISO date."""
+    try:
+        datetime.strptime(str(date_iso), "%Y-%m-%d")
+    except ValueError:
         return None
 
-    english_division = DIVISION_MAP.get(
-        division,
-        division
-    )
-
-    url_hash = hashlib.sha256(
-        pdf_url.encode('utf-8')
-    ).hexdigest()[:12]
-
-    filename = (
-        f'{normalized_date}_'
-        f'{english_division}_'
-        f'{url_hash}.pdf'
-    )
-
-    return filename
+    english_division = DIVISION_MAP.get(division, division)
+    return f"{date_iso}_{english_division}_{url_hash(pdf_url)}.pdf"
 
 
 def download_pdf(url, output_path):
@@ -373,7 +327,7 @@ def main():
 
         pdf_url = row["pdf_url"]
         
-        date = row["date"]
+        date = row["date_iso"]           # repaired ISO date, written by scraper.py
         division = row["division"]
 
 
@@ -468,3 +422,4 @@ if __name__=='__main__':
         logger.exception(
             'PDF Downloader pipeline failed'
         )
+        raise SystemExit(1)       # non-zero exit, so main.py stops here

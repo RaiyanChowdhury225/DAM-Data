@@ -1,5 +1,5 @@
 """
-extractor.py — Stage 1 of DAM price extraction (PDF -> raw rows).
+extractor.py — Stage 1 of DAM price extraction (PDF -> raw rows).  Version 2 (2026-10-29).
 
 What this does:
   1. Recovers correct Bangla text from Nikosh/NikoshBAN PDFs.
@@ -16,7 +16,8 @@ Usage:
   python extractor.py --limit 20
   python extractor.py --survey          # which fonts do the PDFs use?
 """
-import argparse, csv, io, json, re, sys, unicodedata, warnings
+import argparse, csv, hashlib, io, json, os, re, sys, unicodedata, warnings
+from concurrent.futures import ProcessPoolExecutor
 from collections import Counter
 from pathlib import Path
 
@@ -31,7 +32,7 @@ warnings.filterwarnings("ignore")
 
 BASE = Path(__file__).resolve().parent          # works from any working directory
 PDF_DIR = BASE / "data" / "pdfs"
-MANIFEST = BASE / "data" / "download_manifest.csv"
+METADATA = BASE / "data" / "report_metadata.csv"
 OUT_CSV = BASE / "data" / "extracted" / "prices_raw.csv"
 GLYPH_MAP_JSON = BASE / "data" / "nikosh_glyph_map.json"   # built with --build-glyph-map
 
@@ -134,17 +135,39 @@ COLLECTED = {}
 
 _original_cidfont_init = PDFCIDFont.__init__
 
+def embedded_family(font_bytes):
+    """Family name stored inside the embedded font program ('' if unreadable)."""
+    try:
+        name = TTFont(io.BytesIO(font_bytes))["name"].getDebugName(1)
+        return name or ""
+    except Exception:
+        return ""
+
+
 def _patched_cidfont_init(self, rsrcmgr, spec, *args, **kwargs):
-    """After pdfminer loads a Nikosh font, replace its broken ToUnicode map."""
+    """After pdfminer loads a Nikosh font, replace its broken ToUnicode map.
+
+    v2: some PDFs rename the font to a generic 'CIDFont+F1' although the embedded
+    program is still NikoshBAN, so the font program's own name is checked too.
+    """
     _original_cidfont_init(self, rsrcmgr, spec, *args, **kwargs)
-    if "nikosh" not in self.basefont.lower() or not getattr(self, "fontfile", None):
+    if not getattr(self, "fontfile", None):
         return
+    by_basefont = "nikosh" in self.basefont.lower()
+    if not by_basefont:
+        try:
+            data = self.fontfile.get_data()
+        except Exception:
+            return
+        if "nikosh" not in embedded_family(data).lower():
+            return
     try:
         gmap = build_glyph_map(self.fontfile.get_data())
-        known = COLLECTED.setdefault(font_key(self.basefont), {})
-        for g, text in gmap.items():
-            if text or g not in known:      # never overwrite real text with an empty filler
-                known[g] = text
+        if by_basefont:                     # only learn reference ids from normally named fonts
+            known = COLLECTED.setdefault(font_key(self.basefont), {})
+            for g, text in gmap.items():
+                if text or g not in known:  # never overwrite real text with an empty filler
+                    known[g] = text
         umap = FileUnicodeMap()
         # Identity-H + CIDToGIDMap /Identity  =>  cid == glyph id
         umap.cid2unichr = gmap
@@ -231,7 +254,7 @@ def fix_bangla(text):
 # 3. Table extraction
 # =============================================================================
 UNIT_RE = re.compile(r"কেজি|লিটার|টি|হালি|গ্রাম|ডজন")
-DITTO_RE = re.compile(r'^\s*(,,|”|"|\'\')?\s*$')   # ",,"  ”  "  or blank = same as row above
+DITTO_RE = re.compile(r'^\s*(,\s*,|”|"|\'\')?\s*$')   # ",,"  ", ,"  ”  "  or blank = same as row above (v2: ", ," added)
 NUM_RE = re.compile(r"\d+(?:\.\d+)?")
 BN_LETTER_RE = re.compile(r"[\u0985-\u09b9]")
 
@@ -260,8 +283,17 @@ def find_columns(table):
         return None                                   # not a price table
     data_rows = [r for r in table if unit_col < len(r) and r[unit_col]
                  and (UNIT_RE.search(r[unit_col]) or DITTO_RE.match(r[unit_col]))]
-    # current price = first column right of the unit column that is mostly numbers
-    for i in range(unit_col + 1, ncols):
+    # v2: the current price is written as a 'min - max' pair. The 'fair price'
+    # column (header যৌক্তিক মূল্য) holds single numbers and must be skipped even
+    # when it is filled in, otherwise it is read as the current price.
+    header = [" ".join((r[i] or "") for r in table[:3] if i < len(r)) for i in range(ncols)]
+    candidates = [i for i in range(unit_col + 1, ncols) if "যৌক্তিক" not in header[i]]
+    for i in candidates:
+        cells = [r[i] for r in data_rows if i < len(r)]
+        if sum(1 for c in cells if c and len(NUM_RE.findall(c)) >= 2) >= 0.5 * max(len(cells), 1):
+            return unit_col, i
+    # fallback (old rule): first mostly-numeric column
+    for i in candidates:
         cells = [r[i] for r in data_rows if i < len(r)]
         if sum(1 for c in cells if c and NUM_RE.search(c)) >= 0.5 * max(len(cells), 1):
             return unit_col, i
@@ -290,13 +322,19 @@ def drop_overlapping_lines(indexed_chars, letters_only):
             lines.append({"base": base, "size": c["size"], "chars": [(i, c)]})
     keep = []
     for line in lines:
+        line["x0"] = min(c["x0"] for _, c in line["chars"])
+        line["x1"] = max(c["x1"] for _, c in line["chars"])
         text = fix_bangla("".join(c["text"] for _, c in line["chars"])) or ""
         # names: only lines with Bangla letters can clash; prices: only lines with digits
         line["can_clash"] = bool(BN_LETTER_RE.search(text) if letters_only else re.search(r"\d", text))
         clash = None
         if line["can_clash"]:
+            # v2: hidden overflow text lies ON TOP of the visible text, so a clash
+            # needs horizontal overlap as well. A minimum and a maximum printed side by
+            # side on slightly different baselines are not a clash.
             clash = next((k for k in keep if k["can_clash"]
-                          and abs(k["base"] - line["base"]) < 0.5 * line["size"]), None)
+                          and abs(k["base"] - line["base"]) < 0.5 * line["size"]
+                          and min(k["x1"], line["x1"]) > max(k["x0"], line["x0"])), None)
         if clash is None:
             keep.append(line)
         elif min(i for i, _ in line["chars"]) > min(i for i, _ in clash["chars"]):
@@ -330,6 +368,10 @@ def extract_pdf(pdf_path):
     current_type = last_unit = None
     with pdfplumber.open(pdf_path) as pdf:
         for page in pdf.pages:
+            # v2: some reports draw every glyph twice, slightly offset (fake bold),
+            # which doubles the text (1133, প্রপ্রতি). Drop exact duplicates only:
+            # hidden overflow text sits ~0.4 pt away and is handled separately.
+            page = page.dedupe_chars(tolerance=0.1)   # exact duplicates only
             # tables split across pages lose their top/bottom border; add both
             v_edges = [e for e in page.edges if e["orientation"] == "v"]
             settings = {"explicit_horizontal_lines": [min(e["top"] for e in v_edges),
@@ -361,14 +403,21 @@ def extract_pdf(pdf_path):
                             current_type = text_cells[0]  # merged cell -> forward-fill
                         text_cells = text_cells[1:]
                     name = " ".join(c for c in text_cells if c)
-                    if not BN_LETTER_RE.search(name):
-                        continue                      # sub-header / blank rows
                     unit = r[unit_col]
+                    if not BN_LETTER_RE.search(name):
+                        # v2: a row skipped for its name (e.g. text in the legacy Bijoy
+                        # font) can still state a new unit; never let the old one carry on
+                        if unit and UNIT_RE.search(unit):
+                            last_unit = unit
+                        elif unit and not DITTO_RE.match(unit):
+                            last_unit = None
+                        continue                      # sub-header / blank rows
                     if unit and UNIT_RE.search(unit):
                         last_unit = unit
                     elif DITTO_RE.match(unit or ""):
                         unit = last_unit              # ",," or blank means same unit as above
                     else:
+                        last_unit = None              # v2: unreadable unit -> do not carry an old one
                         continue
                     # Read the price from this row's vertical band only. Some reports
                     # miss the line between two rows, which merges their price cells.
@@ -378,6 +427,10 @@ def extract_pdf(pdf_path):
                     if (len(NUM_RE.findall(price or "")) < 2 and r[price_col + 1] == "-"
                             and price_col + 2 < len(row.cells) and row.cells[price_col + 2]):
                         price = text_in_band(page.chars, px0, row.cells[price_col + 2][2], band[1], band[3])
+                    # v2: if the band read lost a number, use the table cell text
+                    # when it holds exactly one 'min - max' pair
+                    if len(NUM_RE.findall(price or "")) < 2 and len(NUM_RE.findall(r[price_col] or "")) == 2:
+                        price = r[price_col]
                     mn, mx = split_price(price)
                     rows.append({"page_number": page.page_number, "serial_raw": r[0],
                                  "commodity_type_raw": current_type if has_type_col else None,
@@ -389,26 +442,43 @@ def extract_pdf(pdf_path):
 # 4. Source metadata + CLI
 # =============================================================================
 def load_url_lookup():
-    """filename -> pdf_url from the download manifest (column names auto-detected)."""
-    if not MANIFEST.exists():
+    """url hash (last 12 characters of a PDF's filename) -> pdf_url, from the scraped metadata.
+
+    Keyed by hash rather than filename, so provenance survives renamed files.
+    """
+    if not METADATA.exists():
+        print(f"[warn] {METADATA} not found: source_url will be empty")
         return {}
-    with MANIFEST.open(encoding="utf-8-sig") as f:
-        reader = csv.DictReader(f)
-        cols = reader.fieldnames or []
-        url_col = next((c for c in cols if "url" in c.lower()), None)
-        file_col = next((c for c in cols if any(k in c.lower() for k in ("file", "path"))), None)
-        if not url_col or not file_col:
-            print(f"[warn] manifest columns not recognised: {cols}")
-            return {}
-        return {Path(r[file_col]).name: r[url_col] for r in reader if r.get(file_col)}
+    with METADATA.open(encoding="utf-8-sig") as f:
+        urls = [r["pdf_url"] for r in csv.DictReader(f) if r.get("pdf_url")]
+    return {hashlib.sha256(u.encode("utf-8")).hexdigest()[:12]: u for u in urls}
 
 
 def source_info(pdf_path, urls):
     # filename format from downloader.py: YYYY-MM-DD_Division_hash.pdf
     parts = pdf_path.stem.split("_")
-    return {"source_file": pdf_path.name, "source_url": urls.get(pdf_path.name, ""),
+    return {"source_file": pdf_path.name, "source_url": urls.get(pdf_path.stem[-12:], ""),
             "date_raw": parts[0] if parts else "",
             "division_raw": parts[1] if len(parts) > 1 else ""}
+
+
+def extract_safe(pdf_path):
+    """extract_pdf for the worker pool: returns (rows, error) instead of raising."""
+    try:
+        return extract_pdf(pdf_path), None
+    except Exception as e:
+        return [], f"{type(e).__name__}: {e}"
+
+
+def batched_results(pdfs, jobs, batch=100):
+    """extract_safe over pdfs, in input order. A fresh pool per batch bounds worker
+    memory (max_tasks_per_child hangs on Windows), so a long run cannot exhaust RAM."""
+    if jobs <= 1 or len(pdfs) <= 1:
+        yield from map(extract_safe, pdfs)
+        return
+    for i in range(0, len(pdfs), batch):
+        with ProcessPoolExecutor(jobs) as pool:
+            yield from list(pool.map(extract_safe, pdfs[i:i + batch], chunksize=4))
 
 
 def survey_fonts(pdfs):
@@ -441,6 +511,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--file", help="extract one PDF and print rows")
     ap.add_argument("--limit", type=int, help="process the first N PDFs into the CSV")
+    # each worker holds a few hundred MB; 4 fits an 8 GB machine
+    ap.add_argument("--jobs", type=int, default=min(4, os.cpu_count() or 1),
+                    help="worker processes (output order does not depend on this)")
     ap.add_argument("--survey", action="store_true", help="count font combinations")
     ap.add_argument("--build-glyph-map", action="store_true",
                     help="learn Nikosh glyph ids from normal PDFs (needed for Ghostscript PDFs)")
@@ -452,18 +525,29 @@ def main():
     if args.build_glyph_map:
         return build_reference_map(pdfs)
 
+    # the same report saved under two names would be counted twice
+    seen, unique = {}, []
+    for p in pdfs:
+        if p.stem[-12:] in seen:
+            print(f"SKIP  {p.name}: same URL hash as {seen[p.stem[-12:]]}")
+        else:
+            seen[p.stem[-12:]] = p.name
+            unique.append(p)
+    pdfs = unique
+
     urls = load_url_lookup()
     all_rows = []
-    for pdf_path in pdfs:
-        try:
-            rows = extract_pdf(pdf_path)
-        except Exception as e:
-            print(f"FAIL  {pdf_path.name}: {type(e).__name__}: {e}")
+    failed = 0
+    results = batched_results(pdfs, args.jobs)
+    for pdf_path, (rows, error) in zip(pdfs, results):
+        if error:
+            print(f"FAIL  {pdf_path.name}: {error}")
+            failed += 1
             continue
         meta = source_info(pdf_path, urls)
         rows = [{**meta, **r} for r in rows]
         missing = sum(r["min_price_raw"] is None for r in rows)
-        print(f"OK    {pdf_path.name}: {len(rows)} rows, {missing} without price")
+        print(f"OK    {pdf_path.name}: {len(rows)} rows, {missing} without price", flush=True)
         all_rows.extend(rows)
         if args.file:
             for r in rows:
@@ -476,7 +560,7 @@ def main():
             w = csv.DictWriter(f, fieldnames=RAW_FIELDS)
             w.writeheader()
             w.writerows(all_rows)
-        print(f"\nWrote {len(all_rows)} rows from {len(pdfs)} PDFs -> {OUT_CSV}")
+        print(f"\nWrote {len(all_rows)} rows from {len(pdfs)} PDFs ({failed} failed) -> {OUT_CSV}")
 
 
 if __name__ == "__main__":

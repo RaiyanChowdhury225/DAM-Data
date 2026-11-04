@@ -7,10 +7,12 @@ Stages, in order:
     glyphmap   extractor.py --build-glyph-map -> data/nikosh_glyph_map.json
     extract    extractor.py          -> data/extracted/prices_raw.csv
     clean      clean.py              -> data/final/prices.csv
-    target     add_target.py         -> data/final/prices_modeling.csv
+    features   features.py           -> data/final/prices_features.csv (analysis layer)
+    rq1..rq5   analysis/rq*.py       -> data/final/analysis/
+    figures    analysis/paper_figures.py -> data/final/analysis/figures/paper/
 
     python main.py                       # run everything
-    python main.py --from extract        # extract, clean, target
+    python main.py --from extract        # extract and everything after it
     python main.py --only clean          # one stage
     python main.py --skip scrape download # everything else
 
@@ -33,7 +35,14 @@ STAGES = {
     "glyphmap": (["extractor.py", "--build-glyph-map"], "data/nikosh_glyph_map.json"),
     "extract":  (["extractor.py"], "data/extracted/prices_raw.csv"),
     "clean":    (["clean.py"], "data/final/prices.csv"),
-    "target":   (["add_target.py"], "data/final/prices_modeling.csv"),
+    "features": (["features.py"], "data/final/prices_features.csv"),
+    # each rq script reads only prices.csv and data/external/, so their order is free
+    "rq3":      (["analysis/rq3_price_change_2023_2025.py"], "data/final/analysis/rq3_overall_index.csv"),
+    "rq1":      (["analysis/rq1_seasonality.py"], "data/final/analysis/rq1_seasonality_summary.csv"),
+    "rq5":      (["analysis/rq5_shocks_and_anomalies.py"], "data/final/analysis/rq5_episodes.csv"),
+    "rq2":      (["analysis/rq2_holiday_effects.py"], "data/final/analysis/rq2_holiday_summary_by_window.csv"),
+    "rq4":      (["analysis/rq4_cpi_comparison.py"], "data/final/analysis/rq4_pair_comparison.csv"),
+    "figures":  (["analysis/paper_figures.py"], "data/final/analysis/figures/paper"),
 }
 ORDER = list(STAGES)
 

@@ -105,27 +105,8 @@ def main():
 
     df = pd.read_csv(IN_CSV)
 
-    # Fix verified malformed years.
-    # Example:
-    #   205-08-14 -> 2025-08-14
-    #   205-01-21 -> 2025-01-21
-    #
-    # Only changes dates whose year is exactly "205".
-    df["date"] = df["date"].astype(str).str.replace(
-        r"^205-(\d{2}-\d{2})$",
-        r"2025-\1",
-        regex=True
-    )
-
-    # The dataset contains two valid date formats:
-    #   DD-MM-YYYY
-    #   YYYY-MM-DD
-    df["date"] = pd.to_datetime(
-        df["date"],
-        format="mixed",
-        dayfirst=True,
-        errors="raise"
-    )
+    # clean.py writes ISO dates only; fail loudly rather than guess a format
+    df["date"] = pd.to_datetime(df["date"], format="%Y-%m-%d", errors="raise")
 
     before = len(df)
 

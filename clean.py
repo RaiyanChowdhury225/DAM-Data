@@ -15,6 +15,7 @@ Usage:
 import csv
 import unicodedata
 from collections import Counter
+from datetime import datetime
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parent
@@ -48,12 +49,29 @@ def norm(text):
 
 def load_map():
     """(type_raw, name_raw) -> (commodity_type, commodity_name)"""
-    mapping = {}
+    mapping, bad = {}, []
     with MAP_CSV.open(encoding="utf-8-sig") as f:
-        for r in csv.DictReader(f):
+        for line, r in enumerate(csv.DictReader(f), start=2):
+            if not any((v or "").strip() for v in r.values()):
+                continue                                   # blank line left by a spreadsheet save
             key = (norm(r["commodity_type_raw"]), norm(r["commodity_name_raw"]))
-            mapping[key] = (r["commodity_type"].strip(), r["commodity_name"].strip())
+            value = ((r["commodity_type"] or "").strip(), (r["commodity_name"] or "").strip())
+            if not all(value):
+                bad.append(f"line {line}: missing commodity_type or commodity_name")
+            elif key in mapping and mapping[key] != value:
+                bad.append(f"line {line}: {key[1]!r} already mapped to {mapping[key]}, now {value}")
+            mapping[key] = value
+    if bad:
+        raise SystemExit(f"{MAP_CSV.name} has {len(bad)} invalid rows:\n  " + "\n  ".join(bad))
     return mapping
+
+
+def iso_date(text):
+    """'2025-09-15' -> itself; anything else -> None (filenames carry ISO dates)."""
+    try:
+        return datetime.strptime(text, "%Y-%m-%d").strftime("%Y-%m-%d")
+    except (TypeError, ValueError):
+        return None
 
 
 def to_price(text):
@@ -67,13 +85,17 @@ def to_price(text):
 def main():
     mapping = load_map()
     rows, problems = [], Counter()
-    unmapped, unknown_units = Counter(), Counter()
+    unmapped, unknown_units, bad_dates = Counter(), Counter(), Counter()
 
     with RAW_CSV.open(encoding="utf-8-sig") as f:
         for raw in csv.DictReader(f):
             key = (norm(raw["commodity_type_raw"]), norm(raw["commodity_name_raw"]))
             if key not in mapping:
                 unmapped[key] += 1                 # new wording: add it to the mapping file
+                continue
+            date = iso_date(raw["date_raw"])
+            if date is None:
+                bad_dates[raw["source_file"]] += 1         # re-run fix_filenames.py
                 continue
             ctype, cname = mapping[key]
             unit_raw = norm(raw["unit_raw"])
@@ -86,7 +108,7 @@ def main():
             elif mn > mx:
                 mn, mx = mx, mn                    # a few reports write the two the wrong way round
                 problems["min/max swapped"] += 1
-            rows.append({"date": raw["date_raw"], "division": raw["division_raw"],
+            rows.append({"date": date, "division": raw["division_raw"],
                          "commodity_type": ctype, "commodity_name": cname,
                          "unit": UNITS[unit_raw], "min_price": mn, "max_price": mx,
                          "source_file": raw["source_file"], "source_url": raw["source_url"],
@@ -113,6 +135,10 @@ def main():
         print(f"\n{sum(unmapped.values())} rows DROPPED - not in the mapping file:")
         for (t, n), c in unmapped.most_common(20):
             print(f"  {c:5d}  {t} | {n}")
+    if bad_dates:
+        print(f"\n{sum(bad_dates.values())} rows DROPPED - filename has no ISO date (run fix_filenames.py):")
+        for name, c in bad_dates.most_common(10):
+            print(f"  {c:5d}  {name}")
     if unknown_units:
         print(f"\n{sum(unknown_units.values())} rows DROPPED - unknown unit:")
         for u, c in unknown_units.most_common():
