@@ -272,7 +272,7 @@ Not in git (rebuilt by the pipeline): `data/pdfs/`, `data/download_manifest.csv`
 
 Code: [MIT](LICENSE). Dataset (`data/`): CC BY 4.0, with attribution to the source as well as this project. The
 source reports are published by the Department of Agricultural Marketing, Government of the People's Republic of
-Bangladesh; this project claims no ownership of them and does not redistribute the PDFs.
+Bangladesh; this project claims no ownership of them and does not redistribute the PDFs..
 
 If you use the data or code, please cite:
 
